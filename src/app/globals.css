@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .bg-yellow { background-color: #FAC711; }  .text-yellow { color: #FAC711; }
+  .bg-green  { background-color: #6BCE83; }  .text-green  { color: #6BCE83; }
+  .bg-purple { background-color: #670BA6; }  .text-purple { color: #670BA6; }
+  .bg-red    { background-color: #ED1C24; }  .text-red    { color: #ED1C24; }
+  .bg-cyan   { background-color: #00FFFF; }  .text-cyan   { color: #00FFFF; }
+  .bg-blue   { background-color: #2E31FF; }  .text-blue   { color: #2E31FF; }
+  .bg-bright { background-color: #FFFF00; }  .text-bright { color: #FFFF00; } 
+  .bg-orange { background-color: #FF7F00; }  .text-orange { color: #FF7F00; }
+  .bg-pink   { background-color: #F20082; }  .text-pink   { color: #F20082; }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Syncopate', sans-serif;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  position: relative;
+}
+
+.marquee span::after {
+  content: "•";
+  color: #2E31FF;
+  margin: 0 10px;
+}
+
+
+@media (max-width: 500px) {
+  h1, button{
+    font-size: 21px;
+    line-height: 22px;
+  }
+  h2{
+    font-size: 18px;
+  }
+  p{
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
+  .marquee-text{
+    font-size: 18px;
+  }
+}
