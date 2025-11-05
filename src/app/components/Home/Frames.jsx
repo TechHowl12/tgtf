@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const Frames = () => {
     return (
-        <div className='bg-orange px-4 py-10'>
+        <div className='bg-orange px-4 pt-10 pb-20'>
             <h1 className='text-white mb-6 w-[324px] ml-auto'>TGTF in <br /><span className='font-bold'>frames</span></h1>
             <div className='grid grid-cols-2 mx-auto justify-items-center w-[324px]'>
                 <div className="w-[154px] h-[217px] overflow-hidden">

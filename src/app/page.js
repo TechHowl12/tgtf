@@ -51,10 +51,17 @@ export default function Home() {
       <Frames />
 
       {/* Curious Section */}
-      <div className="bg-blue rounded-t-[20px]">
-        <h1 className="text-white font-bold">Curious <br/> about us?</h1>
-        <div className="bg-white rounded-t-[20px]">
-           
+      <div className="bg-blue rounded-t-[20px] -mt-10">
+        <h1 className="text-white font-bold p-8">Curious <br /> about us?</h1>
+        <div className="bg-white rounded-t-[20px] flex flex-col gap-y-2 py-3">
+          <button className="w-[95%] bg-pink text-bright py-4 mx-auto flex justify-center items-center gap-1 rounded-[10px] font-bold">
+            <span>PARTNER WITH US</span>
+            <img src={BtnArrow.src} alt="btn arrow" />
+          </button>
+          <button className="w-[95%] bg-pink text-bright py-4 mx-auto flex justify-center items-center gap-1 rounded-[10px] font-bold">
+            <span>REGISTER</span>
+            <img src={BtnArrow.src} alt="btn arrow" />
+          </button>
         </div>
       </div>
 
