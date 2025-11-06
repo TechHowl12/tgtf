@@ -19,6 +19,9 @@
     justify-content: center;
     align-items: center;
   }
+  .curve{
+    border-radius: 10px;
+  }
 }
 
 @layer base {
@@ -26,7 +29,7 @@
     font-family: 'Poppins', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6, button {
+  h1, h2, h3, h4, h5, h6, button, .date {
     font-family: 'Syncopate', sans-serif;
   }
 }

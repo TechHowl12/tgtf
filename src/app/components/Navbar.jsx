@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import JioLogo from "../images/jio-logo.png";
+import Image from 'next/image';
 
 const Navbar = () => {
     return (
         <>
-            <nav className='bg-[#242424] py-3'>
-                <h1 className='text-bright ml-4 font-bold'>#TGTF</h1>
+            <nav className='bg-[#242424] py-3 flex justify-between items-center px-4'>
+                <p className='text-bright font-bold date'>7th & 8th feb 2026</p>
+                <Image src={JioLogo} alt="Jio Logo" width={104} height={23.09} className='' />
             </nav>
             <div className="overflow-hidden whitespace-nowrap bg-white text-blue py-3">
                 <div className="marquee">
