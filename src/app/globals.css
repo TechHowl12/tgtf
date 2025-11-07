@@ -59,6 +59,28 @@
   margin: 0 10px;
 }
 
+h1 {
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 37px;
+}
+
+p{
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 21px;
+}
+
+.hero-bg {
+  background-image: var(--mobileBG);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width:768px) {
+  .hero-bg {
+    background-image: var(--desktopBG);
+  }
+}
+
 
 @media (max-width: 500px) {
   h1, button{

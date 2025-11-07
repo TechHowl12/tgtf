@@ -49,7 +49,9 @@ const PartnersCarousel = () => {
         <Image src={arrow} alt="Next Arrow" width={26} height={26} />
       </button>
 
-      <a className="absolute bottom-4 left-1/2 -translate-x-1/2 text-pink text-center z-20 underline" href="/">see more</a>
+      <h1 className="text-pink absolute top-6 text-center left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">Featured <span className="font-bold">partners</span></h1>
+
+      <a className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-pink text-white rounded-xs py-0 uppercase px-2 z-20" href="/">see more</a>
 
       <Swiper
         modules={[Navigation]}

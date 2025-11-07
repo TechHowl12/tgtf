@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ExploreCarousel = () => {
 
-    const cards = [Explore, Engage, Plan, Book];
+    const cards = [Explore, Engage, Plan, Book, Explore, Engage, Plan, Book];
 
     const starRef = useRef(null);
     const shineRef = useRef(null);
@@ -74,6 +74,11 @@ const ExploreCarousel = () => {
                     grabCursor={true}
                     modules={[EffectCards]}
                     className="mySwiper w-[319px] h-[444px]"
+                    loop={true}
+                    loopAdditionalSlides={cards.length}
+                    speed={600}
+                    resistanceRatio={0}          // IMPORTANT
+                    allowTouchMove={true}
                 >
                     {cards.map((img, i) => (
                         <SwiperSlide key={i} className="relative bg-transparent flex-center rounded-xl">
