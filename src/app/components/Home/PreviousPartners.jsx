@@ -25,8 +25,6 @@ const PreviousPartners = () => {
 
     useEffect(() => {
 
-        if (window.innerWidth >= 1024) return; // desktop no animation
-
         const ctx = gsap.context(() => {
 
             gsap.to([sunRef.current, flowerRef.current], {
@@ -58,13 +56,13 @@ const PreviousPartners = () => {
     }, []);
 
     return (
-        <div ref={sectionRef} className='bg-white p-8'>
-            <div className='bg-pink curve pb-2 w-[319px] mx-auto relative'>
+        <div ref={sectionRef} className='bg-white py-8 px-8 xl:py-12'>
+            <div className='bg-pink curve pb-2 w-[319px] xl:w-[85%] mx-auto relative'>
                 <div className='p-8 z-20'>
                     <h1 className='text-white'>The <br /><span className='font-bold'>Curators</span> Of<br /> The Collective</h1>
-                    <p className='bg-white text-pink w-[111px] h-[18px] flex-center rounded-xs mt-3'>Previous Partners</p>
+                    <p className='bg-white text-pink w-[111px] xl:w-[150px] h-[18px] flex-center rounded-xs mt-3'>Previous Partners</p>
                 </div>
-                <div className='bg-white curve grid grid-cols-2 place-items-center h-[324px] overflow-y-auto gap-6 px-6 py-8 mx-1 z-20'>
+                <div className='bg-white curve grid grid-cols-2 xl:grid-cols-4 place-items-center h-[324px] overflow-y-auto gap-6 px-6 py-8 mx-1 z-20'>
                     <Image width={118} height={70} src={saudi.src} alt="Saudi Logo" />
                     <Image width={95} height={70} src={seychelles.src} alt="Seychelles Logo" />
                     <Image width={101} height={55} src={qatar.src} alt="Qatar Logo" />

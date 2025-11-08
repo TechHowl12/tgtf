@@ -24,7 +24,7 @@ const PartnersCarousel = () => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
 
-  const logos = [ponant, saudi, qatar, seychelles, utah, clubmed];
+  const logos = [saudi, ponant, qatar, seychelles, utah, clubmed];
 
   return (
     <div className="w-full py-2 bg-pink relative">
@@ -32,9 +32,8 @@ const PartnersCarousel = () => {
       <button
         ref={prevRef}
         disabled={isBeginning}
-        className={`absolute left-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer ${
-          isBeginning ? "opacity-40" : "opacity-100"
-        }`}
+        className={`absolute xl:hidden left-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer ${isBeginning ? "opacity-40" : "opacity-100"
+          }`}
       >
         <Image src={arrow} alt="Prev Arrow" width={26} height={26} className="rotate-180" />
       </button>
@@ -42,16 +41,15 @@ const PartnersCarousel = () => {
       <button
         ref={nextRef}
         disabled={isEnd}
-        className={`absolute right-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer ${
-          isEnd ? "opacity-40" : "opacity-100"
-        }`}
+        className={`absolute xl:hidden right-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer ${isEnd ? "opacity-40" : "opacity-100"
+          }`}
       >
         <Image src={arrow} alt="Next Arrow" width={26} height={26} />
       </button>
 
-      <h1 className="text-pink absolute top-6 text-center left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">Featured <span className="font-bold">partners</span></h1>
+      <h1 className="text-pink absolute top-6 xl:top-7 text-center left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">Featured <span className="font-bold">partners</span></h1>
 
-      <a className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-pink text-white rounded-xs py-0 uppercase px-2 z-20" href="/">see more</a>
+      <a className="absolute bottom-4 xl:bottom-6 left-1/2 -translate-x-1/2 bg-pink text-white rounded-xs py-0 uppercase px-2 z-20" href="/">see more</a>
 
       <Swiper
         modules={[Navigation]}
@@ -61,6 +59,14 @@ const PartnersCarousel = () => {
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
+        }}
+        breakpoints={{
+          768: {   // tablet
+            slidesPerView: 4,
+          },
+          1024: {  // desktop
+            slidesPerView: 6,
+          },
         }}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
@@ -78,7 +84,7 @@ const PartnersCarousel = () => {
       >
         {logos.map((logo, i) => (
           <SwiperSlide key={i}>
-            <div className="flex-center bg-white h-[210px] w-full">
+            <div className="flex-center mx-auto xl:py-4 bg-white h-[210px] xl:h-64 w-full">
               <img
                 src={logo.src}
                 alt="partner logo"

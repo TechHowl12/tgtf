@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <div className='bg-[#242424] py-8 flex flex-col justify-center items-center gap-y-20'>
+        <div className='bg-[#242424] py-8 xl:py-4 xl:px-6 flex flex-col xl:flex-row xl:justify-between justify-center items-center gap-y-20'>
             <h1 className='text-white'><span className='font-bold'>Join</span> India's foremost<br/> celebration of travel</h1>
             <div className='flex items-center gap-x-4'>
                 <Image src={Threads.src} width={34} height={34} alt="Threads" />

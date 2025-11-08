@@ -24,6 +24,10 @@
   }
 }
 
+button{
+  cursor: pointer;
+}
+
 @layer base {
   html {
     font-family: 'Poppins', sans-serif;
@@ -74,6 +78,11 @@ p{
   background-size: cover;
   background-position: center;
 }
+
+button:hover .arrow-wrapper {
+  transform: rotate(405deg) translateY(-1px);
+}
+
 
 @media (min-width:768px) {
   .hero-bg {

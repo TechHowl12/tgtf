@@ -28,7 +28,7 @@ export default function Home() {
 
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mediaQuery.matches) return;
-    if (window.innerWidth >=800) return;
+    if (window.innerWidth >= 800) return;
 
     const ctx = gsap.context(() => {
       const logoEl = logoRef.current;
@@ -98,13 +98,16 @@ export default function Home() {
             Whether you are a seasoned traveller or just catching the travel bug, we’ve got everything you need to go on your next epic journey.
           </p>
         </div>
-        <button className="w-[95%] xl:w-[665px] bg-pink text-bright py-4 mx-auto xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold">
+        <button className="w-[95%] xl:w-[40%] bg-pink text-bright py-4 mx-auto xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
           <span>LEARN MORE</span>
-          <img src={BtnArrow.src} alt="btn arrow" />
+          <span className="arrow-wrapper transition-transform duration-300">
+            <img src={BtnArrow.src} alt="btn arrow" />
+          </span>
         </button>
-                    
+
+
         <Image width={22} height={31} src={Circles} alt="Star Icon" className="absolute right-0 bottom-1/2 z-0" />
-          
+
       </section>
 
       {/* Partners Carousel Section */}
@@ -123,20 +126,26 @@ export default function Home() {
       <Frames />
 
       {/* Curious Section */}
-      <div className="bg-blue rounded-t-[20px] -mt-10 relative">
+      <section className="bg-blue flex justify-between xl:items-center flex-col xl:flex-row rounded-t-[20px] -mt-10 relative">
         <h1 className="text-white font-bold py-6 pl-6">Curious about us?</h1>
-        <div className="bg-white rounded-t-[20px] flex flex-col gap-y-2 py-3">
-          <button className="w-[95%] bg-pink text-bright py-4 mx-auto flex justify-center items-center gap-1 curve font-bold">
+        <div className="bg-white w-full xl:w-1/2 rounded-t-[20px] xl:rounded-t-none xl:rounded-tl-[20px] xl:rounded-bl-[20px] flex flex-col gap-y-2 py-3 xl:py-6 xl:gap-y-4">
+          <button className="w-[95%] bg-pink text-bright py-4 mx-auto flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
             <span>PARTNER WITH US</span>
-            <img src={BtnArrow.src} alt="btn arrow" />
+            <span className="arrow-wrapper transition-transform duration-300">
+              <img src={BtnArrow.src} alt="btn arrow" />
+            </span>
           </button>
-          <button className="w-[95%] bg-pink text-bright py-4 mx-auto flex justify-center items-center gap-1 curve font-bold">
+
+          <button className="w-[95%] bg-pink text-bright py-4 mx-auto flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
             <span>REGISTER</span>
-            <img src={BtnArrow.src} alt="btn arrow" />
+            <span className="arrow-wrapper transition-transform duration-300">
+              <img src={BtnArrow.src} alt="btn arrow" />
+            </span>
           </button>
+
         </div>
         <Image width={36} height={50} src={HalfStar} alt="Half Star Icon" className="absolute left-0 -top-7 z-0" />
-      </div>
+      </section>
 
     </main>
   );
