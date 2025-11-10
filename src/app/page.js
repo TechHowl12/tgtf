@@ -34,7 +34,7 @@ export default function Home() {
       const logoEl = logoRef.current;
       const targetSection = registerRef.current;
       if (!logoEl || !targetSection) return;
-      const computeDistance = 150;
+      const computeDistance = 200;
       gsap.to(logoEl, {
         y: computeDistance,
         ease: "none",
