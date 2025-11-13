@@ -61,10 +61,13 @@ const PartnersCarousel = () => {
           nextEl: nextRef.current,
         }}
         breakpoints={{
-          768: {   // tablet
+          768: { 
             slidesPerView: 4,
           },
-          1024: {  // desktop
+          1024: {  
+            slidesPerView: 5,
+          },
+          1280: { 
             slidesPerView: 6,
           },
         }}

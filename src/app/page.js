@@ -34,7 +34,7 @@ export default function Home() {
       const logoEl = logoRef.current;
       const targetSection = registerRef.current;
       if (!logoEl || !targetSection) return;
-      const computeDistance = 200;
+      const computeDistance = 170;
       gsap.to(logoEl, {
         y: computeDistance,
         ease: "none",
@@ -70,7 +70,7 @@ export default function Home() {
         "--mobileBG": `url(${bannerMobile.src})`,
         "--desktopBG": `url(${bannerDesktop.src})`
       }} className="hero-bg w-full bg-cover relative bg-center h-[698px]">
-        <div className="flex w-full gap-x-3 xl:gap-x-10 justify-between md:justify-start px-4 xl:px-40 absolute bottom-0">
+        <div className="flex w-full gap-x-3 md:gap-x-6 xl:gap-x-10 justify-between md:justify-start px-4 md:px-24 xl:px-40 absolute bottom-0">
           <div
             ref={logoRef}
             className="will-change-transform z-20"
@@ -80,11 +80,11 @@ export default function Home() {
               height={204}
               src={Logo}
               alt="TGTF Logo"
-              className="relative top-[100px] xl:top-[180px] xl:w-44 xl:h-[291px]"
+              className="relative top-[100px] md:w-32 md:top-[30px] lg:top-24 xl:top-[180px] xl:w-44 xl:h-[291px]"
             />
           </div>
           <div className="w-52 md:w-[700px] relative">
-            <h1 className="text-bright relative top-[100px] xl:top-[180px] z-20">A Destination that’ll <span className="font-bold">start your next journey.</span></h1>
+            <h1 className="text-bright relative top-[100px] md:top-[30px] lg:top-24 xl:top-[180px] z-20">A Destination that’ll <span className="font-bold">start your next journey.</span></h1>
             <Image ref={starRef} width={31} height={31} src={star} alt="Star Icon" className="absolute right-8 bottom-6 z-0" />
           </div>
         </div>
@@ -92,13 +92,13 @@ export default function Home() {
 
       {/* Register Section */}
       <section ref={registerRef} className="bg-blue relative w-full pb-3 xl:pb-6 z-10">
-        <div className="w-full mx-auto pr-4 py-7">
-          <p className="text-white w-52 xl:w-auto ml-auto xl:ml-[376px] pr-10">
+        <div className="w-full mx-auto pr-4 md:pr-0 py-7">
+          <p className="text-white w-52 md:w-auto ml-auto md:ml-52 lg:ml-[248px] xl:ml-[376px] pr-10">
             <span className="font-bold">The Gypsy Travel Festival</span> is a collective comprising some of the most celebrated and underrated global experiences, cuisines, and cultures. An ever expanding community of like-minded explorers and enthusiasts.<br /><br />
             Whether you are a seasoned traveller or just catching the travel bug, we’ve got everything you need to go on your next epic journey.
           </p>
         </div>
-        <button className="w-[95%] xl:w-[40%] bg-pink text-bright py-4 mx-auto xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
+        <button className="w-[95%] lg:w-[40%] bg-pink text-bright py-4 mx-auto lg:ml-[248px] xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
           <span>LEARN MORE</span>
           <span className="arrow-wrapper transition-transform duration-300">
             <img src={BtnArrow.src} alt="btn arrow" />

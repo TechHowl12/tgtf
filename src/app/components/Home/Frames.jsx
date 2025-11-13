@@ -13,9 +13,9 @@ import Image from 'next/image';
 const Frames = () => {
     return (
         <section className='bg-orange px-4 pt-10 pb-20'>
-            <h1 className='text-white block mb-6 w-[324px] ml-auto xl:hidden'>TGTF in <br /><span className='font-bold'>frames</span></h1>
+            <h1 className='text-white block mb-6 w-[324px] mx-auto sm:hidden'>TGTF in <br /><span className='font-bold'>frames</span></h1>
 
-            <div className='xl:hidden grid grid-cols-2 mx-auto justify-items-center w-[324px]'>
+            <div className='sm:hidden grid grid-cols-2 mx-auto justify-items-center w-[324px]'>
                 <div className="w-[154px] h-[217px] overflow-hidden">
                     <Image src={Frame1.src} width={154} height={217} alt="Frame 1" className="w-full h-full object-cover rounded-md" />
                 </div>
@@ -37,11 +37,11 @@ const Frames = () => {
                 </div>
             </div>
 
-            <section className='hidden xl:flex flex-col items-center '>
+            <section className='hidden sm:flex flex-col items-center '>
 
                 <h1 className='text-white mb-6'>TGTF in <span className='font-bold'>frames</span></h1>
 
-                <div className="hidden xl:flex">
+                <div className="hidden sm:flex">
 
                     {/* LEFT BIG IMAGE */}
                     <div className="relative group mr-3">

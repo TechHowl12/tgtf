@@ -67,13 +67,13 @@ const ExploreCarousel = () => {
     return (
         <div className="bg-white py-10">
             {/* Heading Mobile */}
-            <h1 className="text-blue xl:hidden mx-6 mb-2">Helping Indians travel <span className="font-bold">smarter, better, and farther</span></h1>
+            <h1 className="text-blue md:hidden mx-6 mb-2">Helping Indians travel <span className="font-bold">smarter, better, and farther</span></h1>
 
             {/* Heading Desktop */}
-            <h1 className="text-blue hidden xl:flex w-fit flex-col mb-2 mx-auto">Helping Indians travel<br/> <span className="font-bold">smarter, better, and farther</span></h1>
+            <h1 className="text-blue hidden md:flex w-fit flex-col mb-2 mx-auto">Helping Indians travel<br/> <span className="font-bold">smarter, better, and farther</span></h1>
 
             {/* MOBILE TABLET SWIPER */}
-            <div className="xl:hidden">
+            <div className="md:hidden">
                 <div ref={rotatediv} className="relative w-[359px] h-[500px] flex-center mx-auto overflow-hidden">
 
                     <Swiper
@@ -102,9 +102,9 @@ const ExploreCarousel = () => {
             </div>
 
             {/* DESKTOP STATIC */}
-            <div className="hidden xl:flex flex-wrap justify-center gap-6 w-full mt-10">
+            <div className="hidden md:flex flex-wrap justify-center gap-6 w-full mt-10">
                 {cards.slice(0,4).map((img,i)=>(
-                    <Image key={i} width={319} height={444} src={img.src} alt="Explore Carousel" className="rounded-xl"/>
+                    <Image key={i} width={319} height={444} src={img.src} alt="Explore Carousel" className="rounded-xl md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px] hover:scale-105 duration-300"/>
                 ))}
             </div>
 
