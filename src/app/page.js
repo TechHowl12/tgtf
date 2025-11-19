@@ -10,12 +10,13 @@ import star from "./images/star.webp"
 import ExploreCarousel from "./components/Home/ExploreCarousel";
 import PartnersCarousel from "./components/Home/PartnersCarousel";
 import PreviousPartners from "./components/Home/PreviousPartners";
-import Frames from "./components/Home/Frames";
 import Highlights from "./components/Home/Highlights";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import Button from "./components/Button";
+import InstagramFeed from "./components/InstagramFeed";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -23,6 +24,46 @@ export default function Home() {
   const logoRef = useRef(null);
   const registerRef = useRef(null);
   const starRef = useRef(null);
+
+  useEffect(() => {
+    // Run once: remove existing branding link if present
+    function removeElfsightBranding() {
+      const el = document.querySelector('a[title="Free Instagram Feed widget"], a[href*="elfsight.com/instagram-feed-instashow"], a[rel="noreferrer"]');
+      if (el) el.remove();
+    }
+
+    // try immediately (if widget already injected)
+    removeElfsightBranding();
+
+    // Observe DOM for later injection and remove on the fly
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (!m.addedNodes) continue;
+        m.addedNodes.forEach(node => {
+          try {
+            if (node.nodeType === 1) {
+              // check the node itself
+              if (node.matches && (node.matches('a[title="Free Instagram Feed widget"]') ||
+                node.matches('a[href*="elfsight.com/instagram-feed-instashow"]') ||
+                node.matches('a[rel="noreferrer"]'))) {
+                node.remove();
+              }
+              // check descendants
+              const found = node.querySelector && node.querySelector('a[title="Free Instagram Feed widget"], a[href*="elfsight.com/instagram-feed-instashow"], a[rel="noreferrer"]');
+              if (found) found.remove();
+            }
+          } catch (e) { /* ignore cross-origin or other errors */ }
+        });
+      }
+    });
+
+    // start observing the whole document
+    observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+
+    // optional: stop observing after some time to save resources
+    setTimeout(() => observer.disconnect(), 30_000);
+
+  }, []);
 
   useEffect(() => {
 
@@ -122,27 +163,17 @@ export default function Home() {
       {/* Previous Partners Section */}
       <PreviousPartners />
 
-      {/* Frames Section */}
-      <Frames />
+      {/* Instagram Section */}
+      <div className="mb-20">
+        <InstagramFeed />
+      </div>
 
       {/* Curious Section */}
       <section className="bg-blue flex justify-between xl:items-center flex-col xl:flex-row rounded-t-[20px] -mt-10 relative">
         <h1 className="text-white font-bold py-6 pl-6">Curious about us?</h1>
         <div className="bg-white w-full xl:w-1/2 rounded-t-[20px] xl:rounded-t-none xl:rounded-tl-[20px] xl:rounded-bl-[20px] flex flex-col gap-y-2 py-3 xl:py-6 xl:gap-y-4">
-          <button className="w-[95%] bg-pink text-bright py-4 mx-auto flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
-            <span>PARTNER WITH US</span>
-            <span className="arrow-wrapper transition-transform duration-300">
-              <img src={BtnArrow.src} alt="btn arrow" />
-            </span>
-          </button>
-
-          <button className="w-[95%] bg-pink text-bright py-4 mx-auto flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
-            <span>REGISTER</span>
-            <span className="arrow-wrapper transition-transform duration-300">
-              <img src={BtnArrow.src} alt="btn arrow" />
-            </span>
-          </button>
-
+          <Button text="PARTNER WITH US" />
+          <Button text="REGISTER" />
         </div>
         <Image width={36} height={50} src={HalfStar} alt="Half Star Icon" className="absolute left-0 -top-7 z-0" />
       </section>

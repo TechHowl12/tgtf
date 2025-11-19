@@ -14,6 +14,7 @@
   .bg-bright { background-color: #FFFF00; }  .text-bright { color: #FFFF00; } 
   .bg-orange { background-color: #FF7F00; }  .text-orange { color: #FF7F00; }
   .bg-pink   { background-color: #F20082; }  .text-pink   { color: #F20082; }
+  
   .flex-center {
     display: flex;
     justify-content: center;
@@ -80,9 +81,16 @@ p{
 }
 
 button:hover .arrow-wrapper {
-  transform: rotate(405deg) translateY(-1px);
+  transform: rotate(45deg) translateY(-1px);
 }
 
+.eapps-instagram-feed-title, .eapps-widget-toolbar-panel-wrapper{
+  display: none !important;
+}
+
+.eapps-instagram-feed-posts-slider-next{
+  overflow: hidden;
+}
 
 @media (min-width:768px) {
   .hero-bg {
