@@ -132,18 +132,26 @@ const Highlights = () => {
                 </div>
             </div>
 
-
             {/* DESKTOP */}
-            <div className="hidden xl:block w-[85%] mx-auto mt-10 relative">
-
-                <h1 className='text-white hidden xl:block bg-blue text-center py-3 mb-4 curve mr-auto w-[40%]'>event<span className='font-bold'> highlights</span></h1>
+            <div className="hidden xl:block w-[90%] mx-auto mt-10 relative">
+                <h1 className='text-white hidden xl:block bg-blue text-center py-3 mb-4 curve mr-auto w-[40%]'>
+                    event<span className='font-bold'> highlights</span>
+                </h1>
 
                 <Swiper
                     modules={[Navigation]}
                     loop={false}
                     speed={600}
                     slidesPerView={1}
-                    centeredSlides={true}
+                    centeredSlides={false}
+                    spaceBetween={16}
+                    breakpoints={{
+                        1280: {
+                            slidesPerView: 2,     // ⬅️ show two slides at once on desktop
+                            centeredSlides: false, // keep them left-aligned
+                            spaceBetween: 24,      // a bit more gap between the two
+                        },
+                    }}
                     navigation={{
                         prevEl: prevRefDesktop.current,
                         nextEl: nextRefDesktop.current,
@@ -163,24 +171,25 @@ const Highlights = () => {
                     className="w-full"
                 >
                     <SwiperSlide className="flex justify-center">
-                        <Image src={DHighlight1} width={1357} height={618} alt="desktop highlight 1" className="rounded-xl" />
+                        <Image src={DHighlight1} width={650} height={618} alt="desktop highlight 1" className="rounded-xl" />
                     </SwiperSlide>
-
                     <SwiperSlide className="flex justify-center">
-                        <Image src={DHighlight1} width={1357} height={618} alt="desktop highlight 2" className="rounded-xl" />
+                        <Image src={DHighlight1} width={650} height={618} alt="desktop highlight 2" className="rounded-xl" />
                     </SwiperSlide>
+                    {/* Add more SwiperSlide items as needed */}
                 </Swiper>
 
                 <div className="flex justify-between mt-6">
                     <button ref={prevRefDesktop}>
-                        <Image src={arrow} alt="Prev Arrow" width={30} height={30} className={`rotate-180 cursor-pointer ${isBeginning ? "opacity-40" : "opacity-100"}`} />
+                        <Image src={arrow} alt="Prev Arrow" width={30} height={30}
+                            className={`rotate-180 cursor-pointer ${isBeginning ? "opacity-40" : "opacity-100"}`} />
                     </button>
                     <button ref={nextRefDesktop}>
-                        <Image src={arrow} alt="Next Arrow" width={30} height={30} className={`cursor-pointer ${isEnd ? "opacity-40" : "opacity-100"}`} />
+                        <Image src={arrow} alt="Next Arrow" width={30} height={30}
+                            className={`cursor-pointer ${isEnd ? "opacity-40" : "opacity-100"}`} />
                     </button>
                 </div>
             </div>
-
         </div>
     )
 }
