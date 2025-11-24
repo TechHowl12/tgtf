@@ -126,7 +126,7 @@ export default function Home() {
           </div>
           <div className="w-52 md:w-[700px] relative">
             <h1 className="text-bright relative top-[100px] md:top-[30px] lg:top-24 xl:top-[180px] z-20">A Destination that’ll <span className="font-bold">start your next journey.</span></h1>
-            <Image ref={starRef} width={31} height={31} src={star} alt="Star Icon" className="absolute right-8 bottom-6 z-0" />
+            <Image ref={starRef} width={31} height={31} src={star} alt="Star Icon" className="absolute right-8 xl:right-32 xl:bottom-4 xl:w-12 xl:h-12 bottom-6 z-0" />
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@ export default function Home() {
           </p>
         </div>
         <button className="w-[95%] lg:w-[40%] bg-pink text-bright py-4 mx-auto lg:ml-[248px] xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
-          <span>LEARN MORE</span>
+          <span>REGISTER</span>
           <span className="arrow-wrapper transition-transform duration-300">
             <img src={BtnArrow.src} alt="btn arrow" />
           </span>

@@ -8,9 +8,9 @@ import JioLogo from "../images/jio-logo.png";
 const navLinks = [
   { label: "HOME", href: "/" },
   { label: "ABOUT US", href: "/about" },
-  { label: "COLLECTIVE", href: "/collective" },
   { label: "PARTNERS", href: "/partners" },
   { label: "PROGRAMMING", href: "/programming" },
+  { label: "CONTACT US", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -47,7 +47,7 @@ const Navbar = () => {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`transition-colors duration-200 ${
+                  className={`transition-colors duration-200 font-semibold ${
                     isActive(link.href) ? "text-bright" : "text-white"
                   }`}
                 >
@@ -68,12 +68,12 @@ const Navbar = () => {
             {open ? (
               // X icon
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M6 6l12 12M18 6l-12 12" stroke="#FFFF00" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             ) : (
               // Hamburger icon
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="#FFFF00" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             )}
           </button>
@@ -105,7 +105,7 @@ const Navbar = () => {
                 <Link
                   href={link.href}
                   onClick={closeMenu}
-                  className={`block py-2 text-base ${
+                  className={`block py-2 font-semibold ${
                     isActive(link.href) ? "text-bright" : "text-white"
                   }`}
                 >
@@ -128,7 +128,7 @@ const Navbar = () => {
       </header>
 
       {/* MARQUEE (DRY) */}
-      <div className="overflow-hidden whitespace-nowrap bg-white text-blue py-3">
+      <div className="overflow-hidden whitespace-nowrap bg-white text-blue py-1">
         {[0, 1].map((i) => (
           <div key={i} className="marquee" aria-hidden={i === 1}>
             {marqueeText}

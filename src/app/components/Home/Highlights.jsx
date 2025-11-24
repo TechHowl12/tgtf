@@ -2,29 +2,23 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import arrow from "../../images/next-arrow.png"
-import highlight1 from "../../images/highlight-1.webp"
-import highlight2 from "../../images/highlight-2.webp"
-import DHighlight1 from "../../images/d-highlight-1.webp"
+import Image from "next/image";
+import { events } from "../Home/Event";
+import arrow from "../../images/next-arrow.png";
 import Star2 from "../../images/star.svg";
 import Shine from "../../images/shine.svg";
 import Dots from "../../images/four-dots.svg";
 import Flower from "../../images/flower.svg";
-import Image from "next/image";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Highlights = () => {
-
-    // separate refs now
     const prevRefMobile = useRef(null);
     const nextRefMobile = useRef(null);
-
     const prevRefDesktop = useRef(null);
     const nextRefDesktop = useRef(null);
 
@@ -32,13 +26,10 @@ const Highlights = () => {
     const shineRef = useRef(null);
     const dotsRef = useRef(null);
     const flowerRef = useRef(null);
-
     const containerRef = useRef(null);
 
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
-
-    const events = [highlight1, highlight2];
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -50,7 +41,7 @@ const Highlights = () => {
                     start: "top bottom",
                     end: "bottom top",
                     scrub: true,
-                }
+                },
             });
 
             gsap.to([dotsRef.current, flowerRef.current], {
@@ -61,7 +52,7 @@ const Highlights = () => {
                     start: "top bottom",
                     end: "bottom top",
                     scrub: true,
-                }
+                },
             });
         });
 
@@ -70,11 +61,13 @@ const Highlights = () => {
 
     return (
         <div ref={containerRef} className="bg-[#d9d9d964] py-4">
-            <h1 className='text-white xl:hidden bg-blue text-center py-3 curve mx-auto w-[80%]'>event<span className='font-bold'> highlights</span></h1>
+            {/* MOBILE HEADING */}
+            <h1 className="text-white md:hidden bg-blue text-center py-3 curve mx-auto w-[80%]">
+                event<span className="font-bold"> highlights</span>
+            </h1>
 
-            {/* MOBILE + TABLET */}
-            <div className="mx-auto mt-10 xl:hidden">
-
+            {/* MOBILE / TABLET */}
+            <div className="mx-auto mt-10 md:hidden">
                 <div className="mx-auto relative w-[280px] pointer-events-none">
                     <Image ref={starRef} src={Star2} alt="Star Icon" className="absolute -top-8 -right-10 will-change-transform" />
                     <Image ref={shineRef} src={Shine} alt="Shine Icon" className="absolute -top-8 -left-10 will-change-transform" />
@@ -88,7 +81,6 @@ const Highlights = () => {
                     speed={600}
                     slidesPerView={"auto"}
                     centeredSlides={true}
-                    centerInsufficientSlides={true}
                     navigation={{
                         prevEl: prevRefMobile.current,
                         nextEl: nextRefMobile.current,
@@ -107,21 +99,29 @@ const Highlights = () => {
                     }}
                     className="w-full px-8"
                 >
-                    {events.map((logo, i) => (
-                        <SwiperSlide key={i} className="!w-[280px] mr-2">
-                            <div className="flex-center w-full">
+                    {events.map((ev) => (
+                        <SwiperSlide key={ev.id} className="!w-[280px] mr-2">
+                            <div className="flex-center flex-col w-full">
                                 <Image
                                     width={280}
                                     height={443}
-                                    src={logo.src}
-                                    alt="partner logo"
-                                    className="object-contain"
+                                    src={ev.mobileImg}
+                                    alt={ev.title}
+                                    className="object-cover w-[280px] h-[330px] curve"
                                 />
+                                <div className="bg-darkgrey mx-auto w-full mt-6 curve py-3 px-2 h-44 flex flex-col justify-around">
+                                    <div>
+                                        <small className="text-blue font-semibold block leading-5">{ev.title}</small>
+                                        <small className="tracking-wider block mt-1">{ev.tag}</small>
+                                    </div>
+                                    <p className="mt-2">{ev.byline}</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
 
+                {/* MOBILE NAV */}
                 <div className="flex w-[300px] mt-4 mx-auto justify-between">
                     <button ref={prevRefMobile} className="cursor-pointer">
                         <Image src={arrow} alt="Prev Arrow" width={26} height={26} className={`rotate-180 ${isBeginning ? "opacity-40" : "opacity-100"}`} />
@@ -133,9 +133,9 @@ const Highlights = () => {
             </div>
 
             {/* DESKTOP */}
-            <div className="hidden xl:block w-[90%] mx-auto mt-10 relative">
-                <h1 className='text-white hidden xl:block bg-blue text-center py-3 mb-4 curve mr-auto w-[40%]'>
-                    event<span className='font-bold'> highlights</span>
+            <div className="hidden md:block mx-28 xl:mx-20 2xl:mx-32 mt-10 relative">
+                <h1 className="text-white hidden md:block bg-blue text-center py-3 mb-6 curve mr-auto md:w-[62%] xl:w-[40%]">
+                    event<span className="font-bold"> highlights</span>
                 </h1>
 
                 <Swiper
@@ -143,14 +143,10 @@ const Highlights = () => {
                     loop={false}
                     speed={600}
                     slidesPerView={1}
-                    centeredSlides={false}
                     spaceBetween={16}
                     breakpoints={{
-                        1280: {
-                            slidesPerView: 2,     // ⬅️ show two slides at once on desktop
-                            centeredSlides: false, // keep them left-aligned
-                            spaceBetween: 24,      // a bit more gap between the two
-                        },
+                        768: { slidesPerView: 1, spaceBetween: 1 },
+                        1280: { slidesPerView: 2, spaceBetween: 30 },
                     }}
                     navigation={{
                         prevEl: prevRefDesktop.current,
@@ -168,30 +164,42 @@ const Highlights = () => {
                         setIsBeginning(swiper.isBeginning);
                         setIsEnd(swiper.isEnd);
                     }}
-                    className="w-full"
+                    className="w-full flex justify-center"
                 >
-                    <SwiperSlide className="flex justify-center">
-                        <Image src={DHighlight1} width={650} height={618} alt="desktop highlight 1" className="rounded-xl" />
-                    </SwiperSlide>
-                    <SwiperSlide className="flex justify-center">
-                        <Image src={DHighlight1} width={650} height={618} alt="desktop highlight 2" className="rounded-xl" />
-                    </SwiperSlide>
-                    {/* Add more SwiperSlide items as needed */}
+                    {events.map((ev) => (
+                        <SwiperSlide key={`desktop-${ev.id}`}>
+                            <Image
+                                src={ev.desktopImg || ev.mobileImg}
+                                width={665}
+                                height={618}
+                                alt={ev.title}
+                                className="rounded-xl mx-auto w-full xl:max-w-[665px] h-[550px] object-cover"
+                            />
+                            <div className="bg-darkgrey mx-auto w-full xl:max-w-[665px] mt-6 curve py-6 px-8 flex justify-between gap-x-4 h-40 items-center">
+                                <div className="w-2/6">
+                                    <small className="text-blue font-semibold text-lg block leading-5">
+                                        {ev.title}
+                                    </small>
+                                    <small className="tracking-wider block mt-3">{ev.tag}</small>
+                                </div>
+                                <p className="w-4/6">{ev.byline}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
 
-                <div className="flex justify-between mt-6">
+                {/* DESKTOP NAV */}
+                <div className="flex justify-between mt-6 xl:mx-6">
                     <button ref={prevRefDesktop}>
-                        <Image src={arrow} alt="Prev Arrow" width={30} height={30}
-                            className={`rotate-180 cursor-pointer ${isBeginning ? "opacity-40" : "opacity-100"}`} />
+                        <Image src={arrow} alt="Prev Arrow" width={30} height={30} className={`rotate-180 cursor-pointer ${isBeginning ? "opacity-40" : "opacity-100"}`} />
                     </button>
                     <button ref={nextRefDesktop}>
-                        <Image src={arrow} alt="Next Arrow" width={30} height={30}
-                            className={`cursor-pointer ${isEnd ? "opacity-40" : "opacity-100"}`} />
+                        <Image src={arrow} alt="Next Arrow" width={30} height={30} className={`cursor-pointer ${isEnd ? "opacity-40" : "opacity-100"}`} />
                     </button>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Highlights;
