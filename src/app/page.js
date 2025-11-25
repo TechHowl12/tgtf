@@ -165,7 +165,7 @@ export default function Home() {
 
       {/* Instagram Section */}
       <div className="mb-20">
-        <InstagramFeed />
+        {/* <InstagramFeed /> */}
       </div>
 
       {/* Curious Section */}

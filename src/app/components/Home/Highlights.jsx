@@ -173,9 +173,9 @@ const Highlights = () => {
                                 width={665}
                                 height={618}
                                 alt={ev.title}
-                                className="rounded-xl mx-auto w-full xl:max-w-[665px] h-[550px] object-cover"
+                                className="rounded-xl w-full xl:max-w-[665px] h-[550px] object-cover"
                             />
-                            <div className="bg-darkgrey mx-auto w-full xl:max-w-[665px] mt-6 curve py-6 px-8 flex justify-between gap-x-4 h-40 items-center">
+                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-8 flex justify-between gap-x-4 h-40 items-center">
                                 <div className="w-2/6">
                                     <small className="text-blue font-semibold text-lg block leading-5">
                                         {ev.title}

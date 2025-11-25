@@ -102,7 +102,7 @@ const ExploreCarousel = () => {
             </div>
 
             {/* DESKTOP STATIC */}
-            <div className="hidden md:flex flex-wrap justify-center gap-6 w-full mt-10">
+            <div className="hidden md:flex flex-wrap justify-center gap-10 w-full mt-10">
                 {cards.slice(0,4).map((img,i)=>(
                     <Image key={i} width={319} height={444} src={img.src} alt="Explore Carousel" className="rounded-xl md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px] hover:scale-105 duration-300"/>
                 ))}
