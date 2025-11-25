@@ -90,7 +90,7 @@ const Navbar = () => {
         {/* Mobile Menu Panel */}
         <div
           id="mobile-menu"
-          className={`md:hidden overflow-hidden transition-[max-height] duration-300 bg-[#242424] ${
+          className={`md:hidden overflow-hidden transition-[max-height] duration-300 bg-[#242424] z-50 relative ${
             open ? "max-h-96" : "max-h-0"
           }`}
         >
@@ -116,7 +116,7 @@ const Navbar = () => {
           <button
             aria-hidden
             tabIndex={-1}
-            className="fixed inset-0 bg-black/10 md:hidden"
+            className="fixed inset-0 bg-black/10 md:hidden z-40"
             onClick={closeMenu}
           />
         )}
