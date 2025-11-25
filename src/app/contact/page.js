@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "../../app/components/Contact/ContactForm";
-import FaqList from "../../app/components/Contact/faqlist";
+import FaqList from "../../app/components/Contact/FaqList";
 import Image from "next/image";
 import HalfStar from "../images/half-star.png";
 import Shine from "../images/shine.svg";

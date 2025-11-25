@@ -8,8 +8,8 @@ import JioLogo from "../images/jio-logo.png";
 const navLinks = [
   { label: "HOME", href: "/" },
   { label: "ABOUT US", href: "/about" },
-  { label: "PARTNERS", href: "/partners" },
-  { label: "PROGRAMMING", href: "/programming" },
+  // { label: "PARTNERS", href: "/partners" },
+  // { label: "PROGRAMMING", href: "/programming" },
   { label: "CONTACT US", href: "/contact" },
 ];
 
