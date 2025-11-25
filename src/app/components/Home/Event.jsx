@@ -5,7 +5,6 @@ import Event3 from "../../images/event-3.webp";
 import Event4 from "../../images/event-4.webp";
 import Event5 from "../../images/event-5.webp";
 import Event6 from "../../images/event-6.webp";
-import Event7 from "../../images/event-7.jpg";
 import Event8 from "../../images/event-8.webp";
 import Event9 from "../../images/event-9.webp";
 
