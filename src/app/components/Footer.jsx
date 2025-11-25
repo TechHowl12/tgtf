@@ -12,13 +12,13 @@ import Link from 'next/link';
 const Footer = () => {
 
     const socialLinks = [
-        { icon: Threads, url: "https://www.threads.net" },
-        { icon: Instagram, url: "https://www.instagram.com" },
-        { icon: Facebook, url: "https://www.facebook.com" },
-        { icon: X, url: "https://www.twitter.com" },
-        { icon: Youtube, url: "https://www.youtube.com" },
-        { icon: Whatsapp, url: "https://www.whatsapp.com" },
-        { icon: Linkedin, url: "https://www.linkedin.com" },
+        { icon: Threads, url: "https://www.threads.com/@thegypsytravelfestival" },
+        { icon: Instagram, url: "https://www.instagram.com/thegypsytravelfestival" },
+        { icon: Facebook, url: "https://www.facebook.com/gypsytravelnetwork" },
+        { icon: X, url: "https://x.com/TGTF__" },
+        { icon: Youtube, url: "https://www.youtube.com/@TheGypsyTravelFestival" },
+        { icon: Whatsapp, url: "https://wa.me/918657511329" },
+        { icon: Linkedin, url: "https://www.linkedin.com/company/thegypsytravelfestival/" },
     ];
 
     return (

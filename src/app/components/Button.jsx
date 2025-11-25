@@ -4,7 +4,7 @@ import BtnArrow from "../images/btn-arrow.png";
 
 export default function Button({
   text = "CLICK ME",
-  widthClass = "w-[95%]", // you pass width as a tailwind string
+  widthClass = "w-[95%]",
   onClick = () => {},
   className = "",
 }) {

@@ -17,7 +17,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // lock body scroll when menu is open (nice touch)
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => (document.body.style.overflow = "");
@@ -57,7 +56,6 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Left: Mobile Hamburger */}
           <button
             className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-white outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/40"
             aria-label="Open menu"
@@ -66,19 +64,16 @@ const Navbar = () => {
             onClick={() => setOpen((v) => !v)}
           >
             {open ? (
-              // X icon
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
                 <path d="M6 6l12 12M18 6l-12 12" stroke="#FFFF00" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             ) : (
-              // Hamburger icon
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
                 <path d="M3 6h18M3 12h18M3 18h18" stroke="#FFFF00" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             )}
           </button>
 
-          {/* Right: Date + Logo */}
           <div className="flex items-center gap-x-6">
             <p className="text-bright font-bold date">7th &amp; 8th feb 2026</p>
             <Image

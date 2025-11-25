@@ -1,9 +1,10 @@
 import React from 'react';
 import bannerMobile from "../images/banner-mobile.webp"
 import bannerDesktop from "../images/banner-desktop.webp"
-import Frames from '../components/Home/Frames';
+import Collective from '../components/About/Collective';
 
 const page = () => {
+
     return (
         <main>
 
@@ -19,7 +20,7 @@ const page = () => {
 
             <section className='bg-white pb-10 xl:pb-14'>
                 <div className='bg-pink w-full h-7'></div>
-                <div className='px-6 xl:px-14 flex flex-col lg:flex-row items-center'>
+                <div className='px-6 xl:px-14'>
                     <div>
                         <h1 className='text-blue mt-8 xl:mt-14 mb-3'><span className='font-bold'>Story</span> Behind TGTF</h1>
                         <p className='w-full xl:w-10/12'>
@@ -28,8 +29,8 @@ const page = () => {
                             That is why The Gypsy Travel Festival was born. By travellers, for travellers.
                         </p>
                     </div>
-                    <div>
-                        <div className="relative mt-8 xl:mt-14 isolate">
+                    <div className='lg:flex items-center gap-x-20'>
+                        <div className="relative mt-8 isolate">
                             {/* offset layer behind */}
                             <div
                                 className="absolute inset-0 translate-x-1 translate-y-1 rounded-2xl bg-[#670BA6] -z-10"
@@ -68,6 +69,7 @@ const page = () => {
 
                 </div>
             </section>
+            <Collective/>
 
         </main>
     )

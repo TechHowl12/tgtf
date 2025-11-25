@@ -11,12 +11,12 @@ import ExploreCarousel from "./components/Home/ExploreCarousel";
 import PartnersCarousel from "./components/Home/PartnersCarousel";
 import PreviousPartners from "./components/Home/PreviousPartners";
 import Highlights from "./components/Home/Highlights";
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import Button from "./components/Button";
 import InstagramFeed from "./components/InstagramFeed";
+import { useRouter } from "next/navigation";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -24,6 +24,7 @@ export default function Home() {
   const logoRef = useRef(null);
   const registerRef = useRef(null);
   const starRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     // Run once: remove existing branding link if present
@@ -165,15 +166,15 @@ export default function Home() {
 
       {/* Instagram Section */}
       <div className="mb-20">
-        {/* <InstagramFeed /> */}
+        <InstagramFeed />
       </div>
 
       {/* Curious Section */}
       <section className="bg-blue flex justify-between xl:items-center flex-col xl:flex-row rounded-t-[20px] -mt-10 relative">
         <h1 className="text-white font-bold py-6 pl-6">Curious about us?</h1>
         <div className="bg-white w-full xl:w-1/2 rounded-t-[20px] xl:rounded-t-none xl:rounded-tl-[20px] xl:rounded-bl-[20px] flex flex-col gap-y-2 py-3 xl:py-6 xl:gap-y-4">
-          <Button text="PARTNER WITH US" />
-          <Button text="REGISTER" />
+          <Button onClick={() => router.push("/contact")} text="PARTNER WITH US" />
+          <Button onClick={() => router.push("/contact")} text="REGISTER" />
         </div>
         <Image width={36} height={50} src={HalfStar} alt="Half Star Icon" className="absolute left-0 -top-7 z-0" />
       </section>
