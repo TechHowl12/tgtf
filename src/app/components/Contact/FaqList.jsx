@@ -6,7 +6,7 @@ export default function FaqList() {
   const [openIndex, setOpenIndex] = useState(0); // default open first
 
   return (
-    <section className=" w-full px-5 py-8 md:py-20 md:max-w-5/6 mx-auto">
+    <section className=" w-full px-5 py-8 md:py-20 md:max-w-[1550px] md:px-12 mx-auto">
       <h1 className="text-pink text-2xl mb-4">
         frequently asked <span className="font-bold">questions</span>
       </h1>

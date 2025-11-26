@@ -36,7 +36,7 @@ export default function Collective() {
         </div>
 
         <p className="text-white mb-4 text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed">
-          In February of 2025, we brought the trailblazers of the travel industry under one roof and further ignited India’s appetite for travel.
+          In 2025, we brought the trailblazers of the travel industry under one roof and further ignited India’s appetite for travel.
         </p>
 
         <p className="text-white mb-6 text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed">

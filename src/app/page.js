@@ -136,12 +136,12 @@ export default function Home() {
       <section ref={registerRef} className="bg-blue relative w-full pb-3 xl:pb-6 z-10">
         <div className="w-full mx-auto pr-4 md:pr-0 py-7">
           <p className="text-white w-52 md:w-auto ml-auto md:ml-52 lg:ml-[248px] xl:ml-[376px] pr-10">
-            <span className="font-bold">The Gypsy Travel Festival</span> is a collective comprising some of the most celebrated and underrated global experiences, cuisines, and cultures. An ever expanding community of like-minded explorers and enthusiasts.<br /><br />
-            Whether you are a seasoned traveller or just catching the travel bug, we’ve got everything you need to go on your next epic journey.
+            <span className="font-bold">The Gypsy Travel Festival</span> is a collective of global-iconic and undiscovered experiences, cuisines, and cultures - powered by a community of explorers who share an insatiable love for discovery.<br /><br />
+            Whether you are a seasoned traveller or just catching the travel bug, we’ve got everything you need to go on your next epic journey. 
           </p>
         </div>
         <button className="w-[95%] lg:w-[40%] bg-pink text-bright py-4 mx-auto lg:ml-[248px] xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
-          <span>REGISTER</span>
+          <span>BOOK YOUR TICKETS</span>
           <span className="arrow-wrapper transition-transform duration-300">
             <img src={BtnArrow.src} alt="btn arrow" />
           </span>

@@ -126,14 +126,14 @@ export default function ContactForm() {
         <>
             {/* Success Popup */}
             {showSuccess && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+                <div className="fixed inset-0 z-9999 flex items-center justify-center px-4">
                     {/* backdrop */}
                     <div
                         className="absolute inset-0 bg-black/30"
                         onClick={() => setShowSuccess(false)}
                     />
                     {/* modal */}
-                    <div className="relative z-10 w-full max-w-sm rounded-2xl bg-gray-100 p-6 shadow-xl border border-pink/30">
+                    <div className="relative w-full max-w-sm rounded-2xl bg-gray-100 p-6 shadow-xl border border-pink/30">
                         <h3 className="text-pink font-extrabold text-base mb-2">
                             Submitted successfully!
                         </h3>
@@ -151,7 +151,7 @@ export default function ContactForm() {
                 </div>
             )}
 
-            <form onSubmit={onSubmit} className="space-y-6 text-sm z-30">
+            <form onSubmit={onSubmit} className="space-y-6 text-sm z-9999">
                 {/* Name */}
                 <div>
                     <label className="text-pink text-xs">Name</label>

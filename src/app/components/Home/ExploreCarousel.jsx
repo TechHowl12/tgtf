@@ -30,25 +30,25 @@ const ExploreCarousel = () => {
             img: DExplore,
             tagText: "EXPLORE",
             tagBg: "bg-pink",
-            desc: "some of the most sought after travel destinations, cultural, and cuisines from around the world.",
+            desc: "Discover the world’s most sought-after destinations, hidden cultural gems, and global cuisines.",
         },
         {
             img: DEngage,
             tagText: "ENGAGE",
             tagBg: "bg-blue",
-            desc: "with like-minded travellers and experts for information and inspiration you won’t find anywhere else. ",
+            desc: "Connect with fellow travellers and top travel experts for stories, insights, and inspiration you won’t find anywhere else.",
         },
         {
             img: DPlan,
             tagText: "PLAN",
             tagBg: "bg-orange",
-            desc: "to turn your ideas into itineraries with help from the country’s best travel planners.",
+            desc: "Turn your travel dreams into real itineraries with help from leading travel planners - whether you know the destination or just the vibe.",
         },
         {
             img: DBook,
             tagText: "BOOK",
             tagBg: "bg-red",
-            desc: "and seal your next travel experience with exclusive offers and unbeatable value.",
+            desc: "Lock in your next adventure with exclusive deals and unmatched value - from flights and stays to once-in-a-lifetime experiences.",
         },
     ];
 
@@ -97,10 +97,10 @@ const ExploreCarousel = () => {
     return (
         <div className="bg-white py-10">
             {/* Heading Mobile */}
-            <h1 className="text-blue md:hidden mx-6 mb-2">Helping Indians travel <span className="font-bold">smarter, better, and farther</span></h1>
+            <h1 className="text-blue md:hidden mx-6 mb-2 font-bold">travel smarter, better, and farther</h1>
 
             {/* Heading Desktop */}
-            <h1 className="text-blue hidden md:flex w-fit flex-col mb-2 mx-auto">Helping Indians travel<br /> <span className="font-bold">smarter, better, and farther</span></h1>
+            <h1 className="text-blue hidden md:flex w-fit flex-col mb-2 mx-auto font-bold">travel smarter,<br /> better, and farther</h1>
 
             {/* MOBILE TABLET SWIPER */}
             <div className="md:hidden">
@@ -142,7 +142,7 @@ const ExploreCarousel = () => {
                             alt={card.tagText}
                             className="rounded-xl md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px]"
                         />
-                        <div className="absolute bottom-4 left-3 h-20 max-w-[85%]">
+                        <div className="absolute bottom-4 left-3 h-24 max-w-[85%]">
                             <small
                                 className={`${card.tagBg} text-lg font-bold text-white px-2 py-0.5 rounded-xs`}
                             >

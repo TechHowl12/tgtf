@@ -74,12 +74,12 @@ const PartnersCarousel = () => {
       <h1 className="text-pink absolute top-6 xl:top-5 text-center left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
         Featured <span className="font-bold">partners</span>
       </h1>
-      <a
+      {/* <a
         className="absolute bottom-4 sm:bottom-8 xl:bottom-7 left-1/2 -translate-x-1/2 bg-pink text-white rounded-xs py-0 uppercase px-2 z-20"
         href="/"
       >
         see more
-      </a>
+      </a> */}
 
       <Swiper
         modules={[Navigation]}
