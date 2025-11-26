@@ -247,7 +247,7 @@ const Highlights = () => {
                                 alt={ev.title}
                                 className="rounded-xl w-full xl:max-w-[665px] h-[550px] object-cover"
                             />
-                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-6 flex justify-between gap-x-4 h-36 items-start">
+                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-5 flex justify-between gap-x-4 h-36 items-start">
                                 <div className="w-2/6">
                                     <small className="text-blue font-semibold text-lg block leading-5">
                                         {ev.title}
@@ -279,7 +279,7 @@ const Highlights = () => {
 
                 <button
                     ref={nextRefDesktop}
-                    className="hidden md:flex absolute md:-right-14 2xl:-right-4 top-1/2 -translate-y-1/2 z-30"
+                    className="hidden md:flex absolute md:-right-14 2xl:-right-14 top-1/2 -translate-y-1/2 z-30"
                 >
                     <Image
                         src={arrow}
