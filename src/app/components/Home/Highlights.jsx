@@ -31,6 +31,9 @@ const Highlights = () => {
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
 
+    const [mobileSwiper, setMobileSwiper] = useState(null);
+    const [desktopSwiper, setDesktopSwiper] = useState(null);
+
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.to([starRef.current, shineRef.current], {
@@ -59,6 +62,36 @@ const Highlights = () => {
         return () => ctx.revert();
     }, []);
 
+    // Attach navigation to MOBILE swiper once refs are ready
+    useEffect(() => {
+        if (
+            mobileSwiper &&
+            prevRefMobile.current &&
+            nextRefMobile.current
+        ) {
+            mobileSwiper.params.navigation.prevEl = prevRefMobile.current;
+            mobileSwiper.params.navigation.nextEl = nextRefMobile.current;
+
+            mobileSwiper.navigation.init();
+            mobileSwiper.navigation.update();
+        }
+    }, [mobileSwiper]);
+
+    // Attach navigation to DESKTOP swiper once refs are ready
+    useEffect(() => {
+        if (
+            desktopSwiper &&
+            prevRefDesktop.current &&
+            nextRefDesktop.current
+        ) {
+            desktopSwiper.params.navigation.prevEl = prevRefDesktop.current;
+            desktopSwiper.params.navigation.nextEl = nextRefDesktop.current;
+
+            desktopSwiper.navigation.init();
+            desktopSwiper.navigation.update();
+        }
+    }, [desktopSwiper]);
+
     return (
         <div ref={containerRef} className="bg-[#d9d9d964] py-4">
             {/* MOBILE HEADING */}
@@ -69,10 +102,30 @@ const Highlights = () => {
             {/* MOBILE / TABLET */}
             <div className="mx-auto mt-10 md:hidden">
                 <div className="mx-auto relative w-[280px] pointer-events-none">
-                    <Image ref={starRef} src={Star2} alt="Star Icon" className="absolute -top-8 -right-10 will-change-transform" />
-                    <Image ref={shineRef} src={Shine} alt="Shine Icon" className="absolute -top-8 -left-10 will-change-transform" />
-                    <Image ref={dotsRef} src={Dots} alt="Dots Icon" className="absolute top-80 -right-4 will-change-transform" />
-                    <Image ref={flowerRef} src={Flower} alt="Flower Icon" className="absolute top-60 -left-13 will-change-transform" />
+                    <Image
+                        ref={starRef}
+                        src={Star2}
+                        alt="Star Icon"
+                        className="absolute -top-8 -right-10 will-change-transform"
+                    />
+                    <Image
+                        ref={shineRef}
+                        src={Shine}
+                        alt="Shine Icon"
+                        className="absolute -top-8 -left-10 will-change-transform"
+                    />
+                    <Image
+                        ref={dotsRef}
+                        src={Dots}
+                        alt="Dots Icon"
+                        className="absolute top-80 -right-4 will-change-transform"
+                    />
+                    <Image
+                        ref={flowerRef}
+                        src={Flower}
+                        alt="Flower Icon"
+                        className="absolute top-60 -left-13 will-change-transform"
+                    />
                 </div>
 
                 <Swiper
@@ -90,6 +143,7 @@ const Highlights = () => {
                         swiper.params.navigation.nextEl = nextRefMobile.current;
                     }}
                     onSwiper={(swiper) => {
+                        setMobileSwiper(swiper);
                         setIsBeginning(swiper.isBeginning);
                         setIsEnd(swiper.isEnd);
                     }}
@@ -111,8 +165,12 @@ const Highlights = () => {
                                 />
                                 <div className="bg-darkgrey mx-auto w-full mt-6 curve py-3 px-2 h-44 flex flex-col justify-around">
                                     <div>
-                                        <small className="text-blue font-semibold block leading-5">{ev.title}</small>
-                                        <small className="tracking-wider block mt-1">{ev.tag}</small>
+                                        <small className="text-blue font-semibold block leading-5">
+                                            {ev.title}
+                                        </small>
+                                        <small className="tracking-wider block mt-1">
+                                            {ev.tag}
+                                        </small>
                                     </div>
                                     <p className="mt-2">{ev.byline}</p>
                                 </div>
@@ -124,10 +182,23 @@ const Highlights = () => {
                 {/* MOBILE NAV */}
                 <div className="flex w-[300px] mt-4 mx-auto justify-between">
                     <button ref={prevRefMobile} className="cursor-pointer">
-                        <Image src={arrow} alt="Prev Arrow" width={26} height={26} className={`rotate-180 ${isBeginning ? "opacity-40" : "opacity-100"}`} />
+                        <Image
+                            src={arrow}
+                            alt="Prev Arrow"
+                            width={26}
+                            height={26}
+                            className={`rotate-180 ${isBeginning ? "opacity-40" : "opacity-100"
+                                }`}
+                        />
                     </button>
                     <button ref={nextRefMobile} className="cursor-pointer">
-                        <Image src={arrow} alt="Next Arrow" width={26} height={26} className={`${isEnd ? "opacity-40" : "opacity-100"}`} />
+                        <Image
+                            src={arrow}
+                            alt="Next Arrow"
+                            width={26}
+                            height={26}
+                            className={`${isEnd ? "opacity-40" : "opacity-100"}`}
+                        />
                     </button>
                 </div>
             </div>
@@ -157,6 +228,7 @@ const Highlights = () => {
                         swiper.params.navigation.nextEl = nextRefDesktop.current;
                     }}
                     onSwiper={(swiper) => {
+                        setDesktopSwiper(swiper);
                         setIsBeginning(swiper.isBeginning);
                         setIsEnd(swiper.isEnd);
                     }}
@@ -175,12 +247,14 @@ const Highlights = () => {
                                 alt={ev.title}
                                 className="rounded-xl w-full xl:max-w-[665px] h-[550px] object-cover"
                             />
-                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-8 flex justify-between gap-x-4 h-40 items-center">
+                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-8 flex justify-between gap-x-4 h-36 items-start">
                                 <div className="w-2/6">
                                     <small className="text-blue font-semibold text-lg block leading-5">
                                         {ev.title}
                                     </small>
-                                    <small className="tracking-wider block mt-3">{ev.tag}</small>
+                                    <small className="tracking-wider block mt-3">
+                                        {ev.tag}
+                                    </small>
                                 </div>
                                 <p className="w-4/6">{ev.byline}</p>
                             </div>
@@ -188,15 +262,34 @@ const Highlights = () => {
                     ))}
                 </Swiper>
 
-                {/* DESKTOP NAV */}
-                <div className="flex justify-between mt-6 xl:mx-6">
-                    <button ref={prevRefDesktop}>
-                        <Image src={arrow} alt="Prev Arrow" width={30} height={30} className={`rotate-180 cursor-pointer ${isBeginning ? "opacity-40" : "opacity-100"}`} />
-                    </button>
-                    <button ref={nextRefDesktop}>
-                        <Image src={arrow} alt="Next Arrow" width={30} height={30} className={`cursor-pointer ${isEnd ? "opacity-40" : "opacity-100"}`} />
-                    </button>
-                </div>
+                {/* DESKTOP NAV — LEFT / RIGHT */}
+                <button
+                    ref={prevRefDesktop}
+                    className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2 z-30"
+                >
+                    <Image
+                        src={arrow}
+                        alt="Prev Arrow"
+                        width={30}
+                        height={30}
+                        className={`rotate-180 cursor-pointer ${isBeginning ? "opacity-40" : "opacity-100"
+                            }`}
+                    />
+                </button>
+
+                <button
+                    ref={nextRefDesktop}
+                    className="hidden md:flex absolute md:-right-14 2xl:-right-4 top-1/2 -translate-y-1/2 z-30"
+                >
+                    <Image
+                        src={arrow}
+                        alt="Next Arrow"
+                        width={30}
+                        height={30}
+                        className={`cursor-pointer ${isEnd ? "opacity-40" : "opacity-100"
+                            }`}
+                    />
+                </button>
             </div>
         </div>
     );

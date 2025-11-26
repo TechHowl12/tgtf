@@ -9,6 +9,10 @@ import Explore from "../../images/explore.webp";
 import Engage from "../../images/engage.webp";
 import Plan from "../../images/plan.webp";
 import Book from "../../images/book.webp";
+import DExplore from "../../images/d-explore.webp";
+import DEngage from "../../images/d-engage.webp";
+import DPlan from "../../images/d-plan.webp";
+import DBook from "../../images/d-book.webp";
 import Star2 from "../../images/star.svg";
 import Shine from "../../images/shine.svg";
 import Dots from "../../images/four-dots.svg";
@@ -21,6 +25,32 @@ gsap.registerPlugin(ScrollTrigger);
 const ExploreCarousel = () => {
 
     const cards = [Explore, Engage, Plan, Book, Explore, Engage, Plan, Book];
+    const desktopCards = [
+        {
+            img: DExplore,
+            tagText: "EXPLORE",
+            tagBg: "bg-pink",
+            desc: "some of the most sought after travel destinations, cultural, and cuisines from around the world.",
+        },
+        {
+            img: DEngage,
+            tagText: "ENGAGE",
+            tagBg: "bg-blue",
+            desc: "with like-minded travellers and experts for information and inspiration you won’t find anywhere else. ",
+        },
+        {
+            img: DPlan,
+            tagText: "PLAN",
+            tagBg: "bg-orange",
+            desc: "to turn your ideas into itineraries with help from the country’s best travel planners.",
+        },
+        {
+            img: DBook,
+            tagText: "BOOK",
+            tagBg: "bg-red",
+            desc: "and seal your next travel experience with exclusive offers and unbeatable value.",
+        },
+    ];
 
     const starRef = useRef(null);
     const shineRef = useRef(null);
@@ -70,7 +100,7 @@ const ExploreCarousel = () => {
             <h1 className="text-blue md:hidden mx-6 mb-2">Helping Indians travel <span className="font-bold">smarter, better, and farther</span></h1>
 
             {/* Heading Desktop */}
-            <h1 className="text-blue hidden md:flex w-fit flex-col mb-2 mx-auto">Helping Indians travel<br/> <span className="font-bold">smarter, better, and farther</span></h1>
+            <h1 className="text-blue hidden md:flex w-fit flex-col mb-2 mx-auto">Helping Indians travel<br /> <span className="font-bold">smarter, better, and farther</span></h1>
 
             {/* MOBILE TABLET SWIPER */}
             <div className="md:hidden">
@@ -103,8 +133,26 @@ const ExploreCarousel = () => {
 
             {/* DESKTOP STATIC */}
             <div className="hidden md:flex flex-wrap justify-center gap-10 w-full mt-10">
-                {cards.slice(0,4).map((img,i)=>(
-                    <Image key={i} width={319} height={444} src={img.src} alt="Explore Carousel" className="rounded-xl md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px] hover:scale-105 duration-300"/>
+                {desktopCards.map((card, i) => (
+                    <div key={i} className="relative hover:scale-105 duration-300">
+                        <Image
+                            width={319}
+                            height={444}
+                            src={card.img.src}
+                            alt={card.tagText}
+                            className="rounded-xl md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px]"
+                        />
+                        <div className="absolute bottom-4 left-3 h-20 max-w-[85%]">
+                            <small
+                                className={`${card.tagBg} text-lg font-bold text-white px-2 py-0.5 rounded-xs`}
+                            >
+                                {card.tagText}
+                            </small>
+                            <small className="text-white mt-2 text-xs block">
+                                {card.desc}
+                            </small>
+                        </div>
+                    </div>
                 ))}
             </div>
 
