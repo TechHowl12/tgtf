@@ -30,7 +30,7 @@ const Banner = () => {
             if (!logo || !trigger) return;
 
             gsap.to(logo, {
-                y: 300,
+                y: 200,
                 ease: "none",
                 scrollTrigger: {
                     trigger,
