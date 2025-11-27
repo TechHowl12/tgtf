@@ -14,10 +14,10 @@ export const metadata = { title: "Contact Us" };
 
 export default function ContactPage() {
 
-  const googleMapsUrl = "https://www.google.com/maps/place/Jio+World+Drive/";
+  const googleMapsUrl = "https://maps.app.goo.gl/RPZ8hsfz9TPQRiNR6";
 
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center pt-[100px]">
+    <main className="min-h-screen bg-white flex flex-col items-center pt-24">
 
       <section className="relative w-full bg-no-repeat bg-top bg-cover md:pt-10 md:pb-10 lg:pt-10 lg:pb-10">
 
@@ -85,7 +85,7 @@ export default function ContactPage() {
                       style={{ objectFit: "cover" }}
                     />
                   </div>
-                    <Image width={40} height={40} src={Dots} alt="DotsIcon" className="absolute right-2 -top-10 z-0" />
+                  <Image width={40} height={40} src={Dots} alt="DotsIcon" className="absolute right-2 -top-10 z-0" />
                 </a>
               </div>
             </div>
@@ -108,7 +108,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <FaqList />
+      <section id="faq" className="scroll-mt-8">
+        <FaqList />
+      </section>
     </main>
   );
 }

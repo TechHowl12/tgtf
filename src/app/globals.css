@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
   .bg-yellow { background-color: #FAC711; }  .text-yellow { color: #FAC711; }
   .bg-green  { background-color: #6BCE83; }  .text-green  { color: #6BCE83; }
