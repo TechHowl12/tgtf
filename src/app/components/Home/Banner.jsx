@@ -93,7 +93,7 @@ const Banner = () => {
                         setTimeout(() => setShowButton(false), 500);
                     }}
                 >
-                    <source src="/mobile-banner.mov" type="video/mp4" />
+                    <source src="/mobile-banner.mp4" type="video/mp4" />
                 </video>
 
                 <button
