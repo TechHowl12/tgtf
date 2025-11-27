@@ -30,7 +30,7 @@ const Banner = () => {
             if (!logo || !trigger) return;
 
             gsap.to(logo, {
-                y: 170,
+                y: 200,
                 ease: "none",
                 scrollTrigger: {
                     trigger,
@@ -169,7 +169,7 @@ const Banner = () => {
                         height={204}
                         src={Logo}
                         alt="TGTF Logo"
-                        className="relative top-16 md:w-32 md:top-[30px] lg:top-24 xl:top-[180px] xl:w-44 xl:h-[291px]"
+                        className="relative top-12 md:w-32 md:top-[30px] lg:top-24 xl:top-[180px] xl:w-44 xl:h-[291px]"
                     />
                 </div>
 
