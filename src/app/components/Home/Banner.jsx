@@ -93,7 +93,7 @@ const Banner = () => {
                         setTimeout(() => setShowButton(false), 500);
                     }}
                 >
-                    <source src="/mobile-banner.mp4" type="video/mp4" />
+                    <source src="/mobile-banner.mov" type="video/mp4" />
                 </video>
 
                 <button
@@ -117,7 +117,6 @@ const Banner = () => {
 
             <div
                 className="hidden md:block relative w-full h-full"
-                onClick={togglePlay}
                 onMouseEnter={() => {
                     if (!isPaused) setShowButton(true);
                 }}
@@ -169,7 +168,7 @@ const Banner = () => {
                         height={204}
                         src={Logo}
                         alt="TGTF Logo"
-                        className="relative top-0 md:w-32 md:top-[30px] lg:top-24 xl:top-[180px] xl:w-44 xl:h-[291px]"
+                        className="relative top-8 md:w-32 md:top-[30px] lg:top-24 xl:top-[180px] xl:w-44 xl:h-[291px]"
                     />
                 </div>
 
