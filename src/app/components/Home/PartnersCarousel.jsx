@@ -120,7 +120,6 @@ const PartnersCarousel = () => {
           className="w-full"
         >
           {isMobile ? (
-            // MOBILE: one logo per slide
             mobileSlides.map(({ title, logo }, i) => (
               <SwiperSlide key={`${title}-${i}`}>
                 <div className="relative bg-white rounded-lg w-full h-[210px]">
@@ -135,9 +134,6 @@ const PartnersCarousel = () => {
             ))
           ) : (
             <>
-              {/* 768px–1023px: three category slides */}
-
-              {/* Destination partners */}
               <SwiperSlide>
                 <div className="relative bg-white rounded-lg w-full h-[210px] lg:h-40">
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 text-pink text-sm">
@@ -183,7 +179,6 @@ const PartnersCarousel = () => {
         </Swiper>
       </div>
 
-      {/* STATIC IMAGE: only ≥1024px */}
       <Image
         width={1280}
         height={100}

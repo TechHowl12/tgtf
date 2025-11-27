@@ -34,7 +34,7 @@ const Footer = () => {
                 <div className="text-white text-xs md:text-sm lg:text-lg grid grid-cols-4 md:grid-cols-2 gap-y-2 md:gap-x-2 lg:gap-x-4 xl:gap-x-6 place-items-center md:place-items-start">
                     <Link href="/contact" className="hover:opacity-80">Contact Us</Link>
                     <Link href="/terms.pdf" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">T&C</Link>
-                    <Link href="/contact" className="hover:opacity-80">FAQs</Link>
+                    <Link href="/contact/#faq" className="hover:opacity-80">FAQs</Link>
                     <Link href="/" className="hover:opacity-80">Privacy Policy</Link>
                 </div>
             </div>
