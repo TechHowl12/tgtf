@@ -50,7 +50,7 @@ const PartnersCarousel = () => {
   // mobile: one logo per slide with title
   const mobileSlides = [
     ...destinationPartners.map((logo) => ({ title: "Destination partners", logo })),
-    ...featuredPartners.map((logo) => ({ title: "Featured partners", logo })),
+    ...featuredPartners.map((logo) => ({ title: "Featured partner", logo })),
     ...partnerLogos.map((logo) => ({ title: "Partners", logo })),
   ];
 
@@ -151,7 +151,7 @@ const PartnersCarousel = () => {
               <SwiperSlide>
                 <div className="relative bg-white rounded-lg w-full h-[210px] lg:h-40">
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 text-pink text-sm">
-                    Featured partners
+                    Featured partner
                   </div>
                   <div className="h-full w-full flex items-center justify-center gap-10 xl:gap-20 px-4 pt-6">
                     {featuredPartners.map((logo, i) => (
