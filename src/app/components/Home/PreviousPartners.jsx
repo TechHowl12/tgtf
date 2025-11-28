@@ -79,11 +79,11 @@ const PreviousPartners = () => {
       <div className="bg-pink curve pb-2 w-[319px] md:w-[85%] mx-auto relative">
         <div className="p-8 z-20">
           <h1 className="text-white">
-            The <br />
-            <span className="font-bold">Curators</span> Of<br /> The Collective
+            the <br />
+            <span className="font-bold">curators</span> Of<br /> The collective
           </h1>
           <p className="bg-white text-pink w-[91px] xl:w-[120px] h-[18px] flex-center rounded-xs mt-3">
-            Past Partners
+            past partners
           </p>
         </div>
 

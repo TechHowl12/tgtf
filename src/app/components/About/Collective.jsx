@@ -57,7 +57,7 @@ export default function Collective() {
 
             <div className={`absolute left-2 bottom-2 lg:left-3 lg:bottom-3 px-1 py-1 rounded-md text-xs font-bold leading-tight ${c.color} shadow-md`}>
               {c.label.split('\n').map((line, i) => (
-                <h3 className="font-bold block text-lg xl:text-xl leading-4 xl:leading-5" key={i}>{line}</h3>
+                <h3 className="font-bold block text-sm md:text-lg xl:text-xl leading-4 xl:leading-5" key={i}>{line}</h3>
               ))}
             </div>
 
