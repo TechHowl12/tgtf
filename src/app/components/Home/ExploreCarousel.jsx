@@ -16,6 +16,7 @@ import DBook from "../../images/d-book.webp";
 import Star2 from "../../images/star.svg";
 import Shine from "../../images/shine.svg";
 import Dots from "../../images/four-dots.svg";
+import twoCircles from "../../images/two-circles.png";
 import Flower from "../../images/flower.svg";
 
 import { gsap } from "gsap";
@@ -100,7 +101,15 @@ const ExploreCarousel = () => {
             <h1 className="text-blue md:hidden mx-6 mb-2 font-bold">travel smarter, better, and farther</h1>
 
             {/* Heading Desktop */}
-            <h1 className="text-blue hidden md:flex w-fit flex-col mb-2 mx-auto font-bold">travel smarter,<br /> better, and farther</h1>
+            <div className="relative hidden md:flex">
+                <h1 className="text-blue hidden md:flex relative z-10 w-fit flex-col mb-2 mx-auto font-bold">travel smarter,<br /> better, and farther</h1>
+
+                <Image src={Star2} alt="Star Icon" className="absolute -bottom-4 left-[65%] z-0" />
+                <Image src={Shine} alt="Shine Icon" className="absolute top-25 right-[10%] z-0" />
+                <Image src={Dots} width={50} height={50} alt="Dots Icon" className="absolute top-17 left-1/4 z-0" />
+                <Image src={twoCircles} width={50} height={30} alt="Two Circle Icon" className="absolute -top-12 left-0 z-0" />
+                <Image src={Flower} alt="Flower Icon" className="absolute -top-14 right-[18%] z-20" />
+            </div>
 
             {/* MOBILE TABLET SWIPER */}
             <div className="md:hidden">
@@ -133,6 +142,7 @@ const ExploreCarousel = () => {
 
             {/* DESKTOP STATIC */}
             <div className="hidden md:flex flex-wrap justify-center gap-10 w-full mt-10">
+
                 {desktopCards.map((card, i) => (
                     <div key={i} className="relative hover:scale-105 duration-300">
                         <Image

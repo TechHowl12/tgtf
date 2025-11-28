@@ -75,7 +75,7 @@ const Navbar = () => {
             )}
           </button>
 
-          <div className="flex items-center gap-x-6">
+          <div className="flex items-center gap-x-4">
             <p className="text-bright font-bold date">7th &amp; 8th feb 2026</p>
             <Image
               src={JioLogo}

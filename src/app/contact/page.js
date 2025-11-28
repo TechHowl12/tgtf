@@ -14,10 +14,10 @@ export const metadata = { title: "Contact Us" };
 
 export default function ContactPage() {
 
-  const googleMapsUrl = "https://maps.app.goo.gl/tVPHc1UXY8oGszt36";
+  const googleMapsUrl = "https://maps.app.goo.gl/tMgN6oMsbAcLhiqy8";
 
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center pt-24">
+    <main className="min-h-screen bg-white flex flex-col items-center pt-24 md:pt-20">
 
       <section className="relative w-full bg-no-repeat bg-top bg-cover md:pt-10 md:pb-10 lg:pt-10 lg:pb-10">
 
@@ -92,7 +92,7 @@ export default function ContactPage() {
 
             {/* RIGHT COLUMN — FORM */}
             <div className="w-full flex relative md:justify-end">
-              <div className="relative z-10 bg-white rounded-2xl px-7 flex-center contact-form-card w-full">
+              <div className="relative z-10 bg-white rounded-2xl p-7 flex-center contact-form-card w-full">
                 <ContactForm />
               </div>
               <Image
