@@ -11,7 +11,8 @@ import Star2 from "../../images/star.svg";
 import Shine from "../../images/shine.svg";
 import Dots from "../../images/four-dots.svg";
 import Flower from "../../images/flower.svg";
-
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +34,9 @@ const Highlights = () => {
 
     const [mobileSwiper, setMobileSwiper] = useState(null);
     const [desktopSwiper, setDesktopSwiper] = useState(null);
+
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -96,7 +100,7 @@ const Highlights = () => {
         <div ref={containerRef} className="bg-[#d9d9d964] py-4">
             {/* MOBILE HEADING */}
             <h1 className="text-white md:hidden bg-blue text-center py-3 curve mx-auto w-[80%]">
-                event<span className="font-bold"> highlights</span>
+                2025<span className="font-bold"> highlights</span>
             </h1>
 
             {/* MOBILE / TABLET */}
@@ -161,7 +165,11 @@ const Highlights = () => {
                                     height={443}
                                     src={ev.mobileImg}
                                     alt={ev.title}
-                                    className="object-cover w-[280px] h-[330px] curve"
+                                    className="object-cover w-[280px] h-[330px] curve cursor-pointer"
+                                    onClick={() => {
+                                        setLightboxIndex(events.indexOf(ev));
+                                        setLightboxOpen(true);
+                                    }}
                                 />
                                 <div className="bg-darkgrey mx-auto w-full mt-6 curve py-3 px-2 h-44 flex flex-col justify-around">
                                     <div>
@@ -206,7 +214,7 @@ const Highlights = () => {
             {/* DESKTOP */}
             <div className="hidden md:block mx-28 xl:mx-20 2xl:mx-32 mt-10 relative">
                 <h1 className="text-white hidden md:block bg-blue text-center py-3 mb-6 curve mr-auto md:w-[62%] xl:w-[40%]">
-                    event<span className="font-bold"> highlights</span>
+                    2025<span className="font-bold"> highlights</span>
                 </h1>
 
                 <Swiper
@@ -245,7 +253,11 @@ const Highlights = () => {
                                 width={665}
                                 height={618}
                                 alt={ev.title}
-                                className="rounded-xl w-full xl:max-w-[665px] h-[550px] object-cover"
+                                className="rounded-xl w-full xl:max-w-[665px] h-[550px] object-cover cursor-pointer"
+                                onClick={() => {
+                                    setLightboxIndex(events.indexOf(ev));
+                                    setLightboxOpen(true);
+                                }}
                             />
                             <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-5 flex justify-between gap-x-4 min-[1280px]:h-40 min-[1300px]:h-36 items-start">
                                 <div className="w-2/6">
@@ -291,6 +303,15 @@ const Highlights = () => {
                     />
                 </button>
             </div>
+            <Lightbox
+                open={lightboxOpen}
+                close={() => setLightboxOpen(false)}
+                index={lightboxIndex}
+                slides={events.map((ev) => ({
+                    src: (ev.desktopImg?.src || ev.mobileImg?.src) || ev.desktopImg || ev.mobileImg,
+                    alt: ev.title,
+                }))}
+            />
         </div>
     );
 };

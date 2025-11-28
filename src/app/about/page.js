@@ -39,7 +39,7 @@ const page = () => {
 
                             {/* card */}
                             <div className="relative rounded-2xl border-2 border-[#670BA6] bg-white p-5">
-                                <h1 className='text-purple'>OUR <span className="font-bold">PURPOSE</span></h1>
+                                <h1 className='text-purple'>OUR <span className="font-bold">Purpose</span></h1>
                                 <p className="mt-2 text-purple">
                                     is to connect India’s travel community through experiences that inspire action.
                                     TGTF bridges the gap between inspiration and exploration.
@@ -57,7 +57,7 @@ const page = () => {
                             {/* card */}
                             <div className="relative rounded-2xl border-2 border-[#ED1C24] bg-white p-5">
                                 <h1 className="text-[#ED1C24] text-2xl tracking-wide">
-                                    OUR <span className="font-bold">VISION</span>
+                                    OUR <span className="font-bold">Vision</span>
                                 </h1>
                                 <p className="mt-2 text-[#ED1C24]">
                                     is to make TGTF India’s most trusted destination for travel experience and community building.

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import JioLogo from "../images/jio-logo.png";
+import JioLogo from "../images/jio-logo.webp";
 
 const navLinks = [
   { label: "HOME", href: "/" },
@@ -11,6 +11,7 @@ const navLinks = [
   // { label: "PARTNERS", href: "/partners" },
   // { label: "PROGRAMMING", href: "/programming" },
   { label: "CONTACT US", href: "/contact" },
+  { label: "FAQ", href: "/contact/#faq" },
 ];
 
 const Navbar = () => {
@@ -30,7 +31,7 @@ const Navbar = () => {
   const marqueeCount = 18;
   const marqueeText = Array.from({ length: marqueeCount }, (_, i) => (
     <span key={i} className="marquee-text">
-      BUY TICKETS
+      REGISTER NOW
     </span>
   ));
 
