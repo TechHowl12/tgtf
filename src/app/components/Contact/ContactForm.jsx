@@ -151,7 +151,7 @@ export default function ContactForm() {
                 </div>
             )}
 
-            <form onSubmit={onSubmit} className="space-y-6 text-sm z-9999">
+            <form onSubmit={onSubmit} className="space-y-6 text-sm z-9999 flex flex-col m-auto">
                 {/* Name */}
                 <div>
                     <label className="text-pink text-xs">Name</label>
@@ -200,7 +200,7 @@ export default function ContactForm() {
                 </div>
 
                 {/* Interest */}
-                <div>
+                {/* <div>
                     <label className="text-pink text-xs">I want to...</label>
                     <select
                         name="interest"
@@ -211,7 +211,7 @@ export default function ContactForm() {
                         <option>Partner with TGTF</option>
                         <option>Get updates on Tgtf</option>
                     </select>
-                </div>
+                </div> */}
 
                 {/* Consent */}
                 <div className="flex items-start gap-3">

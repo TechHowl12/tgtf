@@ -7,6 +7,7 @@ export default function Button({
   widthClass = "w-[95%]",
   onClick = () => {},
   className = "",
+  type = "button",
 }) {
   return (
     <button

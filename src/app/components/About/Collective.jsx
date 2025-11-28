@@ -1,19 +1,19 @@
 import React from 'react';
-import MasterClass from "../../images/masterclass.webp";
+import MasterClass from "../../images/attendees.webp";
 import Itenaries from "../../images/itenaries.webp";
-import Festival from "../../images/festival.webp";
-import Brand from "../../images/brand.webp";
-import Workshop from "../../images/workshop.webp";
+import Festival from "../../images/UE.webp";
+import Brand from "../../images/PB.webp";
+import Workshop from "../../images/TW.webp";
 import Cuisine from "../../images/cuisine.webp";
 import RedSun from "../../images/red-sun.png";
 
 const cards = [
-  { id: 1, label: '5300+\nATTENDEES', color: 'bg-pink text-white', image: MasterClass },
-  { id: 2, label: '7 CUISINES\nSERVED', color: 'bg-bright text-black', image: Cuisine },
-  { id: 3, label: '20+ UNIQUE\nEXPERIENCES', color: 'bg-green text-black', image: Festival },
-  { id: 4, label: '30+ TRAVEL\nWORKSHOPS', color: 'bg-orange text-white', image: Workshop },
-  { id: 5, label: '35 PARTNER\nBRANDS', color: 'bg-purple text-white', image: Brand },
-  { id: 6, label: '7 CONTESTS', color: 'bg-red text-white', image: Itenaries }
+  { id: 1, label: '5300+\nAttendees', color: 'bg-pink text-white', image: MasterClass },
+  { id: 2, label: '7 Cuisines\nServed', color: 'bg-bright text-black', image: Cuisine },
+  { id: 3, label: '20+ Unique\nExperiences', color: 'bg-green text-black', image: Festival },
+  { id: 4, label: '30+ Travel\nWorkshops', color: 'bg-orange text-white', image: Workshop },
+  { id: 5, label: '35 Partner\nBrands', color: 'bg-purple text-white', image: Brand },
+  { id: 6, label: '7 Contests', color: 'bg-red text-white', image: Itenaries }
 ];
 
 export default function Collective() {
@@ -22,9 +22,8 @@ export default function Collective() {
       <div className="py-3 px-6 xl:px-14">
         <div className="relative mb-4 z-0">
           <h1 className="text-white relative z-10 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
-            <span className="font-bold">THE LAST TIME</span><br />
-            THE COLLECTIVE<br />
-            came TOGETHER
+            <span className="font-bold">The Last Time</span><br />
+            The Collective came Together
           </h1>
 
           <img
@@ -58,7 +57,7 @@ export default function Collective() {
 
             <div className={`absolute left-2 bottom-2 lg:left-3 lg:bottom-3 px-1 py-1 rounded-md text-xs font-bold leading-tight ${c.color} shadow-md`}>
               {c.label.split('\n').map((line, i) => (
-                <small className="block text-lg xl:text-2xl leading-4 xl:leading-5" key={i}>{line}</small>
+                <h3 className="font-bold block text-lg xl:text-xl leading-4 xl:leading-5" key={i}>{line}</h3>
               ))}
             </div>
 

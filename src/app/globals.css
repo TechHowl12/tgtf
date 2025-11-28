@@ -75,7 +75,7 @@ h1 {
 }
 
 p{
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(14px, 2.5vw, 17px);
   line-height: 21px;
 }
 
@@ -113,7 +113,7 @@ button:hover .arrow-wrapper {
     font-size: 18px;
   }
   p{
-    font-size: 12px;
+    font-size: 13px;
     line-height: 18px;
     letter-spacing: 0%;
   }

@@ -33,13 +33,13 @@ const ExploreCarousel = () => {
             desc: "Discover the world’s most sought-after destinations, hidden cultural gems, and global cuisines.",
         },
         {
-            img: DEngage,
+            img: DPlan,
             tagText: "ENGAGE",
             tagBg: "bg-blue",
             desc: "Connect with fellow travellers and top travel experts for stories, insights, and inspiration you won’t find anywhere else.",
         },
         {
-            img: DPlan,
+            img: DEngage,
             tagText: "PLAN",
             tagBg: "bg-orange",
             desc: "Turn your travel dreams into real itineraries with help from leading travel planners - whether you know the destination or just the vibe.",
@@ -140,7 +140,7 @@ const ExploreCarousel = () => {
                             height={444}
                             src={card.img.src}
                             alt={card.tagText}
-                            className="rounded-xl md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px]"
+                            className="rounded-xl object-cover md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px]"
                         />
                         <div className="absolute bottom-4 left-3 h-24 max-w-[85%]">
                             <small

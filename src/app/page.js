@@ -77,7 +77,7 @@ export default function Home() {
           </p>
         </div>
         <button className="w-[95%] lg:w-[40%] bg-pink text-bright py-4 mx-auto lg:ml-[248px] xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
-          <span>BOOK YOUR TICKETS</span>
+          <span>REGISTER NOW</span>
           <span className="arrow-wrapper transition-transform duration-300">
             <img src={BtnArrow.src} alt="btn arrow" />
           </span>
@@ -102,14 +102,14 @@ export default function Home() {
 
       {/* Instagram Section */}
       <div className="mb-20">
-        <InstagramFeed />
+        {/* <InstagramFeed /> */}
       </div>
 
       {/* Curious Section */}
       <section className="bg-blue flex justify-between xl:items-center flex-col xl:flex-row rounded-t-[20px] -mt-10 relative">
         <h1 className="text-white font-bold py-6 pl-6">Curious about us?</h1>
         <div className="bg-white w-full xl:w-1/2 rounded-t-[20px] xl:rounded-t-none xl:rounded-tl-[20px] xl:rounded-bl-[20px] flex flex-col gap-y-2 py-3 xl:py-6 xl:gap-y-4">
-          <Button onClick={() => router.push("/contact")} text="PARTNER WITH US" />
+          <Button onClick={() => (window.location.href = "mailto:info@gtn-india.com")} text="PARTNER WITH US"/>
           <Button onClick={() => router.push("/contact")} text="REGISTER" />
         </div>
         <Image width={36} height={50} src={HalfStar} alt="Half Star Icon" className="absolute left-0 -top-7 z-0" />
