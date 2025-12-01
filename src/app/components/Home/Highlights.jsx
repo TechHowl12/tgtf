@@ -171,8 +171,11 @@ const Highlights = () => {
                                         setLightboxOpen(true);
                                     }}
                                 />
-                                <div className="bg-darkgrey mx-auto w-full mt-6 curve py-3 px-2 h-44 flex flex-col justify-around">
+                                <div className="bg-darkgrey mx-auto w-full mt-6 curve py-4 px-4 h-[220px] flex flex-col justify-between overflow-hidden">
                                     <div>
+                                        <small className="inline-block underline decoration-black underline-offset-2 font-semibold text-black">
+                                            {ev.subtitle}
+                                        </small>
                                         <small className="text-blue font-semibold block leading-5">
                                             {ev.title}
                                         </small>
@@ -259,8 +262,11 @@ const Highlights = () => {
                                     setLightboxOpen(true);
                                 }}
                             />
-                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-5 flex justify-between gap-x-4 min-[1280px]:h-40 min-[1300px]:h-36 items-start">
-                                <div className="w-2/6">
+                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-6 flex gap-x-4 items-stretch h-[150px] overflow-hidden">
+                                <div className="w-3/6 ">
+                                    <small className="inline-block underline">
+                                        {ev.subtitle}
+                                    </small>
                                     <small className="text-blue font-semibold text-lg block leading-5">
                                         {ev.title}
                                     </small>
@@ -268,7 +274,7 @@ const Highlights = () => {
                                         {ev.tag}
                                     </small>
                                 </div>
-                                <p className="w-4/6">{ev.byline}</p>
+                                <p className="w-3/6 ">{ev.byline}</p>
                             </div>
                         </SwiperSlide>
                     ))}
