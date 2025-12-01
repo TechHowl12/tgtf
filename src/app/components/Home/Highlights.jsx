@@ -171,7 +171,7 @@ const Highlights = () => {
                                         setLightboxOpen(true);
                                     }}
                                 />
-                                <div className="bg-darkgrey mx-auto w-full mt-6 curve py-4 px-4 h-[220px] flex flex-col justify-between overflow-hidden">
+                                <div className="bg-darkgrey mx-auto w-full mt-6 curve py-4 px-4 h-[230px] flex flex-col justify-between overflow-hidden">
                                     <div>
                                         <small className="inline-block underline decoration-black underline-offset-2 font-semibold text-black">
                                             {ev.subtitle}
@@ -183,7 +183,9 @@ const Highlights = () => {
                                             {ev.tag}
                                         </small>
                                     </div>
-                                    <p className="mt-2">{ev.byline}</p>
+                                    <p className={`${ev.id === "visit-saudi-x-im-wholesome" ? "mb-6 md:mt-2" : "mt-2"}`}>
+                                    {ev.byline}
+                                    </p>
                                 </div>
                             </div>
                         </SwiperSlide>

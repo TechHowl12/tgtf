@@ -28,7 +28,7 @@ export const events = [
     title: "Visit Saudi x I'm Wholesome",
     tag: "by I'm Wholesome",
     byline:
-      "An immersive cooking experience with Visit Saudi, putting Saudi’s staple Jareesh in the spotlight\n\n",
+      "An immersive cooking experience with Visit Saudi, putting Saudi’s staple Jareesh in the spotlight.",
   },
   {
     id: "wander-women",
