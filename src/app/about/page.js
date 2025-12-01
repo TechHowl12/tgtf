@@ -14,7 +14,7 @@ const page = () => {
             }} className="hero-bg w-full bg-cover relative bg-center h-[698px] -z-20">
                 <div className='absolute bottom-0 py-6 px-6 xl:px-14 bg-black/20 w-full'>
                     <h1 className='text-bright'>India’s foremost <span className='font-bold'>celebration of travel</span></h1>
-                    <p className='mt-5 text-white xl:w-1/2'>Here, travellers, creators, brands, and destinations meet face-to-face to share experiences that spark discovery — of new cuisine, cultures, and stories.</p>
+                    <p className='mt-2 text-white xl:w-1/2'>— bringing travellers, creators, brands, and destinations together to spark discovery through cuisine, culture, and stories.</p>
                 </div>
             </section>
 
@@ -60,8 +60,9 @@ const page = () => {
                                     OUR <span className="font-bold">Vision</span>
                                 </h1>
                                 <p className="mt-2 text-[#ED1C24]">
-                                    is to make TGTF India’s most trusted destination for travel experience and community building.
-                                    A festival that explores every side of travel, from the where to the why.
+                                    is to be India’s most trusted travel festival, celebrating every aspect of travel—from 
+                                    experiences to insights.
+                                    A platform where travellers connect, discover, and confidently plan their next journey.
                                 </p>
                             </div>
                         </div>
