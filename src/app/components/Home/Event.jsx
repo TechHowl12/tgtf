@@ -38,7 +38,7 @@ export const events = [
     title: "Wander Women",
     tag: "by Rashmi Chadha, Anindita Chatterjee, Anupriya Kapur, Jinal Inamdar, & Mahie Sharma",
     byline:
-      "A panel discussion with Wovoyage group about breaking stereotypes, empowerment, and safety for women travellers",
+      "A panel discussion celebrating women who inspire others to explore the world, solo or together",
   },
   {
     id: "conscious-travel-storytelling",
@@ -85,7 +85,7 @@ export const events = [
     desktopImg: Event8,
     subtitle: "Engagement",
     title: "Cin Cin with Il Dolce Vino",
-    tag: "by Seema Chari",
+    tag: "by Indo-Italian Chamber of Commerce",
     byline:
       "A wine-tasting workshop with varieties of cheeses and salami, teaching participants how to identify the notes of a wine",
   },
