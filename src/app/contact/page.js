@@ -5,7 +5,7 @@ import Image from "next/image";
 import HalfStar from "../images/half-star.png";
 import Shine from "../images/shine.svg";
 import Circle from "../images/circle.png";
-import Logo from "../images/logo.webp";
+import Logo from "../images/logo.svg";
 import star from "../images/star.webp";
 import MapImage from "../images/map.png";
 import Dots from "../images/four-dots.svg";

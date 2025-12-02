@@ -15,6 +15,7 @@ export const events = [
     mobileImg: Event3,
     desktopImg: Event3,
     subtitle: "Key Note",
+    subtitleClass:"bg-pink",
     title: "Antarctica 101: The Ultimate Guide to Exploring the 7th Continent",
     tag: "by Matty Jordan",
     byline:
@@ -25,6 +26,7 @@ export const events = [
     mobileImg: Event4,
     desktopImg: Event4,
     subtitle: "Workshop",
+    subtitleClass:"bg-yellow",
     title: "Visit Saudi x I'm Wholesome",
     tag: "by I'm Wholesome",
     byline:
@@ -35,6 +37,7 @@ export const events = [
     mobileImg: Event1,
     desktopImg: Event1,
     subtitle: "Panel Discussion",
+    subtitleClass:"bg-green",
     title: "Wander Women",
     tag: "by Rashmi Chadha, Anindita Chatterjee, Anupriya Kapur, Jinal Inamdar, & Mahie Sharma",
     byline:
@@ -45,6 +48,7 @@ export const events = [
     mobileImg: Event2,
     desktopImg: Event2,
     subtitle: "Key Note",
+    subtitleClass:"bg-pink",
     title: "Conscious Travel With a Focus on Travel Storytelling",
     tag: "by Shivya Nath",
     byline:
@@ -55,6 +59,7 @@ export const events = [
     mobileImg: Event5,
     desktopImg: Event5,
     subtitle: "Engagement",
+    subtitleClass:"bg-purple",
     title: "Scents & Sensibilities: Exploring the Art of Oud",
     tag: "by Meyander",
     byline:
@@ -65,6 +70,7 @@ export const events = [
     mobileImg: Event6,
     desktopImg: Event6,
     subtitle: "Masterclass",
+    subtitleClass:"bg-red",
     title: "The Ultimate Backpacking Guide x Decathlon",
     tag: "by Aavi & Sagar",
     byline:
@@ -84,6 +90,7 @@ export const events = [
     mobileImg: Event8,
     desktopImg: Event8,
     subtitle: "Engagement",
+    subtitleClass:"bg-purple",
     title: "Cin Cin with Il Dolce Vino",
     tag: "by Indo-Italian Chamber of Commerce",
     byline:
@@ -94,6 +101,7 @@ export const events = [
     mobileImg: Event9,
     desktopImg: Event9,
     subtitle: "Engagement",
+    subtitleClass:"bg-purple",
     title: "The Perfect Brew",
     tag: "by Third Wave Coffee",
     byline:
@@ -104,6 +112,7 @@ export const events = [
     mobileImg: Event10,
     desktopImg: Event10,
     subtitle: "Panel Discussion",
+    subtitleClass:"bg-green",
     title: "Journeys of a Lifetime",
     tag: "by Daksh Sharma ,Manish Sonar- Ponant, Bjorn Palsson- Crazy Puffin Adventures, Ankita Kumar- Monkey Inc",
     byline:
