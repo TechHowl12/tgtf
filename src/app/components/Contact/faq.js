@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "How do I buy tickets for the festival?",
-    a: "Tickets can be registered online through our official website / on Skillbox, or at the festival entrance, subject to availability."
+    a: "Tickets can be registered online through our official website / on Skillbox / at the festival entrance, subject to availability."
   },
   {
     q: "What does my ticket include?",

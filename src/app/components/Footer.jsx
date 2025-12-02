@@ -49,7 +49,7 @@ const Footer = () => {
             href="/terms.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80"
+            className="hover:opacity-80 ml-3 md:ml-0"
           >
             T&C
           </Link>
