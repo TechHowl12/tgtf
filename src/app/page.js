@@ -66,7 +66,7 @@ export default function Home() {
   return (
     <main>
 
-      <Banner/>
+      <Banner />
 
       {/* Register Section */}
       <section ref={registerRef} className="bg-blue relative w-full pb-3 xl:pb-6 z-10">
@@ -109,7 +109,7 @@ export default function Home() {
       <section className="bg-blue flex justify-between xl:items-center flex-col xl:flex-row rounded-t-[20px] -mt-10 relative">
         <h1 className="text-white font-bold py-6 pl-6">Curious about us?</h1>
         <div className="bg-white w-full xl:w-1/2 rounded-t-[20px] xl:rounded-t-none xl:rounded-tl-[20px] xl:rounded-bl-[20px] flex flex-col gap-y-2 py-3 xl:py-6 xl:gap-y-4">
-          <Button onClick={() => (window.location.href = "mailto:info@gtn-india.com")} text="PARTNER WITH US"/>
+          <Button onClick={() => (window.location.href = "mailto:info@gtn-india.com")} text="PARTNER WITH US" />
           <Button onClick={() => router.push("/contact")} text="REGISTER" />
         </div>
         <Image width={36} height={50} src={HalfStar} alt="Half Star Icon" className="absolute left-0 -top-7 z-0" />

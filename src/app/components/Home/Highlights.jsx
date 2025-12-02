@@ -276,7 +276,7 @@ const Highlights = () => {
                                         {ev.tag}
                                     </small>
                                 </div>
-                                <p className="w-3/6 ">{ev.byline}</p>
+                                <p className="w-3/6 !text-[16px]">{ev.byline}</p>
                             </div>
                         </SwiperSlide>
                     ))}

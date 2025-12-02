@@ -56,36 +56,37 @@ const PartnersCarousel = () => {
 
   return (
     <div className="w-full pt-20 pb-10 lg:py-0 lg:pt-20 lg:pb-7 md:px-16 lg:px-10 sm:px-20 bg-grey relative">
-      {/* Prev (only for swiper, and only visible <1024px because of lg:hidden below) */}
-      <button
-        ref={prevRef}
-        disabled={isBeginning}
-        className={`absolute lg:hidden left-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer ${
-          isBeginning ? "opacity-40" : "opacity-100"
-        }`}
-        aria-label="Previous"
-      >
-        <Image src={arrow} alt="Prev Arrow" width={26} height={26} className="rotate-180" />
-      </button>
 
-      {/* Next */}
-      <button
-        ref={nextRef}
-        disabled={isEnd}
-        className={`absolute lg:hidden right-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer ${
-          isEnd ? "opacity-40" : "opacity-100"
-        }`}
-        aria-label="Next"
-      >
-        <Image src={arrow} alt="Next Arrow" width={26} height={26} />
-      </button>
 
       <h1 className="text-pink absolute top-6 xl:top-5 text-center left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
         Featured <span className="font-bold">partners</span>
       </h1>
 
       {/* SLIDER: visible only below 1024px */}
-      <div className="lg:hidden">
+      <div className="lg:hidden relative">
+
+        {/* Prev (only for swiper, and only visible <1024px because of lg:hidden below) */}
+        <button
+          ref={prevRef}
+          disabled={isBeginning}
+          className={`absolute lg:hidden left-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer ${isBeginning ? "opacity-40" : "opacity-100"
+            }`}
+          aria-label="Previous"
+        >
+          <Image src={arrow} alt="Prev Arrow" width={26} height={26} className="rotate-180" />
+        </button>
+
+        {/* Next */}
+        <button
+          ref={nextRef}
+          disabled={isEnd}
+          className={`absolute lg:hidden max-[600px]:right-2 right-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer ${isEnd ? "opacity-40" : "opacity-100"
+            }`}
+          aria-label="Next"
+        >
+          <Image src={arrow} alt="Next Arrow" width={26} height={26} />
+        </button>
+
         <Swiper
           modules={[Navigation]}
           loop={false}
@@ -127,7 +128,7 @@ const PartnersCarousel = () => {
                     {title}
                   </div>
                   <div className="h-full w-full flex items-center justify-center px-4 pt-6">
-                    <Image width={200} height={80} src={logo} alt={`${title} Logo`} />
+                    <Image width={220} height={80} src={logo} alt={`${title} Logo`} />
                   </div>
                 </div>
               </SwiperSlide>
@@ -141,7 +142,7 @@ const PartnersCarousel = () => {
                   </div>
                   <div className="h-full w-full flex items-center justify-center gap-10 xl:gap-20 px-4 pt-6">
                     {destinationPartners.map((logo, i) => (
-                      <Image width={200} height={50} key={i} src={logo} alt="Destination Partner Logo" />
+                      <Image width={250} height={100} key={i} src={logo} alt="Destination Partner Logo" />
                     ))}
                   </div>
                 </div>
