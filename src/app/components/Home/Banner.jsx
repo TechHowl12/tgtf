@@ -126,7 +126,7 @@ const Banner = () => {
             >
                 <video
                     ref={desktopVideoRef}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full pt-20 object-cover"
                     playsInline
                     loop
                     onPause={() => {

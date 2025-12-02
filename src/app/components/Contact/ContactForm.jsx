@@ -151,7 +151,7 @@ export default function ContactForm() {
                 </div>
             )}
 
-            <form onSubmit={onSubmit} className="space-y-6 text-sm z-9999 flex flex-col m-auto">
+            <form onSubmit={onSubmit} className="space-y-6 text-sm z-50 flex flex-col m-auto">
                 {/* Name */}
                 <div>
                     <label className="text-pink text-xs">Name</label>
