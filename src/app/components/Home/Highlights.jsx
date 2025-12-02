@@ -173,7 +173,7 @@ const Highlights = () => {
                                 />
                                 <div className="bg-darkgrey mx-auto w-full mt-6 curve py-4 px-4 h-[230px] flex flex-col justify-between overflow-hidden">
                                     <div>
-                                        <small className="inline-block underline decoration-black underline-offset-2 font-semibold text-black">
+                                        <small className={`inline-block font-semibold px-2 py-0.5 mb-2 rounded-xs ${ev.subtitleClass || ""}`}>
                                             {ev.subtitle}
                                         </small>
                                         <small className="text-blue font-semibold block leading-5">
@@ -266,7 +266,7 @@ const Highlights = () => {
                             />
                             <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-6 flex gap-x-4 items-stretch h-[160px] overflow-hidden">
                                 <div className="w-3/6 ">
-                                    <small className="inline-block underline">
+                                    <small className={`inline-block text-white px-2 py-0.5 mb-2 rounded-xs ${ev.subtitleClass || ""}`}>
                                         {ev.subtitle}
                                     </small>
                                     <small className="text-blue font-semibold text-lg block leading-5">

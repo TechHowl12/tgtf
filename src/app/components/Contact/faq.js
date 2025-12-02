@@ -9,7 +9,10 @@ const faqs = [
   },
   {
     q: "How do I buy tickets for the festival?",
-    a: "Tickets can be purchased online through our official website https://www.gypsytravelfestival.com/ or at the festival entrance, subject to availability. Early bird tickets are often available, so be sure to check for discounts."
+    a: `You can get the tickets:
+  - On our official website- https://www.gypsytravelfestival.com/
+  - On Skillbox
+  - At the festival entrance (subject to availability)`
   },
   {
     q: "What does my ticket include?",

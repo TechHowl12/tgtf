@@ -11,7 +11,7 @@ import arrow from "../../images/next-arrow.png";
 import partnersDesktop from "../../images/partners-desktop.png"; // renamed to avoid name clash
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 
 const PartnersCarousel = () => {
@@ -88,9 +88,13 @@ const PartnersCarousel = () => {
         </button>
 
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           loop={false}
           speed={600}
+          autoplay={{
+            delay: 2000,         // 3 sec per slide
+            disableOnInteraction: false,  // keep autoplay even after user drags
+          }}
           slidesPerView={1}
           spaceBetween={32}
           navigation={{
@@ -128,7 +132,7 @@ const PartnersCarousel = () => {
                     {title}
                   </div>
                   <div className="h-full w-full flex items-center justify-center px-4 pt-6">
-                    <Image width={220} height={80} src={logo} alt={`${title} Logo`} />
+                    <Image width={240} height={80} src={logo} alt={`${title} Logo`} />
                   </div>
                 </div>
               </SwiperSlide>

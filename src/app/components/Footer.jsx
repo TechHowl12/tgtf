@@ -6,6 +6,7 @@ import X from "../images/x.png";
 import Youtube from "../images/youtube.png";
 import Whatsapp from "../images/whatsapp.png";
 import Linkedin from "../images/linkedin.png";
+import skillbox from "../images/skillbox.png";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,7 +23,7 @@ const Footer = () => {
     ];
 
     return (
-        <div className="bg-[#242424] py-8 xl:py-6 px-4 xl:px-8 flex flex-col gap-y-20">
+        <div id="site-footer" className="bg-[#242424] py-8 xl:py-6 px-4 xl:px-8 flex flex-col gap-y-4 md:gap-y-10">
 
             {/* Top Section */}
             <div className="flex flex-col md:flex-row gap-y-6 w-full justify-between">
@@ -31,7 +32,7 @@ const Footer = () => {
                 </h1>
 
                 {/* Center-align the items */}
-                <div className="text-white text-xs md:text-sm lg:text-lg grid grid-cols-4 md:grid-cols-2 gap-y-2 md:gap-x-2 lg:gap-x-4 xl:gap-x-6 place-items-center md:place-items-start">
+                <div className="text-white text-xs md:text-sm lg:text-lg grid grid-cols-4 md:grid-cols-2 gap-y-2 md:gap-x-2 lg:gap-x-4 xl:gap-x-6 place-items-start md:place-items-start">
                     <Link href="/contact" className="hover:opacity-80">Contact Us</Link>
                     <Link href="/terms.pdf" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">T&C</Link>
                     <Link href="/contact/#faq" className="hover:opacity-80">FAQs</Link>
@@ -40,17 +41,23 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-x-4">
-                {socialLinks.map(({ icon, url }, index) => (
-                    <Link
-                        key={index}
-                        href={url}
-                        target="_blank"
-                        className="transition-transform duration-300 hover:-translate-y-1"
-                    >
-                        <Image src={icon.src} width={34} height={34} alt="social-icon" />
-                    </Link>
-                ))}
+            <div className='flex flex-col-reverse md:flex-row justify-between items-start md:items-end'>
+                <div className="flex items-center gap-x-4">
+                    {socialLinks.map(({ icon, url }, index) => (
+                        <Link
+                            key={index}
+                            href={url}
+                            target="_blank"
+                            className="transition-transform duration-300 hover:-translate-y-2"
+                        >
+                            <Image src={icon.src} width={34} height={34} alt="social-icon" />
+                        </Link>
+                    ))}
+                </div>
+                <div className='flex flex-col items-start mr-0 md:mr-7 mt-4 md:mt-0'>
+                    <p className='text-white'>Ticketing Partner</p>
+                    <Image className='mb-4 md:-mb-4 -ml-3' src={skillbox.src} width={250} height={50} alt="skillbox-logo" />
+                </div>
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import JioLogo from "../images/jio-logo.webp";
+import JioLogo from "../images/jio-logo.svg";
 
 const navLinks = [
   { label: "HOME", href: "/" },
@@ -11,7 +11,7 @@ const navLinks = [
   // { label: "PARTNERS", href: "/partners" },
   // { label: "PROGRAMMING", href: "/programming" },
   { label: "CONTACT US", href: "/contact" },
-  { label: "FAQ", href: "/contact/#faq" },
+  { label: "FAQs", href: "/contact/#faq" },
 ];
 
 const Navbar = () => {
