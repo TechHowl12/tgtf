@@ -9,10 +9,7 @@ const faqs = [
   },
   {
     q: "How do I buy tickets for the festival?",
-    a: `You can get the tickets:
-  - On our official website- https://www.gypsytravelfestival.com/
-  - On Skillbox
-  - At the festival entrance (subject to availability)`
+    a: "Tickets can be registered online through our official website / on Skillbox, or at the festival entrance, subject to availability."
   },
   {
     q: "What does my ticket include?",
