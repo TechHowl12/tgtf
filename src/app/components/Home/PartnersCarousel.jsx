@@ -55,7 +55,7 @@ const PartnersCarousel = () => {
   ];
 
   return (
-    <div className="w-full pt-20 pb-10 lg:py-0 lg:pt-16 lg:pb-6 md:px-16 lg:px-10 sm:px-20 bg-grey relative">
+    <div className="w-full pt-20 pb-10 lg:py-0 lg:pt-20 lg:pb-7 md:px-16 lg:px-10 sm:px-20 bg-grey relative">
       {/* Prev (only for swiper, and only visible <1024px because of lg:hidden below) */}
       <button
         ref={prevRef}
