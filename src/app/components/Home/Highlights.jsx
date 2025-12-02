@@ -173,7 +173,7 @@ const Highlights = () => {
                                 />
                                 <div className="bg-darkgrey mx-auto w-full mt-6 curve py-4 px-4 h-[230px] flex flex-col justify-between overflow-hidden">
                                     <div>
-                                        <small className={`inline-block font-semibold px-2 py-0.5 mb-2 rounded-xs ${ev.subtitleClass || ""}`}>
+                                        <small className={`inline-block text-white font-semibold px-2 py-0.5 mb-2 rounded-xs ${ev.subtitleClass || ""}`}>
                                             {ev.subtitle}
                                         </small>
                                         <small className="text-blue font-semibold block leading-5">

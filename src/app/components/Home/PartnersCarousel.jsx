@@ -132,7 +132,7 @@ const PartnersCarousel = () => {
                     {title}
                   </div>
                   <div className="h-full w-full flex items-center justify-center px-4 pt-6">
-                    <Image width={240} height={80} src={logo} alt={`${title} Logo`} />
+                    <Image width={200} height={80} src={logo} alt={`${title} Logo`} />
                   </div>
                 </div>
               </SwiperSlide>
