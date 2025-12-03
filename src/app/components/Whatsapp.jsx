@@ -50,7 +50,7 @@ export default function WhatsAppFloat() {
       </a>
 
       <a
-        href="https://www.skillboxes.com/events/the-gypsy-travel-festival"
+        href="https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=registernow_floater"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 md:left-6 md:right-auto z-40"
