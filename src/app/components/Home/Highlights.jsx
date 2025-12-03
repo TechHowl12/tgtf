@@ -264,7 +264,7 @@ const Highlights = () => {
                                     setLightboxOpen(true);
                                 }}
                             />
-                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-6 flex gap-x-4 items-stretch h-[160px] overflow-hidden">
+                            <div className="bg-darkgrey w-full xl:max-w-[665px] mt-6 curve py-6 px-6 flex gap-x-4 md:h-44 max-lg:h-40 max-[1300px]:h-44 h-40 items-stretch overflow-hidden">
                                 <div className="w-3/6 ">
                                     <small className={`inline-block text-white px-2 py-0.5 mb-2 rounded-xs ${ev.subtitleClass || ""}`}>
                                         {ev.subtitle}
