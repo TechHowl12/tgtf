@@ -46,6 +46,8 @@ const PreviousPartners = () => {
   const flowerRef = useRef(null);
   const dotsRef = useRef(null);
 
+  const logosRef = useRef(null);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to([sunRef.current, flowerRef.current], {
@@ -74,6 +76,51 @@ const PreviousPartners = () => {
     return () => ctx.revert();
   }, []);
 
+  // Auto-scroll only when section is in view
+useEffect(() => {
+  const container = logosRef.current;
+  if (!container) return;
+
+  let animationFrameId;
+  const scrollSpeed = 0.9; 
+  let isActive = false;
+
+  const step = () => {
+    if (!isActive) {
+      animationFrameId = requestAnimationFrame(step);
+      return;
+    }
+
+    container.scrollTop += scrollSpeed;
+
+    if (container.scrollTop >= container.scrollHeight - container.clientHeight) {
+      container.scrollTop = 0;
+    }
+
+    animationFrameId = requestAnimationFrame(step);
+  };
+
+  // observer to trigger on visibility
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        isActive = entry.isIntersecting;
+      });
+    },
+    {
+      threshold: 0.9, // 30% visible → start scroll
+    }
+  );
+
+  observer.observe(container);
+  animationFrameId = requestAnimationFrame(step);
+
+  return () => {
+    observer.disconnect();
+    cancelAnimationFrame(animationFrameId);
+  };
+}, []);
+
   return (
     <div ref={sectionRef} className="bg-white py-8 px-8 xl:py-12">
       <div className="bg-pink curve pb-2 w-[319px] md:w-[85%] mx-auto relative">
@@ -88,7 +135,9 @@ const PreviousPartners = () => {
         </div>
 
         {/* LOGO GRID */}
-        <div className="bg-white curve grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 place-items-center h-[324px] overflow-y-auto gap-6 px-6 py-8 mx-1 z-20">
+        <div 
+        ref={logosRef}
+        className="bg-white curve grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 place-items-center h-[324px] overflow-y-auto gap-6 px-6 py-8 mx-1 z-20">
           {/* 1. Saudi */}
           <Image width={118} height={60} src={saudi} alt="Saudi Logo" />
 

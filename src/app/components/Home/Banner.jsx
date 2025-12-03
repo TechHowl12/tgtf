@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Logo from "../../images/logo.webp";
+import Logo from "../../images/logo.svg";
 import star from "../../images/star.webp";
 
 gsap.registerPlugin(ScrollTrigger);
