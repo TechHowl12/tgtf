@@ -102,7 +102,7 @@ export default function Home() {
       <PreviousPartners />
 
       {/* Instagram Section */}
-      <div className="mb-20">
+      <div id="site-footer" className="mb-20">
         <InstagramFeed />
       </div>
 

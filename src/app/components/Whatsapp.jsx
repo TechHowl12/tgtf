@@ -38,7 +38,7 @@ export default function WhatsAppFloat() {
         href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20The%20Gypsy%20Travel%20Festival"
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] rounded-full w-14 h-14 md:flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+        className="hidden fixed bottom-6 left-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] rounded-full w-14 h-14 md:flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Chat on WhatsApp"
       >
         <img
@@ -53,7 +53,7 @@ export default function WhatsAppFloat() {
         href="https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=registernow_floater"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 md:left-6 md:right-auto z-40"
+        className="fixed bottom-6 right-6 z-40"
       >
         <Image src={register} alt="Register Now" width={120} height={50} />
       </a>
