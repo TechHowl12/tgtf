@@ -4,9 +4,54 @@ import Navbar from './components/Navbar'
 import WhatsAppFloat from './components/Whatsapp'
 import './globals.css'
 
+const siteUrl = "https://gypsytravelfestival.com"
+
 export const metadata = {
-  title: 'TGTF | The Gypsy Travel Festival',
-  description: 'The Gypsy Travel Festival',
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "TGTF | The Gypsy Travel Festival",
+    template: "%s | TGTF",
+  },
+
+  description:
+    "The Gypsy Travel Festival brings you global experiences, cuisines, and cultures.",
+
+  keywords: [
+    "Gypsy Travel Festival",
+    "travel festival",
+    "culture festival",
+    "food festival",
+    "music festival",
+    "TGTF 2026",
+  ],
+
+  icons: {
+    icon: "/favicon.ico",     
+    shortcut: "/favicon.ico",
+  },
+
+  openGraph: {
+    title: "TGTF | The Gypsy Travel Festival",
+    description:
+      "The Gypsy Travel Festival brings you global experiences, cuisines, and cultures.",
+    url: siteUrl,
+    siteName: "The Gypsy Travel Festival",
+    images: [
+      {
+        url: "/og-image.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "The Gypsy Travel Festival",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  alternates: {
+    canonical: siteUrl,
+  },
 }
 
 export default function RootLayout({ children }) {
@@ -22,12 +67,12 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <AOSProvider>
-        <Navbar />
-        {children}
-        <Footer />       
+          <Navbar />
+          {children}
+          <Footer />
         </AOSProvider>
 
-        <WhatsAppFloat/>
+        <WhatsAppFloat />
       </body>
     </html>
   )

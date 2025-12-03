@@ -122,7 +122,7 @@ const Navbar = () => {
 
       {/* MARQUEE (DRY) */}
       <div onClick={() => window.open(
-        "https://www.skillboxes.com/events/the-gypsy-travel-festival",
+        "https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=ticker",
         "_blank"
       )} className="overflow-hidden cursor-pointer whitespace-nowrap bg-white text-blue py-1">
         {[0, 1].map((i) => (

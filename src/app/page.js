@@ -15,14 +15,12 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import Button from "./components/Button";
 import InstagramFeed from "./components/InstagramFeed";
-import { useRouter } from "next/navigation";
 import Banner from "./components/Home/Banner";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
 
   const registerRef = useRef(null);
-  const router = useRouter();
 
   useEffect(() => {
     // Run once: remove existing branding link if present
@@ -77,7 +75,7 @@ export default function Home() {
           </p>
         </div>
         <button onClick={() => window.open(
-        "https://www.skillboxes.com/events/the-gypsy-travel-festival",
+        "https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=registernow_fold1",
         "_blank"
         )} className="w-[95%] lg:w-[40%] bg-pink text-bright py-4 mx-auto lg:ml-[248px] xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
           <span>REGISTER NOW</span>
@@ -105,7 +103,7 @@ export default function Home() {
 
       {/* Instagram Section */}
       <div className="mb-20">
-        {/* <InstagramFeed /> */}
+        <InstagramFeed />
       </div>
 
       {/* Curious Section */}
@@ -114,7 +112,7 @@ export default function Home() {
         <div className="bg-white w-full xl:w-1/2 rounded-t-[20px] xl:rounded-t-none xl:rounded-tl-[20px] xl:rounded-bl-[20px] flex flex-col gap-y-2 py-3 xl:py-6 xl:gap-y-4">
           <Button onClick={() => (window.location.href = "mailto:info@gtn-india.com")} text="PARTNER WITH US" />
           <Button onClick={() => window.open(
-            "https://www.skillboxes.com/events/the-gypsy-travel-festival",
+            "https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=registernow_lastfold",
             "_blank"
           )} text="REGISTER" />
         </div>
