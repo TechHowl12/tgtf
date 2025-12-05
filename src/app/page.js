@@ -35,16 +35,24 @@ export default function Home() {
             Whether you are a seasoned traveller or just catching the travel bug, we’ve got everything you need to go on your next epic journey.
           </p>
         </div>
-        <button onClick={() => window.open(
-        "https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=registernow_fold1",
-        "_blank"
-        )} className="w-[95%] lg:w-[40%] bg-pink text-bright py-4 mx-auto lg:ml-[248px] xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200">
+        <button
+          type="button"
+          onClick={() =>
+            window.open(
+              "https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=registernow_fold1",
+              "_blank"
+            )
+          }
+          className="w-[95%] lg:w-[40%] bg-pink text-bright py-4 mx-auto lg:ml-[248px] xl:ml-[376px] flex justify-center items-center gap-1 curve font-bold group active:scale-[0.97] transition-all duration-200"
+        >
           <span>REGISTER NOW</span>
-          <span className="arrow-wrapper transition-transform duration-300">
-            <img src={BtnArrow.src} alt="btn arrow" />  
+          <span
+            className="arrow-wrapper transition-transform duration-300"
+            aria-hidden="true"
+          >
+            <img src={BtnArrow.src} alt="" /> {/* decorative icon */}
           </span>
         </button>
-
 
         <Image width={22} height={31} src={Circles} alt="Star Icon" className="absolute right-0 bottom-1/2 z-0" />
 

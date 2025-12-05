@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import WhatsAppFloat from "./components/Whatsapp";
 import "./globals.css";
-import Script from "next/script"; // ⬅️ ADD THIS
+import Script from "next/script";
 
 const siteUrl = "https://gypsytravelfestival.com";
 
@@ -87,9 +87,30 @@ export default function RootLayout({ children }) {
             fbq('track', 'PageView');
           `}
         </Script>
+
+        {/* Google Tag Manager */}
+        <Script id="gtm-base" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P7J3VCWZ');
+          `}
+        </Script>
       </head>
 
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P7J3VCWZ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         {/* Meta Pixel noscript fallback */}
         <noscript>
           <img
@@ -100,7 +121,9 @@ export default function RootLayout({ children }) {
             alt=""
           />
         </noscript>
-        <FacebookPixel/>
+
+        <FacebookPixel />
+
         <AOSProvider>
           <Navbar />
           {children}

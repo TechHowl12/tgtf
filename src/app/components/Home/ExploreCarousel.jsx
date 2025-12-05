@@ -25,7 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ExploreCarousel = () => {
 
-    const cards = [Explore, Engage, Plan, Book, Explore, Engage, Plan, Book];
+    const cards = [Explore, Engage, Plan, Book, Explore, Engage, Plan, Book, Explore, Engage, Plan, Book];
     const desktopCards = [
         {
             img: DExplore,
@@ -150,7 +150,7 @@ const ExploreCarousel = () => {
                             height={444}
                             src={card.img.src}
                             alt={card.tagText}
-                            className="rounded-xl object-cover md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px]"
+                            className="rounded-xl object-cover md:w-[340px] lg:w-[410px] xl:w-[280px] 2xl:w-[319px] h-auto"
                         />
                         <div className="absolute bottom-4 left-3 h-24 max-w-[85%]">
                             <small
