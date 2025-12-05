@@ -17,7 +17,7 @@ export default function AOSProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    AOS.refresh(); // re-scan DOM on every route change
+    AOS.refresh();
   }, [pathname]);
 
   return children;

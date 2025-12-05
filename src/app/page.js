@@ -22,45 +22,6 @@ export default function Home() {
 
   const registerRef = useRef(null);
 
-  useEffect(() => {
-    // Run once: remove existing branding link if present
-    function removeElfsightBranding() {
-      const el = document.querySelector('a[title="Free Instagram Feed widget"], a[href*="elfsight.com/instagram-feed-instashow"], a[rel="noreferrer"]');
-      if (el) el.remove();
-    }
-
-    // try immediately (if widget already injected)
-    removeElfsightBranding();
-
-    // Observe DOM for later injection and remove on the fly
-    const observer = new MutationObserver((mutations) => {
-      for (const m of mutations) {
-        if (!m.addedNodes) continue;
-        m.addedNodes.forEach(node => {
-          try {
-            if (node.nodeType === 1) {
-              // check the node itself
-              if (node.matches && (node.matches('a[title="Free Instagram Feed widget"]') ||
-                node.matches('a[href*="elfsight.com/instagram-feed-instashow"]') ||
-                node.matches('a[rel="noreferrer"]'))) {
-                node.remove();
-              }
-              // check descendants
-              const found = node.querySelector && node.querySelector('a[title="Free Instagram Feed widget"], a[href*="elfsight.com/instagram-feed-instashow"], a[rel="noreferrer"]');
-              if (found) found.remove();
-            }
-          } catch (e) { /* ignore cross-origin or other errors */ }
-        });
-      }
-    });
-
-    observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
-
-    // optional: stop observing after some time to save resources
-    setTimeout(() => observer.disconnect(), 30_000);
-
-  }, []);
-
   return (
     <main>
 
@@ -102,7 +63,7 @@ export default function Home() {
       <PreviousPartners />
 
       {/* Instagram Section */}
-      <div id="site-footer" className="mb-20">
+      <div id="instagram" className="mb-20">
         <InstagramFeed />
       </div>
 
