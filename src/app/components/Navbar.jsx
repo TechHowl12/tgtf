@@ -81,8 +81,8 @@ const Navbar = () => {
               alt="Jio Logo"
               width={104}
               height={23.09}
-              className="md:w-[135px]"
-              priority
+              className="md:w-[135px] h-auto"
+              style={{ height: "auto" }}
             />
           </div>
         </nav>

@@ -1,9 +1,9 @@
 "use client";
-
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import fallback from "../../images/fallback.webp";
 import Logo from "../../images/logo.svg";
 import star from "../../images/star.webp";
 
@@ -17,9 +17,12 @@ const Banner = () => {
   const registerRef = useRef(null);
   const starRef = useRef(null);
 
-  const [isPaused, setIsPaused] = useState(false);   // autoplay -> not paused initially
-  const [showButton, setShowButton] = useState(false); // autoplay -> hide play btn
-  const [isMuted, setIsMuted] = useState(true);      // must start muted for autoplay
+  const [isPaused, setIsPaused] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+
+  // global "video ready" state (mobile or desktop)
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
   const getActiveVideo = useCallback(() => {
     if (typeof window === "undefined") return null;
@@ -34,6 +37,10 @@ const Banner = () => {
 
     video.muted = true; // ensure muted before autoplay attempt
     const p = video.play();
+
+    // ✅ ensure we show the video as soon as we attempt to play
+    setIsVideoReady(true);
+
     if (p && typeof p.catch === "function") {
       p.catch(() => {
         setIsPaused(true);
@@ -103,17 +110,41 @@ const Banner = () => {
     setIsMuted(nextMuted);
   };
 
+  // handler when video has loaded enough to play
+  const handleVideoLoaded = () => {
+    if (!isVideoReady) {
+      setIsVideoReady(true);
+    }
+  };
+
   return (
     <div id="first-section" className="relative w-full h-[698px]">
+      {/* FALLBACK IMAGE (shown until video is ready) */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Image
+          src={fallback}
+          alt="Banner fallback"
+          fill
+          className={`object-cover transition-opacity duration-500 ${
+            isVideoReady ? "opacity-0" : "opacity-100"
+          }`}
+        />
+      </div>
+
       {/* MOBILE */}
       <div className="md:hidden w-full h-full relative" onClick={togglePlay}>
         <video
           ref={mobileVideoRef}
-          className="w-full h-full object-cover mt-10"
+          className={`w-full h-full object-cover mt-10 transition-opacity duration-500 ${
+            isVideoReady ? "opacity-100" : "opacity-0"
+          }`}
           playsInline
           loop
           autoPlay
           muted={isMuted}
+          preload="auto"
+          onLoadedData={handleVideoLoaded}
+          onCanPlay={handleVideoLoaded}
           onPause={() => {
             setIsPaused(true);
             setShowButton(true);
@@ -123,11 +154,12 @@ const Banner = () => {
             setTimeout(() => setShowButton(false), 500);
           }}
         >
-          <source src="/mobile-banner.mov" type="video/mp4" />
+          <source src="/mobile-banner.mp4" type="video/mp4" />
         </video>
 
         {/* Play/Pause Overlay */}
         <button
+          aria-label={isPaused ? "Play video" : "Pause video"}
           className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500
           ${showButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         >
@@ -157,11 +189,16 @@ const Banner = () => {
       >
         <video
           ref={desktopVideoRef}
-          className="w-full h-full pt-20 object-cover"
+          className={`w-full h-full pt-20 object-cover transition-opacity duration-500 ${
+            isVideoReady ? "opacity-100" : "opacity-0"
+          }`}
           playsInline
           loop
           autoPlay
           muted={isMuted}
+          preload="auto"
+          onLoadedData={handleVideoLoaded}
+          onCanPlay={handleVideoLoaded}
           onPause={() => {
             setIsPaused(true);
             setShowButton(true);
@@ -176,6 +213,7 @@ const Banner = () => {
 
         {/* Play/Pause Overlay */}
         <button
+          aria-label={isPaused ? "Play video" : "Pause video"}
           onClick={togglePlay}
           className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500
           ${showButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
