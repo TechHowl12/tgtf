@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-[#242424] py-8 xl:py-6 px-4 xl:px-8 flex flex-col gap-y-4 md:gap-y-10"
+    <div id="site-footer" className="bg-[#242424] py-8 xl:py-6 px-4 xl:px-8 flex flex-col gap-y-4 md:gap-y-10"
     >
       {/* Top Section */}
       <div className="flex flex-col md:flex-row gap-y-6 w-full justify-between">

@@ -8,10 +8,11 @@ export default function WhatsAppFloat() {
 
   useEffect(() => {
     const first = document.querySelector("#first-section");
+    const instagram = document.querySelector("#instagram");
     const footer = document.querySelector("#site-footer");
 
     // If elements not found, don’t hide
-    if (!first && !footer) return;
+    if (!first && !footer && !instagram) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -25,6 +26,7 @@ export default function WhatsAppFloat() {
     );
 
     if (first) observer.observe(first);
+    if (instagram) observer.observe(instagram);
     if (footer) observer.observe(footer);
 
     return () => observer.disconnect();
