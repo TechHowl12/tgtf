@@ -36,6 +36,7 @@ export default function Home() {
           </p>
         </div>
         <button
+          id="register-now"
           type="button"
           onClick={() =>
             window.open(
@@ -80,7 +81,7 @@ export default function Home() {
         <h1 className="text-white font-bold py-6 pl-6">Curious about us?</h1>
         <div className="bg-white w-full xl:w-1/2 rounded-t-[20px] xl:rounded-t-none xl:rounded-tl-[20px] xl:rounded-bl-[20px] flex flex-col gap-y-2 py-3 xl:py-6 xl:gap-y-4">
           <Button onClick={() => (window.location.href = "mailto:info@gtn-india.com")} text="PARTNER WITH US" />
-          <Button onClick={() => window.open(
+          <Button id="register-now" onClick={() => window.open(
             "https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=registernow_lastfold",
             "_blank"
           )} text="REGISTER" />

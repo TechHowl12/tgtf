@@ -56,6 +56,7 @@ export default function WhatsAppFloat() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40"
+        id="register-now"
       >
         <Image src={register} alt="Register Now" width={120} height={50} />
       </a>

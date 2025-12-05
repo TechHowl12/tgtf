@@ -121,7 +121,7 @@ const Navbar = () => {
       </header>
 
       {/* MARQUEE (DRY) */}
-      <div onClick={() => window.open(
+      <div id="register-now" onClick={() => window.open(
         "https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=ticker",
         "_blank"
       )} className="overflow-hidden cursor-pointer whitespace-nowrap bg-white text-blue py-1">
