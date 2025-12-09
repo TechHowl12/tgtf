@@ -54,9 +54,9 @@ const Footer = () => {
           <Link href="/contact/#faq" className="hover:opacity-80">
             FAQs
           </Link>
-          <Link href="/" className="hover:opacity-80">
+          {/* <Link href="/" className="hover:opacity-80">
             Privacy Policy
-          </Link>
+          </Link> */}
         </div>
       </div>
 
