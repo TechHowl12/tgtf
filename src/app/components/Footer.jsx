@@ -44,7 +44,7 @@ const Footer = () => {
             Contact Us
           </Link>
           <Link
-            href="/terms.pdf"
+            href="/terms-condition"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 ml-3 md:ml-0"

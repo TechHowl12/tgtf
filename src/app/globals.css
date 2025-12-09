@@ -37,7 +37,7 @@ button{
 }
 
 @layer base {
-  html {
+  html, .blog-heading {
     font-family: 'Poppins', sans-serif;
   }
 
@@ -91,12 +91,11 @@ button:hover .arrow-wrapper {
   transform: rotate(45deg) translateY(-1px);
 }
 
-.eapps-instagram-feed-title, .eapps-widget-toolbar-panel-wrapper{
-  display: none !important;
-}
-
-.eapps-instagram-feed-posts-slider-next{
-  overflow: hidden;
+.blog-banner{
+  background: url(../app/images/fallback.webp);
+  width: 100%;
+  height: auto;
+  background-size: cover;
 }
 
 @media (min-width:768px) {
