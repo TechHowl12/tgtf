@@ -12,6 +12,7 @@ const navLinks = [
   // { label: "PROGRAMMING", href: "/programming" },
   { label: "CONTACT US", href: "/contact" },
   { label: "FAQs", href: "/contact/#faq" },
+  { label: "BLOGS", href: "/blogs" },
 ];
 
 const Navbar = () => {

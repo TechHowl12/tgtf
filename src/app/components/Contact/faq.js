@@ -8,7 +8,7 @@ const faqs = [
     a: "The festival will be held on February 7th & 8th, 2026, at JIO World Drive – Bandra Kurla Complex – Mumbai. For the most up-to-date information, please visit our website or follow us on social media."
   },
   {
-    q: "How do I buy tickets for the festival?",
+    q: "How do I register for the festival?",
     a: "Tickets can be registered online through our official website / on Skillbox / at the festival entrance, subject to availability."
   },
   {
