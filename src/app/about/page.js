@@ -3,6 +3,8 @@ import bannerMobile from "../images/banner-mobile.webp"
 import bannerDesktop from "../images/banner-desktop.webp"
 import Collective from '../components/About/Collective';
 
+export const metadata = { title: "About Us" };
+
 const page = () => {
 
     return (
