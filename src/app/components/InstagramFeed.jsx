@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 import Image from "next/image";
 import arrow from "../images/next-arrow.png";
-import verified from "../images/verified.png"; // <-- add your verified icon here
+import verified from "../images/verified.png"; 
 
 export default function InstagramFeed() {
   const [profile, setProfile] = useState(null);
@@ -34,7 +34,8 @@ export default function InstagramFeed() {
         const data = await res.json();
 
         setProfile(data.profile);
-        setPosts(data.posts);
+        const uniquePosts = (data.posts.filter((p) => p.id !== "18186942055344754"));        
+        setPosts(uniquePosts);
       } catch (err) {
         console.error("Instagram API error:", err);
       }
