@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 import Image from "next/image";
 import arrow from "../images/next-arrow.png";
-import verified from "../images/verified.png"; 
+import verified from "../images/verified.png";
 
 export default function InstagramFeed() {
   const [profile, setProfile] = useState(null);
@@ -34,7 +34,7 @@ export default function InstagramFeed() {
         const data = await res.json();
 
         setProfile(data.profile);
-        const uniquePosts = (data.posts.filter((p) => p.id !== "18186942055344754"));        
+        const uniquePosts = (data.posts.filter((p) => p.id !== "18186942055344754"));
         setPosts(uniquePosts);
       } catch (err) {
         console.error("Instagram API error:", err);
@@ -128,25 +128,32 @@ export default function InstagramFeed() {
           }}
         >
           {posts.map((post) => (
-            <SwiperSlide key={post.id}>
+            <SwiperSlide key={post.id} className="bg-black h-[487px]">
               <a
                 href={post.permalink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block aspect-square w-full overflow-hidden rounded-xl"
+                className="block w-full overflow-hidden"
               >
-                <img
-                  src={
-                    post.media_type === "VIDEO"
-                      ? post.thumbnail_url
-                      : post.media_url
-                  }
-                  alt={post.caption || ""}
-                  className="h-full w-full object-cover"
-                />
+                <div className="w-full h-[487px] bg-black flex items-center justify-center">
+                  <img
+                    src={
+                      post.media_type === "VIDEO"
+                        ? post.thumbnail_url
+                        : post.media_url
+                    }
+                    alt={post.caption || ""}
+                    className={
+                      post.media_type === "VIDEO"
+                        ? "w-full h-full object-cover" // REELS — fill frame
+                        : "max-h-full w-full object-contain" // POSTS — keep ratio
+                    }
+                  />
+                </div>
               </a>
             </SwiperSlide>
           ))}
+
         </Swiper>
       </div>
     </div>
