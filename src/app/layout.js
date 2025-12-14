@@ -72,21 +72,33 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
 
-        {/* Google Analytics */}
+        {/* Google Analytics - Existing */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JJZKYYZ79T"
           strategy="afterInteractive"
         />
-
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-JJZKYYZ79T');
-        `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JJZKYYZ79T');
+          `}
         </Script>
 
+        {/* Google Analytics - NEW (G-CZBVRTVJ1E) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CZBVRTVJ1E"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics-secondary" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CZBVRTVJ1E');
+          `}
+        </Script>
 
         {/* Meta Pixel Code */}
         <Script id="facebook-pixel" strategy="afterInteractive">
