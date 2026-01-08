@@ -2,9 +2,15 @@
 import { useEffect, useState } from "react";
 import register from "../images/register.png";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function WhatsAppFloat() {
   const [hidden, setHidden] = useState(false);
+  const pathname = usePathname();
+
+  if (pathname === "/programmes") {
+    return null;
+  }
 
   useEffect(() => {
     const first = document.querySelector("#first-section");
@@ -12,16 +18,15 @@ export default function WhatsAppFloat() {
     const footer = document.querySelector("#site-footer");
 
     // If elements not found, don’t hide
-    if (!first && !footer && !instagram) return;
+    if (!first && !footer && !instagram && !programme) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        // hide if ANY of the watched sections are visible
         const anyVisible = entries.some((e) => e.isIntersecting);
         setHidden(anyVisible);
       },
       {
-        threshold: 0.6, // 20% visible = count as "in view"
+        threshold: 0.6,
       }
     );
 
