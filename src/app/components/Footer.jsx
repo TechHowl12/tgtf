@@ -8,6 +8,7 @@ import Youtube from "../images/youtube.png";
 import Whatsapp from "../images/whatsapp.png";
 import Linkedin from "../images/linkedin.png";
 import skillbox from "../images/skillbox.png";
+import swiggy from '../images/swiggy.png';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -74,23 +75,36 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div
-          onClick={() =>
-            window.open(
-              "https://www.skillboxes.com/events/the-gypsy-travel-festival",
-              "_blank"
-            )
-          }
-          className="flex flex-col items-start mr-0 md:mr-7 mt-4 md:mt-0 cursor-pointer"
-        >
-          <p className="text-white">Ticketing Partner</p>
-          <Image
-            className="mb-4 md:-mb-4 -ml-3"
-            src={skillbox.src}
-            width={250}
-            height={50}
-            alt="skillbox-logo"
-          />
+        <div className="flex flex-col items-start mr-0 md:mr-7 mt-4 md:mt-0 cursor-pointer">
+          <p className="text-white mb-2">Ticketing Partner</p>
+          <div className="flex items-center gap-x-6">
+            <Image
+              onClick={() =>
+                window.open(
+                  "https://www.skillboxes.com/events/the-gypsy-travel-festival",
+                  "_blank"
+                )
+              }
+              className="mb-4 md:-mb-4 -ml-3"
+              src={skillbox.src}
+              width={170}
+              height={50}
+              alt="skillbox-logo"
+            />
+            <Image
+              // onClick={() =>
+              //   window.open(
+              //     "https://www.skillboxes.com/events/the-gypsy-travel-festival",
+              //     "_blank"
+              //   )
+              // }
+              className="mb-4 md:-mb-4 -ml-3"
+              src={swiggy.src}
+              width={170}
+              height={50}
+              alt="skillbox-logo"
+            />
+          </div>
         </div>
       </div>
     </div>

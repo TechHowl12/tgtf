@@ -8,17 +8,13 @@ export default function WhatsAppFloat() {
   const [hidden, setHidden] = useState(false);
   const pathname = usePathname();
 
-  if (pathname === "/programmes") {
-    return null;
-  }
-
   useEffect(() => {
     const first = document.querySelector("#first-section");
     const instagram = document.querySelector("#instagram");
     const footer = document.querySelector("#site-footer");
 
     // If elements not found, don’t hide
-    if (!first && !footer && !instagram && !programme) return;
+    if (!first && !footer && !instagram) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,6 +32,10 @@ export default function WhatsAppFloat() {
 
     return () => observer.disconnect();
   }, []);
+
+  if (pathname === "/programmes" || hidden) {
+    return null;
+  }
 
   if (hidden) return null;
 
