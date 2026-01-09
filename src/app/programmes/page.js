@@ -26,7 +26,7 @@ export default function Page() {
         </p>
       </div>
 
-      <div className="w-full h-8 bg-pink" />
+      <div className="w-full h-8 bg-pink md:hidden" />
 
       <div className="w-full flex items-center justify-center gap-x-4 py-5 px-5">
         <button
@@ -90,7 +90,7 @@ function ProgrammeCard({ item }) {
       </div>
 
       {/* Flip Container */}
-      <div className="flip h-152 relative z-20 overflow-hidden perspective">
+      <div className="flip md:h-152 relative z-20 overflow-hidden perspective">
         <div className={`flip-inner ${flipped ? 'is-flipped' : ''}`}>
           {/* FRONT */}
           <div className="flip-face flip-front">
@@ -117,7 +117,7 @@ function ProgrammeCard({ item }) {
 
           {/* BACK */}
           <div className="flip-face flip-back">
-            <div className={`${cardClass} h-152 bottom-3 relative z-20 flex flex-col justify-between`}>
+            <div className={`${cardClass} md:h-152 bottom-3 relative z-20 flex flex-col justify-between`}>
                 <h1 className={headingClass}>{item.title}</h1>
                 <p className={textClass}>{item.moreInfo || 'More information coming soon.'}</p>
 

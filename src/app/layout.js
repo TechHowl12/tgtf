@@ -129,8 +129,8 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
+        {/* Google Tag Manager (noscript) */}      
+        <noscript> 
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P7J3VCWZ"
             height="0"
