@@ -5,7 +5,7 @@ import clubmed from "../../images/club-med.webp";
 // import immersive from "../../images/immersive.png";
 import thailand from "../../images/thailand.png";
 import kenya from "../../images/kenya.png";
-import CGH from "../../images/cgh.png";
+import CGH from "../../images/CGH.png";
 // import kohventure from "../../images/kohventure.png";
 import ana from "../../images/ana.png";
 // import latitude from "../../images/latitude.png";
