@@ -63,7 +63,7 @@ const Footer = () => {
 
       {/* Social Icons */}
       <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-end">
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-start gap-x-4">
           {socialLinks.map(({ icon, url }, index) => (
             <Link
               key={index}
@@ -85,7 +85,7 @@ const Footer = () => {
                   "_blank"
                 )
               }
-              className="mb-4 md:-mb-4 -ml-3"
+              className="mb-4 md:mb-0 -ml-3"
               src={skillbox.src}
               width={170}
               height={50}
