@@ -76,7 +76,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex flex-col items-start mr-0 md:mr-7 mt-4 md:mt-0 cursor-pointer">
-          <p className="text-white mb-2">Ticketing Partner</p>
+          {/* <p className="text-white mb-2">Ticketing Partner</p> */}
           <div className="flex items-center gap-x-6">
             <Image
               onClick={() =>
