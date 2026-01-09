@@ -2,11 +2,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import clubmed from "../../images/club-med.webp";
-import immersive from "../../images/immersive.png";
+// import immersive from "../../images/immersive.png";
 import thailand from "../../images/thailand.png";
-import kohventure from "../../images/kohventure.png";
+import kenya from "../../images/kenya.png";
+import CGH from "../../images/cgh.png";
+// import kohventure from "../../images/kohventure.png";
 import ana from "../../images/ana.png";
-import latitude from "../../images/latitude.png";
+// import latitude from "../../images/latitude.png";
 import arrow from "../../images/next-arrow.png";
 import partnersDesktop from "../../images/partners-desktop.png"; // renamed to avoid name clash
 import "swiper/css";
@@ -43,15 +45,15 @@ const PartnersCarousel = () => {
   }, []);
 
   // category groups
-  const destinationPartners = [thailand, ana];
-  const featuredPartners = [clubmed];
-  const partnerLogos = [latitude, kohventure, immersive];
+  const destinationPartners = [thailand, ana, kenya];
+  const featuredPartners = [clubmed, CGH];
+  // const partnerLogos = [latitude, kohventure, immersive];
 
   // mobile: one logo per slide with title
   const mobileSlides = [
     ...destinationPartners.map((logo) => ({ title: "Destination partner", logo })),
     ...featuredPartners.map((logo) => ({ title: "Featured partner", logo })),
-    ...partnerLogos.map((logo) => ({ title: "Partner", logo })),
+    // ...partnerLogos.map((logo) => ({ title: "Partner", logo })),
   ];
 
   return (
@@ -59,7 +61,7 @@ const PartnersCarousel = () => {
 
 
       <h1 className="text-pink absolute top-6 xl:top-5 text-center left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
-        Featured <span className="font-bold">partners</span>
+        <span className="font-bold">partners</span>
       </h1>
 
       {/* SLIDER: visible only below 1024px */}
@@ -146,7 +148,7 @@ const PartnersCarousel = () => {
                   </div>
                   <div className="h-full w-full flex items-center justify-center gap-10 xl:gap-20 px-4 pt-6">
                     {destinationPartners.map((logo, i) => (
-                      <Image width={250} height={100} key={i} src={logo} alt="Destination Partner Logo" />
+                      <Image width={150} height={100} key={i} src={logo} alt="Destination Partner Logo" />
                     ))}
                   </div>
                 </div>
@@ -156,7 +158,7 @@ const PartnersCarousel = () => {
               <SwiperSlide>
                 <div className="relative bg-white rounded-lg w-full h-[210px] lg:h-40">
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 text-pink text-sm">
-                    Featured partner
+                    partner
                   </div>
                   <div className="h-full w-full flex items-center justify-center gap-10 xl:gap-20 px-4 pt-6">
                     {featuredPartners.map((logo, i) => (
@@ -167,7 +169,7 @@ const PartnersCarousel = () => {
               </SwiperSlide>
 
               {/* Partners */}
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <div className="relative bg-white rounded-lg w-full h-[210px] lg:h-40">
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 text-pink text-sm">
                     Partners
@@ -178,7 +180,7 @@ const PartnersCarousel = () => {
                     ))}
                   </div>
                 </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </>
           )}
         </Swiper>

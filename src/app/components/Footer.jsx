@@ -92,12 +92,12 @@ const Footer = () => {
               alt="skillbox-logo"
             />
             <Image
-              // onClick={() =>
-              //   window.open(
-              //     "https://www.skillboxes.com/events/the-gypsy-travel-festival",
-              //     "_blank"
-              //   )
-              // }
+              onClick={() =>
+                window.open(
+                  "https://r.swiggy.com/v1/swiggy/scenes/comms/100039582",
+                  "_blank"
+                )
+              }
               className="mb-4 md:-mb-4 -ml-3"
               src={swiggy.src}
               width={170}
