@@ -75,7 +75,7 @@ function ProgrammeCard({ item }) {
     ? 'button border border-bright bg-transparent text-sm! text-bright curve w-22 py-1 font-semibold'
     : 'button border border-blue bg-transparent text-sm! text-blue curve w-22 py-1 font-semibold';
 
-  const textClass = isPaid ? 'mt-1 mb-2 text-white' : 'mt-1 mb-2 text-black';
+  const textClass = isPaid ? 'mt-1 mb-2 text-white' : 'mt-1 mb-2 text-black ';
 
   return (
     <div data-aos="zoom-out">
@@ -90,7 +90,7 @@ function ProgrammeCard({ item }) {
       </div>
 
       {/* Flip Container */}
-      <div className="flip md:h-152 relative z-20 overflow-hidden perspective">
+      <div className="flip h-130 md:h-152 relative z-20 overflow-hidden perspective">
         <div className={`flip-inner ${flipped ? 'is-flipped' : ''}`}>
           {/* FRONT */}
           <div className="flip-face flip-front">
@@ -117,7 +117,7 @@ function ProgrammeCard({ item }) {
 
           {/* BACK */}
           <div className="flip-face flip-back">
-            <div className={`${cardClass} md:h-152 bottom-3 relative z-20 flex flex-col justify-between`}>
+            <div className={`${cardClass} h-130 md:h-152 bottom-3 relative z-20 flex flex-col justify-between`}>
                 <h1 className={headingClass}>{item.title}</h1>
                 <p className={textClass}>{item.moreInfo || 'More information coming soon.'}</p>
 
