@@ -122,10 +122,7 @@ const Page = () => {
                 <Image src={Circles} alt='icon' className='absolute w-14 -top-18 right-[50%] hidden md:block' />
                 <Image src={Shine} alt='icon' className='absolute bottom-0 right-0 w-14 hidden md:block' />
                 <div className='relative'>
-                    <h1 className="text-pink md:hidden">
-                        <span className="font-bold">partners</span> of TGTF
-                    </h1>
-                    <h1 className="text-pink hidden md:block relative z-20">
+                    <h1 className="text-pink relative z-20">
                         <span className="font-bold mb-2">FEATURED PARTNERS</span>
                         <br /> of TGTF
                     </h1>
