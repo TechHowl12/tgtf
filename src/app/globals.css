@@ -210,6 +210,15 @@ button:hover .arrow-wrapper {
   transform: rotateY(180deg);
 }
 
+.swiper-pagination{
+  position: relative !important;
+  top: 5px !important;
+}
+
+.swiper-pagination-bullet-active{
+  background :#2E31FF !important;
+}
+
 @media (min-width:768px) {
   .hero-bg {
     background-image: var(--desktopBG);

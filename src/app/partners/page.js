@@ -2,8 +2,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
 import clubmed from "../images/club-med.webp";
 import immersive from "../images/immersive.png";
 import thailand from "../images/thailand.png";
@@ -20,16 +21,19 @@ import twk from "../images/twk.png";
 import volunteer from "../images/volunteer.png";
 import indulge from "../images/indulge.png";
 import rare from "../images/rare.png";
-import Star from "../images/bright-star.png"; 
+import Star from "../images/bright-star.png";
 import Circles from "../images/two-circles.png";
 import Dots from "../images/green-dots.png";
 import Shine from "../images/shine.svg";
 
 const swiperCommonProps = {
-    modules: [Autoplay],
+    modules: [Autoplay, Pagination],
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
+    },
+    pagination: {
+        clickable: true,
     },
     loop: true,
     spaceBetween: 40,
@@ -115,20 +119,20 @@ const Page = () => {
         <main className="mt-32 mb-10 md:mt-40 md:mb-24 px-0 md:px-14">
 
             <div className="pb-8 pl-8 pr-5 relative flex flex-col md:flex-row justify-between md:items-center">
-                <Image src={Circles} alt='icon' className='absolute w-14 -top-18 right-[55%] hidden md:block'/>
-                <Image src={Shine} alt='icon' className='absolute bottom-0 right-0 w-14 hidden md:block'/>
+                <Image src={Circles} alt='icon' className='absolute w-14 -top-18 right-[50%] hidden md:block' />
+                <Image src={Shine} alt='icon' className='absolute bottom-0 right-0 w-14 hidden md:block' />
                 <div className='relative'>
                     <h1 className="text-pink md:hidden">
                         <span className="font-bold">partners</span> of TGTF
                     </h1>
                     <h1 className="text-pink hidden md:block relative z-20">
-                        <span className="font-bold mb-2">PARTNERS</span>
+                        <span className="font-bold mb-2">FEATURED PARTNERS</span>
                         <br /> of TGTF
                     </h1>
-                    <Image src={Star} alt='star icon' className='hidden md:block w-30 h-30 absolute -top-9 z-10 -right-6'/>
+                    <Image src={Star} alt='star icon' className='hidden md:block w-30 h-30 absolute -top-9 z-10 -right-6' />
                 </div>
                 <p className="mt-3 md:w-[40%]">
-                    Powered by partners who love travel as much as you do. From inspiration to experiences, they help bring the festival to life.
+                    Powered by Partners who love travel as much as you do. From inspiration to experiences, they help bring the festival to life.
                 </p>
             </div>
 
