@@ -51,8 +51,8 @@ const PartnersCarousel = () => {
 
   // mobile: one logo per slide with title
   const mobileSlides = [
-    ...destinationPartners.map((logo) => ({ title: "Destination partner", logo })),
-    ...featuredPartners.map((logo) => ({ title: "Premium partner", logo })),
+    ...destinationPartners.map((logo) => ({ title: "Destination Partner", logo })),
+    ...featuredPartners.map((logo) => ({ title: "Premium Partner", logo })),
     // ...partnerLogos.map((logo) => ({ title: "Partner", logo })),
   ];
 
