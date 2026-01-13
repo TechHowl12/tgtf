@@ -24,7 +24,8 @@ import rare from "../images/rare.png";
 import Star from "../images/bright-star.png";
 import Circles from "../images/two-circles.png";
 import Dots from "../images/green-dots.png";
-import Shine from "../images/shine.svg";
+import Sun from "../images/red-sun.png";
+import Shine from "../images/half-shine.png";
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
@@ -112,26 +113,31 @@ const Page = () => {
 
     const giftingPartners = [
         { src: indulge, alt: 'indulge', className: 'w-34 object-contain' },
-        { src: H, alt: 'H', className: 'w-32' },
+        { src: H, alt: 'H', className: 'w-100 mt-8' },
     ];
 
     return (
         <main className="mt-32 mb-10 md:mt-40 md:mb-24 px-0 md:px-14">
 
-            <div className="pb-8 pl-8 pr-5 relative flex flex-col md:flex-row justify-between md:items-center">
-                <Image src={Circles} alt='icon' className='absolute w-14 -top-18 right-[50%] hidden md:block' />
-                <Image src={Shine} alt='icon' className='absolute bottom-0 right-0 w-14 hidden md:block' />
+            <div className="pb-8 pl-8 pr-5 relative flex flex-col justify-between">
+
+                <Image src={Dots} alt='icon' className='absolute w-14 bottom-0 right-[25%] hidden md:block' />
+                <Image src={Sun} alt='icon' className='absolute w-14 -top-24 right-[45%] hidden md:block' />
+                <Image src={Circles} alt='icon' className='absolute w-14 top-0 right-[6%] hidden md:block' />
+                <Image src={Shine} alt='icon' className='absolute -bottom-10 -right-20 w-50 hidden md:block' />
+
                 <div className='relative'>
                     <h1 className="text-pink relative z-20">
-                        <span className="font-bold mb-2">FEATURED PARTNERS</span>
-                        <br /> of TGTF
+                        <span className="font-bold mb-2">CURATORS</span> OF THE<br/> TRAVEL COLLECTIVE
                     </h1>
-                    <Image src={Star} alt='star icon' className='hidden md:block w-30 h-30 absolute -top-9 z-10 -right-6' />
+                    <Image src={Star} alt='star icon' className='hidden md:block w-32 h-32 absolute -top-7 z-10 -left-12' />
                 </div>
-                <p className="mt-3 md:w-[40%]">
-                    Powered by Partners who love travel as much as you do. From inspiration to experiences, they help bring the festival to life.
+                <p className="mt-3 md:w-[58%] md:mt-8 relative z-20">
+                    Our Partners are the driving force behind TGTF — a curated network of travel brands, creators, and communities coming together to shape unforgettable journeys and experiences.
                 </p>
             </div>
+
+            <div className="w-full h-8 bg-pink md:hidden" />
 
             <div className="px-6 py-10 flex flex-col gap-y-10">
                 <PartnersSection title={<><span className="font-bold">Destination</span> partners</>} items={destinationPartners} />
