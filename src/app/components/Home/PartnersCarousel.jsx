@@ -57,7 +57,7 @@ const PartnersCarousel = () => {
   ];
 
   return (
-    <div className="w-full pt-20 pb-14 lg:py-0 lg:pt-20 lg:pb-14 md:px-16 lg:px-10 sm:px-20 bg-grey relative">
+    <div className="w-full pt-20 pb-13 lg:py-0 lg:pt-20 lg:pb-14 md:px-16 lg:px-10 sm:px-20 bg-grey relative">
 
       <h1 className="text-pink absolute top-6 xl:top-5 text-center left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
         <span className="font-bold">partners</span>
@@ -136,7 +136,7 @@ const PartnersCarousel = () => {
                     {title}
                   </div>
                   <div className="h-full w-full flex items-center justify-center px-4 pt-6">
-                    <Image width={200} height={80} src={logo} alt={`${title} Logo`} />
+                    <Image width={200} height={80} src={logo} className={logo === ana ? "scale-150" : "scale-100"} alt={`${title} Logo`} />
                   </div>
                 </div>
               </SwiperSlide>
