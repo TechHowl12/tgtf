@@ -57,12 +57,14 @@ const PartnersCarousel = () => {
   ];
 
   return (
-    <div className="w-full pt-20 pb-10 lg:py-0 lg:pt-20 lg:pb-7 md:px-16 lg:px-10 sm:px-20 bg-grey relative">
-
+    <div className="w-full pt-20 pb-14 lg:py-0 lg:pt-20 lg:pb-14 md:px-16 lg:px-10 sm:px-20 bg-grey relative">
 
       <h1 className="text-pink absolute top-6 xl:top-5 text-center left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
         <span className="font-bold">partners</span>
       </h1>
+      <button onClick={() => (window.location.href = "/partners")} className="button rounded-sm px-2 text-sm! font-thin! absolute bottom-4 text-center bg-pink text-white left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
+        see more
+      </button>
 
       {/* SLIDER: visible only below 1024px */}
       <div className="lg:hidden relative">

@@ -210,7 +210,6 @@ button:hover .arrow-wrapper {
   transform: rotateY(180deg);
 }
 
-
 @media (min-width:768px) {
   .hero-bg {
     background-image: var(--desktopBG);
