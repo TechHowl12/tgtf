@@ -107,7 +107,7 @@ const Page = () => {
     ];
 
     const giftingPartners = [
-        { src: indulge, alt: 'indulge', className: 'w-40' },
+        { src: indulge, alt: 'indulge', className: 'w-34 object-contain' },
         { src: H, alt: 'H', className: 'w-32' },
     ];
 
