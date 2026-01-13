@@ -15,12 +15,12 @@ export default function Page() {
       : 'bg-transparent text-blue curve border border-blue w-full py-3';
 
   return (
-    <main id="programme" className="mt-32 mb-10">
-      <div className="pb-8 pl-8 pr-5">
+    <main id="programme" className="mt-32 mb-10 md:mt-40 md:mb-24 px-0 md:px-14">
+      <div className="pb-8 pl-8 pr-5 flex flex-col md:flex-row justify-between items-center">
         <h1 className="text-pink">
           all <span className="font-bold">progammes</span>
         </h1>
-        <p className="mt-3">
+        <p className="mt-3 md:w-[40%]">
           Please note that while entry is free, select events are ticketed to manage limited seating.
           Book yours early to avoid missing out!
         </p>
@@ -28,7 +28,7 @@ export default function Page() {
 
       <div className="w-full h-8 bg-pink md:hidden" />
 
-      <div className="w-full flex items-center justify-center gap-x-4 py-5 px-5">
+      <div className="w-full md:w-96 flex items-center justify-center gap-x-4 py-5 px-5">
         <button
           type="button"
           className={dayButtonClass(activeDay === 'day1')}
