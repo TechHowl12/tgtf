@@ -60,6 +60,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="g9uUeml4Don2wZ5FAgDLqWRk_JhXHJVMkYpTDZN0c_c" />
         {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
