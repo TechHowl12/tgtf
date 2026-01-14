@@ -27,6 +27,7 @@ import Circles from "../images/two-circles.png";
 import Dots from "../images/green-dots.png";
 import Sun from "../images/red-sun.png";
 import Shine from "../images/half-shine.png";
+import Link from 'next/link';
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
@@ -45,9 +46,19 @@ const swiperCommonProps = {
     },
 };
 
-const LogoCard = ({ src, alt, className = '' }) => (
+const LogoCard = ({ src, alt, className = '', url }) => (
     <div className="flex items-center justify-center h-[140px]">
-        <Image src={src} alt={alt} className={`object-contain ${className}`} />
+        {url ? (
+            <Link href={url} target="_blank" rel="noopener noreferrer">
+                <Image 
+                    src={src} 
+                    alt={alt} 
+                    className={`object-contain cursor-pointer hover:opacity-80 transition-opacity ${className}`} 
+                />
+            </Link>
+        ) : (
+            <Image src={src} alt={alt} className={`object-contain ${className}`} />
+        )}
     </div>
 );
 
@@ -73,11 +84,21 @@ const PartnersSection = ({ title, items }) => {
             <div className="hidden md:grid grid-cols-3 gap-y-14 gap-x-8 justify-items-center">
                 {items.map((item) => (
                     <div key={item.alt} className="flex items-center justify-center h-[140px]">
-                        <Image
-                            src={item.src}
-                            alt={item.alt}
-                            className={`object-contain ${item.className || ''}`}
-                        />
+                        {item.url ? (
+                            <Link href={item.url} target="_blank" rel="noopener noreferrer">
+                                <Image
+                                    src={item.src}
+                                    alt={item.alt}
+                                    className={`object-contain cursor-pointer hover:opacity-80 transition-opacity ${item.className || ''}`}
+                                />
+                            </Link>
+                        ) : (
+                            <Image
+                                src={item.src}
+                                alt={item.alt}
+                                className={`object-contain ${item.className || ''}`}
+                            />
+                        )}
                     </div>
                 ))}
             </div>
@@ -87,34 +108,34 @@ const PartnersSection = ({ title, items }) => {
 
 const Page = () => {
     const destinationPartners = [
-        { src: thailand, alt: 'thailand', className: 'w-40' },
-        { src: ana, alt: 'ana', className: 'w-80 scale-110' },
-        { src: kenya, alt: 'kenya', className: 'w-44' },
+        { src: thailand, alt: 'thailand', className: 'w-40', url: "https://www.tourismthailand.org/" },
+        { src: ana, alt: 'ana', className: 'w-80 scale-110', url:"https://visit.sapporo.travel/" },
+        { src: kenya, alt: 'kenya', className: 'w-44', url:"https://ktb.go.ke/" },
     ];
 
     const premiumPartners = [
-        { src: clubmed, alt: 'club-med', className: 'w-72 aspect-square' },
-        { src: CGH, alt: 'CGH', className: 'w-56 aspect-square' },
+        { src: clubmed, alt: 'club-med', className: 'w-72 aspect-square', url:"https://www.clubmed.asia/" },
+        { src: CGH, alt: 'CGH', className: 'w-56 aspect-square', url:"https://www.cghearth.com/" },
     ];
 
     const partners = [
-        { src: latitude, alt: 'latitude', className: 'w-40' },
-        { src: immersive, alt: 'immersive', className: 'w-44' },
-        { src: temple, alt: 'temple', className: 'w-44' },
-        { src: kohventure, alt: 'kohventure', className: 'w-56' },
-        { src: rajasthan, alt: 'rajasthan', className: 'w-44' },
-        { src: rare, alt: 'rare', className: 'w-36' },
+        { src: latitude, alt: 'latitude', className: 'w-40', url:"https://onelatitude.in/" },
+        { src: immersive, alt: 'immersive', className: 'w-44', url:"https://www.immersivetrails.com/" },
+        { src: temple, alt: 'temple', className: 'w-44', url:"https://www.templepilots.com/" },
+        { src: kohventure, alt: 'kohventure', className: 'w-56', url:"https://kohventure.com/" },
+        { src: rajasthan, alt: 'rajasthan', className: 'w-44', url:"https://rajasthanstudio.com/" },
+        { src: rare, alt: 'rare', className: 'w-36' , url:"https://www.rareindia.com/"},
     ];
 
     const communityPartners = [
-        { src: volunteer, alt: 'volunteer', className: 'w-40' },
-        { src: twk, alt: 'twk', className: 'w-32' },
-        { src: surface, alt: 'surface', className: 'w-44' },
+        { src: volunteer, alt: 'volunteer', className: 'w-40', url:"https://volunteeryatra.com/" },
+        { src: twk, alt: 'twk', className: 'w-32', url:"https://travelwithkids.co.in/" },
+        { src: surface, alt: 'surface', className: 'w-44', url:"https://surface-interval.com/?srsltid=AfmBOor3FdtvrzdPmPoag0nDrxFfbNnx0iG84XwIppRCde_rm6BgDnf6" },
     ];
 
     const giftingPartners = [
-        { src: indulge, alt: 'indulge', className: 'w-34 object-contain' },
-        { src: H, alt: 'H', className: 'w-100 mt-8' },
+        { src: indulge, alt: 'indulge', className: 'w-34 object-contain', url:"https://www.indulge.house/"},
+        { src: H, alt: 'H', className: 'w-100 mt-8', url:"https://www.hostelbird.com/" },
         { src: ibis, alt: 'ibis', className: 'w-30 mt-4' },
     ];
 

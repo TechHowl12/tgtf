@@ -3,6 +3,10 @@
 import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
 import PROGRAMMES from './programmes';
+import Star from "../images/bright-star.png";
+import fshine from "../images/f-shine.png";
+import Dots from "../images/green-dots.png";
+import Circles from "../images/two-circles.png";
 
 export default function Page() {
   const [activeDay, setActiveDay] = useState('day1');
@@ -17,10 +21,11 @@ export default function Page() {
   return (
     <main id="programme" className="mt-32 mb-20 md:px-20 md:py-20">
       <div className="pb-8 pl-8 pr-5 md:pb-0">
-        <div className="md:flex md:justify-between md:items-start md:mb-8">
-          <h1 className="text-pink">
+        <div className="md:flex md:justify-between md:items-start md:mb-8 relative">
+          <h1 className="text-pink relative z-20">
             ALL <span className="font-bold">progammes</span>
           </h1>
+          <Image src={Star} alt='star icon' className='hidden md:block w-32 h-32 absolute -top-15 z-10 left-90' />
           <p className="mt-3 md:mt-0 md:max-w-xl">
             Please note that while entry is free, select events are ticketed to manage limited seating.
             Book yours early to avoid missing out!
@@ -45,6 +50,9 @@ export default function Page() {
         >
           DAY 2
         </button>
+        <Image src={Circles} alt='icon' className='absolute w-14 top-25 right-25 hidden md:block' />
+        <Image src={Dots} alt='icon' className='absolute w-14 top-80 left-0 hidden md:block' />
+        <Image src={fshine} alt='icon' className='absolute top-80 right-135 w-25 hidden md:block' />
       </div>
       <div className="programmes px-4 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-6">
         {programmes.map((item) => (
@@ -61,8 +69,8 @@ function ProgrammeCard({ item }) {
   const isPaid = item.priceType === 'paid';
 
   const pillClass = isPaid
-    ? 'relative top-2 z-10 border border-pink text-pink px-2 pt-2 pb-3 rounded-t-xl'
-    : 'relative top-2 z-10 border border-blue text-blue px-2 pt-2 pb-3 rounded-t-xl';
+    ? 'relative top-2 z-10 text-sm! border border-pink text-pink px-2 pt-2 pb-3 rounded-t-xl'
+    : 'relative top-2 z-10 text-sm! border border-blue text-blue px-2 pt-2 pb-3 rounded-t-xl';
 
   const headingClass = isPaid ? 'text-base! text-pink font-semibold' : 'text-base! text-blue font-semibold';
 
@@ -72,9 +80,9 @@ function ProgrammeCard({ item }) {
     ? 'bg-bright mt-2 curve px-4 py-3 border-none'
     : 'bg-blue mt-2 curve px-4 py-3 border-none';
 
-  const backHeadingClass = isPaid ? 'text-2xl! text-pink font-semibold' : 'text-2xl! text-white font-semibold'; // White text for back
+  const backHeadingClass = isPaid ? 'text-2xl! text-pink font-semibold' : 'text-2xl! text-white font-semibold'; 
 
-  const backTextClass = isPaid ? 'mt-6 mb-2 text-black !text-lg' : 'mt-6 mb-2 text-white !text-lg'; // White text for back
+  const backTextClass = isPaid ? 'mt-6 mb-2 text-black !text-lg' : 'mt-6 mb-2 text-white !text-lg';
 
   const registerBtnClass = isPaid
     ? 'button bg-pink text-sm! text-white curve font-semibold w-32 py-1'
@@ -112,7 +120,7 @@ function ProgrammeCard({ item }) {
               alt="programme image"
             />
 
-            <div className={`${cardClass} min-h-[180px] flex flex-col justify-between`}>
+            <div className={`${cardClass} min-h-[160px] flex flex-col justify-between`}>
               <h2 className={headingClass}>{item.title}</h2>
               <p className={textClass}>by {item.by}</p>
 
