@@ -122,7 +122,7 @@ function ProgrammeCard({ item }) {
 
             <div className={`${cardClass} min-h-[160px] flex flex-col justify-between`}>
               <h2 className={headingClass}>{item.title}</h2>
-              <p className={textClass}>by {item.by}</p>
+              <p className={textClass}>by <span className="font-bold">{item.by}</span></p>
 
               <div className="flex items-center gap-x-2">
                 <button type="button" className={moreinfoBtnClass} onClick={() => setFlipped(true)}>
