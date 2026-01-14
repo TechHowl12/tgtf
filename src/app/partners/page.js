@@ -21,6 +21,7 @@ import twk from "../images/twk.png";
 import volunteer from "../images/volunteer.png";
 import indulge from "../images/indulge.png";
 import rare from "../images/rare.png";
+import ibis from "../images/ibis.png";
 import Star from "../images/bright-star.png";
 import Circles from "../images/two-circles.png";
 import Dots from "../images/green-dots.png";
@@ -68,8 +69,8 @@ const PartnersSection = ({ title, items }) => {
                 </Swiper>
             </div>
 
-            {/* Tablet + Desktop: Grid cols-4 */}
-            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-3 gap-y-14">
+            {/* Tablet + Desktop: Grid cols-3 */}
+            <div className="hidden md:grid grid-cols-3 gap-y-14 gap-x-8 justify-items-center">
                 {items.map((item) => (
                     <div key={item.alt} className="flex items-center justify-center h-[140px]">
                         <Image
@@ -114,6 +115,7 @@ const Page = () => {
     const giftingPartners = [
         { src: indulge, alt: 'indulge', className: 'w-34 object-contain' },
         { src: H, alt: 'H', className: 'w-100 mt-8' },
+        { src: ibis, alt: 'ibis', className: 'w-30 mt-4' },
     ];
 
     return (
