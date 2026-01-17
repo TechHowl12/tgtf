@@ -9,7 +9,7 @@ const PROGRAMMES = {
             venue: 'Explorer\'s Lab',
             format: 'Engagement',
             title: 'Strollers to Suitcases: mini explorer\'s meetup',
-            by: 'Travel by kids',
+            by: 'Travel with kids',
             image: programmeImg,
             moreInfo:"Travel With Kids India is a family-focused travel platform and community that helps parents plan meaningful, kid-friendly journeys. Through curated trips, practical tips, and shared experiences, it makes travelling with children easier, more enjoyable, and full of memorable moments for the entire family."
         },
