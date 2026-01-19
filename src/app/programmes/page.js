@@ -138,7 +138,7 @@ function ProgrammeCard({ item }) {
           <div className="flip-face flip-front" style={{
             opacity: flipped ? 0 : 1,
             visibility: flipped ? 'hidden' : 'visible',
-            transition: 'opacity 0s, visibility 0s'
+            transition: flipped ? 'opacity 0s 300ms, visibility 0s 300ms' : 'opacity 0s, visibility 0s'
           }}>
             <div style={{
               WebkitTransform: 'translate3d(0,0,0)',
