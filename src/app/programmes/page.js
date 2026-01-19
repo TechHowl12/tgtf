@@ -168,7 +168,7 @@ function ProgrammeCard({ item }) {
 
           {/* BACK */}
           <div className="flip-face flip-back relative">
-            <div className={`${backCardClass} h-130 md:h-140 relative -top-2 z-20 flex flex-col justify-between`}>
+            <div className={`${backCardClass} h-130 md:h-140 relative -top-2 z-30 flex flex-col justify-between`}>
               <div>
                 <div className="flex justify-between items-start mt-2">
                   <h1 className={backHeadingClass}>{item.title}</h1>
