@@ -28,6 +28,10 @@ import Dots from "../images/green-dots.png";
 import Sun from "../images/red-sun.png";
 import Shine from "../images/half-shine.png";
 import Link from 'next/link';
+import homeex from "../images/homeex.webp";
+import topo from "../images/topo.webp";
+import wholetruth from "../images/wholetruth.png";
+import shwaas from "../images/shwaas.webp";
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
@@ -116,6 +120,7 @@ const Page = () => {
     const premiumPartners = [
         { src: clubmed, alt: 'club-med', className: 'w-72 aspect-square', url:"https://www.clubmed.asia/" },
         { src: CGH, alt: 'CGH', className: 'w-56 aspect-square', url:"https://www.cghearth.com/" },
+        { src: homeex, alt: 'homeex', className: 'w-52', url:"https://www.homeexchange.com/" },
     ];
 
     const partners = [
@@ -125,6 +130,8 @@ const Page = () => {
         { src: kohventure, alt: 'kohventure', className: 'w-56', url:"https://kohventure.com/" },
         { src: rajasthan, alt: 'rajasthan', className: 'w-44', url:"https://rajasthanstudio.com/" },
         { src: rare, alt: 'rare', className: 'w-36' , url:"https://www.rareindia.com/"},
+        { src: topo, alt: 'topo', className: 'w-46', url:"https://www.toponomad.co/"},
+        { src: wholetruth, alt: 'wholetruth', className: 'w-56', url:"https://thewholetruthfoods.com/"},
     ];
 
     const communityPartners = [
@@ -137,6 +144,7 @@ const Page = () => {
         { src: indulge, alt: 'indulge', className: 'w-34 object-contain', url:"https://www.indulge.house/"},
         { src: H, alt: 'H', className: 'w-100 mt-8', url:"https://www.hostelbird.com/" },
         { src: ibis, alt: 'ibis', className: 'w-30 mt-4' },
+        { src: shwaas, alt: 'shwaas', className: 'w-40 mt-4', url:"https://shwaas.co/"},
     ];
 
     return (

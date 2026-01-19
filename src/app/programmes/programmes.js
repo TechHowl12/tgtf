@@ -35,7 +35,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Thailand Authority of Tourism',
+            by: 'Tourism Authority of Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Thailand’s official tourism platform sparks travel dreams with destination highlights, culture, festivals, experiences, and handy planning tips to explore the Land of Smiles with ease."
         },
@@ -90,7 +90,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Thailand Authority of Tourism',
+            by: 'Tourism Authority of Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Thailand’s official tourism platform sparks travel dreams with destination highlights, culture, festivals, experiences, and handy planning tips to explore the Land of Smiles with ease."
         },
@@ -156,7 +156,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Thailand Authority of Tourism',
+            by: 'Tourism Authority of Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Thailand’s official tourism platform sparks travel dreams with destination highlights, culture, festivals, experiences, and handy planning tips to explore the Land of Smiles with ease."
         },
@@ -180,7 +180,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Thailand Authority of Tourism',
+            by: 'Tourism Authority of Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Thailand’s official tourism platform sparks travel dreams with destination highlights, culture, festivals, experiences, and handy planning tips to explore the Land of Smiles with ease."
         },
@@ -235,7 +235,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Thailand Authority of Tourism',
+            by: 'Tourism Authority of Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Thailand’s official tourism platform sparks travel dreams with destination highlights, culture, festivals, experiences, and handy planning tips to explore the Land of Smiles with ease."
         },
