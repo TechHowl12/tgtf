@@ -80,15 +80,15 @@ function ProgrammeCard({ item }) {
 
   // Pill styling - updated colors
   const pillClass = isPaid 
-    ? 'relative top-2 z-10 text-sm! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold' 
-    : 'relative top-2 z-10 text-sm! bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
+    ? 'relative top-2 z-10 text-xs! sm:text-sm! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold' 
+    : 'relative top-2 z-10 text-xs! sm:text-sm! bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
   
-  const formatPillClass = `relative top-2 z-10 text-sm! ${getFormatColor(item.format)} text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold`;
+  const formatPillClass = `relative top-2 z-10 text-xs! sm:text-sm! ${getFormatColor(item.format)} text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold`;
 
   // Card styling
   const headingClass = isPaid 
-    ? 'text-base! text-pink font-bold uppercase' 
-    : 'text-base! text-blue font-bold uppercase';
+    ? 'text-sm! sm:text-base! text-pink font-bold uppercase' 
+    : 'text-sm! sm:text-base! text-blue font-bold uppercase';
 
   const cardClass = isPaid 
     ? 'border-2 border-pink mt-2 curve px-4 py-3 bg-white' 
@@ -99,8 +99,8 @@ function ProgrammeCard({ item }) {
     : 'bg-blue mt-2 curve px-4 py-3 border-none';
 
   const backHeadingClass = isPaid 
-    ? 'text-2xl! text-pink font-semibold' 
-    : 'text-2xl! text-white font-semibold';
+    ? 'text-xl! sm:text-2xl! text-pink font-semibold' 
+    : 'text-xl! sm:text-2xl! text-white font-semibold';
 
   const backTextClass = isPaid 
     ? 'mt-6 mb-2 text-black !text-lg' 
@@ -132,7 +132,7 @@ function ProgrammeCard({ item }) {
       </div>
 
       {/* Flip Container */}
-      <div className="flip h-130 md:h-152 relative z-20 perspective">
+      <div className="flip h-130 md:h-150 relative z-20 perspective">
         <div className={`flip-inner ${flipped ? 'is-flipped' : ''}`}>
           {/* FRONT */}
           <div className="flip-face flip-front">
@@ -141,7 +141,7 @@ function ProgrammeCard({ item }) {
               className="relative z-20 border-2 border-blue rounded-xl" 
               alt="programme image" 
             />
-            <div className={`${cardClass} min-h-[160px] flex flex-col justify-between`}>
+            <div className={`${cardClass} flex flex-col justify-between`}>
               <div>
                 <h2 className={headingClass}>{item.title}</h2>
                 <p className={textClass}>
@@ -168,7 +168,7 @@ function ProgrammeCard({ item }) {
 
           {/* BACK */}
           <div className="flip-face flip-back relative">
-            <div className={`${backCardClass} h-130 md:h-152 md:mt-0 relative z-20 flex flex-col justify-between`}>
+            <div className={`${backCardClass} h-130 md:h-140 relative -top-2 z-20 flex flex-col justify-between`}>
               <div>
                 <div className="flex justify-between items-start mt-2">
                   <h1 className={backHeadingClass}>{item.title}</h1>
@@ -179,7 +179,7 @@ function ProgrammeCard({ item }) {
                       e.stopPropagation();
                       setFlipped(false);
                     }}
-                    className={`rounded-full w-10 h-10 flex items-center justify-center text-2xl shrink-0 cursor-pointer ${
+                    className={`rounded-full w-10 h-10 flex items-center justify-center text-4xl! shrink-0 cursor-pointer ${
                       isPaid 
                         ? 'bg-bright text-pink border-pink hover:opacity-60' 
                         : 'bg-blue text-white border-white hover:opacity-60'
