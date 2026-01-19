@@ -103,8 +103,8 @@ function ProgrammeCard({ item }) {
     : 'text-xl! sm:text-2xl! text-white font-semibold';
 
   const backTextClass = isPaid 
-    ? 'mt-6 mb-2 text-black !text-lg' 
-    : 'mt-6 mb-2 text-white !text-lg';
+    ? 'mt-6 mb-2 text-black text-sm! md:text-lg!' 
+    : 'mt-6 mb-2 text-white text-sm! md:text-lg!';
 
   const registerBtnClass = isPaid 
     ? 'button bg-pink text-sm! text-white curve font-bold w-auto px-4 py-2' 
@@ -146,7 +146,7 @@ function ProgrammeCard({ item }) {
             }}>
               <Image 
                 src={item.image} 
-                className="relative z-20 border-2 border-blue rounded-xl" 
+                className={`relative z-20 border-2 rounded-xl ${isPaid ? "border-pink" : "border-blue"}`} 
                 alt="programme image"
                 style={{
                   WebkitBackfaceVisibility: 'hidden',
@@ -156,7 +156,7 @@ function ProgrammeCard({ item }) {
                 }}
               />
             </div>
-            <div className={`${cardClass} flex flex-col justify-between`}>
+            <div className={`${cardClass} md:h-50 flex flex-col justify-between`}>
               <div>
                 <h2 className={headingClass}>{item.title}</h2>
                 <p className={textClass}>
@@ -183,9 +183,9 @@ function ProgrammeCard({ item }) {
 
           {/* BACK */}
           <div className="flip-face flip-back relative">
-            <div className={`${backCardClass} h-130 md:h-140 relative -top-2 z-30 flex flex-col justify-between`}>
+            <div className={`${backCardClass} h-130 md:h-150 relative -top-2 z-30 flex flex-col justify-between`}>
               <div>
-                <div className="flex justify-between items-start mt-2">
+                <div className="flex justify-between items-start gap-x-3 mt-2">
                   <h1 className={backHeadingClass}>{item.title}</h1>
                   <button 
                     type="button"

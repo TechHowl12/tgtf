@@ -24,7 +24,7 @@ const PROGRAMMES = {
             venue: 'Explorer\'s Lab',
             format: 'Engagement',
             title: 'Strollers to Suitcases: mini explorer\'s meetup',
-            by: 'Travel with kids',
+            by: 'Travel with Kids',
             image: travelWithKidsImg,
             moreInfo:"Travel With Kids India is a family-focused travel platform and community that helps parents plan meaningful, kid-friendly journeys. Through curated trips, practical tips, and shared experiences, it makes travelling with children easier, more enjoyable, and full of memorable moments for the entire family."
         },
@@ -224,7 +224,7 @@ const PROGRAMMES = {
             venue: 'Explorer\'s Lab',
             format: 'Engagement',
             title: 'Veggie Voyages - A Silk Roads Chaikhana & Spain’s regional food culture - Experiences',
-            by: 'Ahuti Sejpal and Chep Aparna',
+            by: 'Ahuti Sejpal and Chef Aparna',
             image: ahutisejpalandchepaparnaImg,
             moreInfo: "Ahuti Sejpal is a conscious travel advocate promoting vegetarian-friendly, mindful, and sustainable tourism worldwide. Travelling Thali is a culinary storytelling platform that explores cultures through food. Led by Chef Aparna, it brings global cuisines to life through vegetarian recipes, hands-on workshops, and shared dining experiences—connecting people, places, and traditions one plate at a time."
         },
