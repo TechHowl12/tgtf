@@ -123,7 +123,7 @@ function ProgrammeCard({ item }) {
     : 'button bg-white text-xl! text-blue curve font-semibold w-full py-3';
 
   return (
-    <div data-aos="zoom-out">
+    <main>
       <div className="flex justify-between relative z-10">
         <div className="flex gap-x-1">
           <p className={pillClass}>{isPaid ? 'Paid' : 'Free'}</p>
@@ -232,6 +232,6 @@ function ProgrammeCard({ item }) {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
