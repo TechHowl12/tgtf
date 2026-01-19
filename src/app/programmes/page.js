@@ -19,7 +19,7 @@ export default function Page() {
       : 'bg-transparent text-blue curve border border-blue w-full md:w-40 py-3';
 
   return (
-    <main id="programme" className="mt-32 mb-20 md:px-20 md:py-20">
+    <main id="programme" className="mt-32 mb-0 md:px-20 md:pt-20">
       <div className="pb-8 pl-8 pr-5 md:pb-0">
         <div className="md:flex md:justify-between md:items-start md:mb-8 relative">
           <h1 className="text-pink relative z-20">
