@@ -79,45 +79,45 @@ function ProgrammeCard({ item }) {
   };
 
   // Pill styling - updated colors
-  const pillClass = isPaid 
-    ? 'relative top-2 z-10 text-xs! sm:text-sm! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold' 
+  const pillClass = isPaid
+    ? 'relative top-2 z-10 text-xs! sm:text-sm! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold'
     : 'relative top-2 z-10 text-xs! sm:text-sm! bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
-  
+
   const formatPillClass = `relative top-2 z-10 text-xs! sm:text-sm! ${getFormatColor(item.format)} text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold`;
 
   // Card styling
-  const headingClass = isPaid 
-    ? 'text-sm! sm:text-base! text-pink font-bold uppercase' 
+  const headingClass = isPaid
+    ? 'text-sm! sm:text-base! text-pink font-bold uppercase'
     : 'text-sm! sm:text-base! text-blue font-bold uppercase';
 
-  const cardClass = isPaid 
-    ? 'border-2 border-pink mt-2 curve px-4 py-3 bg-white' 
+  const cardClass = isPaid
+    ? 'border-2 border-pink mt-2 curve px-4 py-3 bg-white'
     : 'border-2 border-blue mt-2 curve px-4 py-3 bg-white';
 
-  const backCardClass = isPaid 
-    ? 'bg-bright mt-2 curve px-4 py-3 border-none' 
+  const backCardClass = isPaid
+    ? 'bg-bright mt-2 curve px-4 py-3 border-none'
     : 'bg-blue mt-2 curve px-4 py-3 border-none';
 
-  const backHeadingClass = isPaid 
-    ? 'text-xl! sm:text-2xl! text-pink font-semibold' 
+  const backHeadingClass = isPaid
+    ? 'text-xl! sm:text-2xl! text-pink font-semibold'
     : 'text-xl! sm:text-2xl! text-white font-semibold';
 
-  const backTextClass = isPaid 
-    ? 'mt-6 mb-2 text-black !text-lg' 
+  const backTextClass = isPaid
+    ? 'mt-6 mb-2 text-black !text-lg'
     : 'mt-6 mb-2 text-white !text-lg';
 
-  const registerBtnClass = isPaid 
-    ? 'button bg-pink text-sm! text-white curve font-bold w-auto px-4 py-2' 
+  const registerBtnClass = isPaid
+    ? 'button bg-pink text-sm! text-white curve font-bold w-auto px-4 py-2'
     : 'button bg-blue text-sm! text-white curve font-bold w-auto px-4 py-2';
 
-  const moreinfoBtnClass = isPaid 
-    ? 'button border-2 border-pink bg-white text-sm! text-pink curve px-4 py-2 font-bold' 
+  const moreinfoBtnClass = isPaid
+    ? 'button border-2 border-pink bg-white text-sm! text-pink curve px-4 py-2 font-bold'
     : 'button border-2 border-blue bg-white text-sm! text-blue curve px-4 py-2 font-bold';
 
   const textClass = 'mt-2 mb-3 text-black text-sm';
 
-  const backRegisterBtnClass = isPaid 
-    ? 'button bg-pink text-xl! text-white curve font-semibold w-full py-3' 
+  const backRegisterBtnClass = isPaid
+    ? 'button bg-pink text-xl! text-white curve font-semibold w-full py-3'
     : 'button bg-white text-xl! text-blue curve font-semibold w-full py-3';
 
   return (
@@ -136,11 +136,22 @@ function ProgrammeCard({ item }) {
         <div className={`flip-inner ${flipped ? 'is-flipped' : ''}`}>
           {/* FRONT */}
           <div className="flip-face flip-front">
-            <Image 
-              src={item.image} 
-              className="relative z-20 border-2 border-blue rounded-xl" 
-              alt="programme image" 
-            />
+            <div style={{
+              WebkitTransform: 'translate3d(0,0,0)',
+              transform: 'translate3d(0,0,0)'
+            }}>
+              <Image
+                src={item.image}
+                className="relative z-20 border-2 border-blue rounded-xl"
+                alt="programme image"
+                style={{
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  WebkitTransform: 'translateZ(0)',
+                  transform: 'translateZ(0)'
+                }}
+              />
+            </div>
             <div className={`${cardClass} flex flex-col justify-between`}>
               <div>
                 <h2 className={headingClass}>{item.title}</h2>
@@ -149,15 +160,15 @@ function ProgrammeCard({ item }) {
                 </p>
               </div>
               <div className="flex items-center gap-x-2 mt-3">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className={moreinfoBtnClass}
                   onClick={() => setFlipped(true)}
                 >
                   More info
                 </button>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className={registerBtnClass}
                 >
                   REGISTER NOW
@@ -172,18 +183,17 @@ function ProgrammeCard({ item }) {
               <div>
                 <div className="flex justify-between items-start mt-2">
                   <h1 className={backHeadingClass}>{item.title}</h1>
-                  <button 
+                  <button
                     type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
                       setFlipped(false);
                     }}
-                    className={`rounded-full w-10 h-10 flex items-center justify-center text-4xl! shrink-0 cursor-pointer ${
-                      isPaid 
-                        ? 'bg-bright text-pink border-pink hover:opacity-60' 
+                    className={`rounded-full w-10 h-10 flex items-center justify-center text-4xl! shrink-0 cursor-pointer ${isPaid
+                        ? 'bg-bright text-pink border-pink hover:opacity-60'
                         : 'bg-blue text-white border-white hover:opacity-60'
-                    }`}
+                      }`}
                     style={{ pointerEvents: 'auto', zIndex: 100 }}
                   >
                     ×
@@ -194,8 +204,8 @@ function ProgrammeCard({ item }) {
                 </p>
               </div>
               <div className="flex items-center gap-x-2">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className={backRegisterBtnClass}
                 >
                   REGISTER NOW
