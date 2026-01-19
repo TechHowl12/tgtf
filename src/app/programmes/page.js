@@ -4,9 +4,10 @@ import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
 import PROGRAMMES from './programmes';
 import Star from "../images/bright-star.png";
-import fshine from "../images/f-shine.png";
+import Shine from "../images/half-shine.png";
 import Dots from "../images/green-dots.png";
 import Circles from "../images/two-circles.png";
+import Sun from "../images/red-sun.png";
 
 export default function Page() {
   const [activeDay, setActiveDay] = useState('day1');
@@ -19,14 +20,14 @@ export default function Page() {
       : 'bg-transparent text-blue curve border border-blue w-full md:w-40 py-3';
 
   return (
-    <main id="programme" className="mt-32 mb-0 md:px-20 md:pt-20">
+    <main id="programme" className="mt-32 mb-20 md:px-20 md:py-20">
       <div className="pb-8 pl-8 pr-5 md:pb-0">
-        <div className="xl:flex md:justify-between md:items-start md:mb-8 relative">
+        <div className="md:flex md:justify-between md:items-start md:mb-8 relative">
           <h1 className="text-pink relative z-20">
             ALL <span className="font-bold">progammes</span>
           </h1>
-          <Image src={Star} alt='star icon' className='hidden xl:block w-32 h-32 absolute -top-15 z-10 left-90' />
-          <p className="mt-3 xl:mt-0 md:max-w-xl">
+          <Image src={Star} alt='star icon' className='hidden md:block w-32 h-32 absolute -top-13 z-10 -left-12' />
+          <p className="mt-3 md:mt-0 md:max-w-xl">
             Please note that while entry is free, select events are ticketed to manage limited seating.
             Book yours early to avoid missing out!
           </p>
@@ -50,11 +51,12 @@ export default function Page() {
         >
           DAY 2
         </button>
-        <Image src={Circles} alt='icon' className='absolute w-14 top-25 right-25 hidden xl:block' />
-        <Image src={Dots} alt='icon' className='absolute w-14 top-80 left-0 hidden xl:block' />
-        <Image src={fshine} alt='icon' className='absolute top-80 right-135 w-25 hidden xl:block' />
+        <Image src={Dots} alt='icon' className='absolute w-14 top-5 right-[25%] hidden md:block' />
+        <Image src={Sun} alt='icon' className='absolute w-14 top-15 right-[45%] hidden md:block' />
+        <Image src={Circles} alt='icon' className='absolute w-14 -top-10 right-[6%] hidden md:block' />
+        <Image src={Shine} alt='icon' className='absolute -bottom-10 -right-20 w-50 hidden md:block' />
       </div>
-      <div className="programmes px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-6">
+      <div className="programmes px-4 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-6">
         {programmes.map((item) => (
           <ProgrammeCard key={item.id} item={item} />
         ))}
@@ -70,54 +72,54 @@ function ProgrammeCard({ item }) {
   // Format color mapping
   const getFormatColor = (format) => {
     const formatColors = {
-      'Engagement': 'bg-red-500',
-      'Entertainment': 'bg-orange-500',
-      'Masterclass': 'bg-purple-600',
-      'Wisdom Vault': 'bg-green-600'
+      'Engagement': 'bg-red',
+      'Entertainment': 'bg-orange',
+      'Masterclass': 'bg-purple',
+      'Wisdom Vault': 'bg-green'
     };
     return formatColors[format] || 'bg-gray-500';
   };
 
   // Pill styling - updated colors
-  const pillClass = isPaid
-    ? 'relative top-2 z-10 text-xs! 2xl:text-sm! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold'
-    : 'relative top-2 z-10 text-xs! 2xl:text-sm! bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
-
-  const formatPillClass = `relative top-2 z-10 text-xs! sm:text-sm! ${getFormatColor(item.format)} text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold`;
+  const pillClass = isPaid 
+    ? 'relative top-2 z-10 text-sm! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold' 
+    : 'relative top-2 z-10 text-sm! bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
+  
+  const formatPillClass = `relative top-2 z-10 text-sm! ${getFormatColor(item.format)} text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold`;
 
   // Card styling
-  const headingClass = isPaid
-    ? 'text-sm! sm:text-base! text-pink font-bold uppercase'
-    : 'text-sm! sm:text-base! text-blue font-bold uppercase';
+  const headingClass = isPaid 
+    ? 'text-base! text-pink font-bold Capitalize' 
+    : 'text-base! text-blue font-bold Capitalize';
 
-  const cardClass = isPaid
-    ? 'border-2 border-pink mt-2 curve px-4 py-3 bg-white'
+  const cardClass = isPaid 
+    ? 'border-2 border-pink mt-2 curve px-4 py-3 bg-white' 
     : 'border-2 border-blue mt-2 curve px-4 py-3 bg-white';
 
-  const backCardClass = isPaid
-    ? 'bg-bright mt-2 curve px-4 py-3 border-none'
+  const backCardClass = isPaid 
+    ? 'bg-bright mt-2 curve px-4 py-3 border-none' 
     : 'bg-blue mt-2 curve px-4 py-3 border-none';
 
-  const backHeadingClass = isPaid
-    ? 'text-xl! sm:text-2xl! text-pink font-semibold'
-    : 'text-xl! sm:text-2xl! text-white font-semibold';
+  const backHeadingClass = isPaid 
+    ? 'text-2xl! text-pink font-semibold' 
+    : 'text-2xl! text-white font-semibold';
 
-  const backTextClass = isPaid
-    ? 'mt-6 mb-2 text-black text-sm! md:text-lg!'
-    : 'mt-6 mb-2 text-white text-sm! md:text-lg!';
+  const backTextClass = isPaid 
+    ? 'mt-6 mb-2 text-black !text-lg' 
+    : 'mt-6 mb-2 text-white !text-lg';
 
-  const registerBtnClass = isPaid
-    ? 'button bg-pink text-sm! text-white curve font-bold w-auto px-4 py-2'
+  const registerBtnClass = isPaid 
+    ? 'button bg-pink text-sm! text-white curve font-bold w-auto px-4 py-2' 
     : 'button bg-blue text-sm! text-white curve font-bold w-auto px-4 py-2';
 
-  const moreinfoBtnClass = isPaid
-    ? 'button border-2 border-pink bg-white text-sm! text-pink curve px-4 py-2 font-bold'
+  const moreinfoBtnClass = isPaid 
+    ? 'button border-2 border-pink bg-white text-sm! text-pink curve px-4 py-2 font-bold' 
     : 'button border-2 border-blue bg-white text-sm! text-blue curve px-4 py-2 font-bold';
 
   const textClass = 'mt-2 mb-3 text-black text-sm';
 
-  const backRegisterBtnClass = isPaid
-    ? 'button bg-pink text-xl! text-white curve font-semibold w-full py-3'
+  const backRegisterBtnClass = isPaid 
+    ? 'button bg-pink text-xl! text-white curve font-semibold w-full py-3' 
     : 'button bg-white text-xl! text-blue curve font-semibold w-full py-3';
 
   return (
@@ -132,31 +134,16 @@ function ProgrammeCard({ item }) {
       </div>
 
       {/* Flip Container */}
-      <div className="flip h-130 md:h-[600px] relative z-20 perspective">
+      <div className="flip h-130 md:h-152 relative z-20 perspective">
         <div className={`flip-inner ${flipped ? 'is-flipped' : ''}`}>
           {/* FRONT */}
-          <div className="flip-face flip-front" style={{
-            opacity: flipped ? 0 : 1,
-            visibility: flipped ? 'hidden' : 'visible',
-            transition: flipped ? 'opacity 0s 300ms, visibility 0s 300ms' : 'opacity 0s, visibility 0s'
-          }}>
-            <div style={{
-              WebkitTransform: 'translate3d(0,0,0)',
-              transform: 'translate3d(0,0,0)'
-            }}>
-              <Image
-                src={item.image}
-                className={`relative z-20 border-2 rounded-xl ${isPaid ? "border-pink" : "border-blue"}`}
-                alt="programme image"
-                style={{
-                  WebkitBackfaceVisibility: 'hidden',
-                  backfaceVisibility: 'hidden',
-                  WebkitTransform: 'translateZ(0)',
-                  transform: 'translateZ(0)'
-                }}
-              />
-            </div>
-            <div className={`${cardClass} h-auto xl:h-54 2xl:h-50 flex flex-col justify-between`}>
+          <div className="flip-face flip-front">
+            <Image 
+              src={item.image} 
+              className="relative z-20 border-2 border-blue rounded-xl" 
+              alt="programme image" 
+            />
+            <div className={`${cardClass} min-h-[160px] flex flex-col justify-between`}>
               <div>
                 <h2 className={headingClass}>{item.title}</h2>
                 <p className={textClass}>
@@ -164,20 +151,16 @@ function ProgrammeCard({ item }) {
                 </p>
               </div>
               <div className="flex items-center gap-x-2 mt-3">
-                <button
-                  type="button"
+                <button 
+                  type="button" 
                   className={moreinfoBtnClass}
                   onClick={() => setFlipped(true)}
                 >
                   More info
                 </button>
-                <button
-                  type="button"
+                <button 
+                  type="button" 
                   className={registerBtnClass}
-                  onClick={() => window.open(
-                    "https://www.skillboxes.com/events/ticket/the-gypsy-travel-festival",
-                    "_blank"
-                  )}
                 >
                   REGISTER NOW
                 </button>
@@ -187,21 +170,22 @@ function ProgrammeCard({ item }) {
 
           {/* BACK */}
           <div className="flip-face flip-back relative">
-            <div className={`${backCardClass} h-130 sm:h-auto xl:h-[523px] 2xl:h-[582px]! relative -top-2 z-30 flex flex-col justify-between`}>
+            <div className={`${backCardClass} h-130 md:h-152 md:mt-0 relative z-20 flex flex-col justify-between`}>
               <div>
-                <div className="flex justify-between items-start gap-x-3 mt-2">
+                <div className="flex justify-between items-start mt-2">
                   <h1 className={backHeadingClass}>{item.title}</h1>
-                  <button
+                  <button 
                     type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
                       setFlipped(false);
                     }}
-                    className={`rounded-full w-10 h-10 flex items-center justify-center text-4xl! shrink-0 cursor-pointer ${isPaid
-                      ? 'bg-bright text-pink border-pink hover:opacity-60'
-                      : 'bg-blue text-white border-white hover:opacity-60'
-                      }`}
+                    className={`rounded-full w-10 h-10 flex items-center justify-center text-2xl shrink-0 cursor-pointer ${
+                      isPaid 
+                        ? 'bg-bright text-pink border-pink hover:opacity-60' 
+                        : 'bg-blue text-white border-white hover:opacity-60'
+                    }`}
                     style={{ pointerEvents: 'auto', zIndex: 100 }}
                   >
                     ×
@@ -212,13 +196,9 @@ function ProgrammeCard({ item }) {
                 </p>
               </div>
               <div className="flex items-center gap-x-2">
-                <button
-                  type="button"
+                <button 
+                  type="button" 
                   className={backRegisterBtnClass}
-                  onClick={() => window.open(
-                    "https://www.skillboxes.com/events/ticket/the-gypsy-travel-festival",
-                    "_blank"
-                  )}
                 >
                   REGISTER NOW
                 </button>
