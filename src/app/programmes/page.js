@@ -137,12 +137,30 @@ function ProgrammeCard({ item }) {
       <div className="flip h-130 md:h-152 relative z-20 perspective">
         <div className={`flip-inner ${flipped ? 'is-flipped' : ''}`}>
           {/* FRONT */}
-          <div className="flip-face flip-front">
-            <Image
-              src={item.image}
-              className="relative z-20 border-2 border-blue rounded-xl"
-              alt="programme image"
-            />
+          <div 
+            className="flip-face flip-front"
+            style={{
+              opacity: flipped ? 0 : 1,
+              visibility: flipped ? 'hidden' : 'visible',
+              transition: flipped ? 'opacity 0s 300ms, visibility 0s 300ms' : 'opacity 0s, visibility 0s'
+            }}
+          >
+            <div style={{
+              WebkitTransform: 'translate3d(0,0,0)',
+              transform: 'translate3d(0,0,0)'
+            }}>
+              <Image
+                src={item.image}
+                className="relative z-20 border-2 border-blue rounded-xl"
+                alt="programme image"
+                style={{
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  WebkitTransform: 'translateZ(0)',
+                  transform: 'translateZ(0)'
+                }}
+              />
+            </div>
             <div className={`${cardClass} min-h-40 flex flex-col justify-between`}>
               <div>
                 <h2 className={headingClass}>{item.title}</h2>
@@ -174,7 +192,7 @@ function ProgrammeCard({ item }) {
 
           {/* BACK */}
           <div className="flip-face flip-back relative">
-            <div className={`${backCardClass} md:mt-0 relative -top-1 z-20 flex flex-col gap-y-5 lg:gap-y-25 justify-between`}>
+            <div className={`${backCardClass} md:mt-0 relative -top-0.5 z-20 flex flex-col gap-y-5 lg:gap-y-10 justify-between`}>
               <div>
                 <div className="flex justify-between items-start mt-2">
                   <h1 className={backHeadingClass}>{item.title}</h1>
