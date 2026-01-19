@@ -21,12 +21,12 @@ export default function Page() {
   return (
     <main id="programme" className="mt-32 mb-0 md:px-20 md:pt-20">
       <div className="pb-8 pl-8 pr-5 md:pb-0">
-        <div className="md:flex md:justify-between md:items-start md:mb-8 relative">
+        <div className="xl:flex md:justify-between md:items-start md:mb-8 relative">
           <h1 className="text-pink relative z-20">
             ALL <span className="font-bold">progammes</span>
           </h1>
-          <Image src={Star} alt='star icon' className='hidden md:block w-32 h-32 absolute -top-15 z-10 left-90' />
-          <p className="mt-3 md:mt-0 md:max-w-xl">
+          <Image src={Star} alt='star icon' className='hidden xl:block w-32 h-32 absolute -top-15 z-10 left-90' />
+          <p className="mt-3 xl:mt-0 md:max-w-xl">
             Please note that while entry is free, select events are ticketed to manage limited seating.
             Book yours early to avoid missing out!
           </p>
@@ -50,11 +50,11 @@ export default function Page() {
         >
           DAY 2
         </button>
-        <Image src={Circles} alt='icon' className='absolute w-14 top-25 right-25 hidden md:block' />
-        <Image src={Dots} alt='icon' className='absolute w-14 top-80 left-0 hidden md:block' />
-        <Image src={fshine} alt='icon' className='absolute top-80 right-135 w-25 hidden md:block' />
+        <Image src={Circles} alt='icon' className='absolute w-14 top-25 right-25 hidden xl:block' />
+        <Image src={Dots} alt='icon' className='absolute w-14 top-80 left-0 hidden xl:block' />
+        <Image src={fshine} alt='icon' className='absolute top-80 right-135 w-25 hidden xl:block' />
       </div>
-      <div className="programmes px-4 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-6">
+      <div className="programmes px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-6">
         {programmes.map((item) => (
           <ProgrammeCard key={item.id} item={item} />
         ))}
@@ -80,8 +80,8 @@ function ProgrammeCard({ item }) {
 
   // Pill styling - updated colors
   const pillClass = isPaid 
-    ? 'relative top-2 z-10 text-xs! sm:text-sm! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold' 
-    : 'relative top-2 z-10 text-xs! sm:text-sm! bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
+    ? 'relative top-2 z-10 text-xs! 2xl:text-sm! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold' 
+    : 'relative top-2 z-10 text-xs! 2xl:text-sm! bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
   
   const formatPillClass = `relative top-2 z-10 text-xs! sm:text-sm! ${getFormatColor(item.format)} text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold`;
 
@@ -132,7 +132,7 @@ function ProgrammeCard({ item }) {
       </div>
 
       {/* Flip Container */}
-      <div className="flip h-130 md:h-150 relative z-20 perspective">
+      <div className="flip h-130 md:h-[600px] relative z-20 perspective">
         <div className={`flip-inner ${flipped ? 'is-flipped' : ''}`}>
           {/* FRONT */}
           <div className="flip-face flip-front" style={{
@@ -156,7 +156,7 @@ function ProgrammeCard({ item }) {
                 }}
               />
             </div>
-            <div className={`${cardClass} md:h-50 flex flex-col justify-between`}>
+            <div className={`${cardClass} h-auto xl:h-54 2xl:h-50 flex flex-col justify-between`}>
               <div>
                 <h2 className={headingClass}>{item.title}</h2>
                 <p className={textClass}>
@@ -183,7 +183,7 @@ function ProgrammeCard({ item }) {
 
           {/* BACK */}
           <div className="flip-face flip-back relative">
-            <div className={`${backCardClass} h-130 md:h-150 relative -top-2 z-30 flex flex-col justify-between`}>
+            <div className={`${backCardClass} h-130 sm:h-auto xl:h-[523px] 2xl:h-[582px]! relative -top-2 z-30 flex flex-col justify-between`}>
               <div>
                 <div className="flex justify-between items-start gap-x-3 mt-2">
                   <h1 className={backHeadingClass}>{item.title}</h1>
