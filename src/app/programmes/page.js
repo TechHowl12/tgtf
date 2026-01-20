@@ -164,9 +164,11 @@ function ProgrammeCard({ item }) {
             <div className={`${cardClass} min-h-40 flex flex-col justify-between`}>
               <div>
                 <h2 className={headingClass}>{item.title}</h2>
-                <p className={textClass}>
-                  by <span className="font-semibold">{item.by}</span>
-                </p>
+                {item.by && (
+                  <p className={textClass}>
+                    by <span className="font-semibold">{item.by}</span>
+                  </p>
+                )}
               </div>
               <div className="flex items-center gap-x-2 mt-3">
                 <button

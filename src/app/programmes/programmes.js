@@ -145,7 +145,7 @@ const PROGRAMMES = {
             venue: 'Explorer\'s Lab',
             format: 'Engagement',
             title: 'Sip Seychelles: The Takamaka Trail',
-            by: 'Ashtad Kollah',
+            by: '',
             image: ashtadKollahImg,
             moreInfo:"A masterclass celebrating the distinctive flavours of Takamaka Rum, crafted in the heart of the Seychelles. This session will take you on a sensory journey, exploring the rich heritage and tropical essence of this iconic Seychellois spirit"
         },
