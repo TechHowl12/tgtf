@@ -744,8 +744,6 @@ export const posts = [
       sapporo2: "/images/sapporo-2.webp",
       sapporo3: "/images/sapporo-3.webp",
       sapporo4: "/images/sapporo-4.webp",
-      sapporo5: "/images/sapporo-5.webp",
-      sapporo6: "/images/sapporo-6.webp",
       sapporo7: "/images/sapporo-7.webp",
       sapporo8: "/images/sapporo-8.webp",
       sapporo9: "/images/sapporo-9.webp"
@@ -876,16 +874,6 @@ export const posts = [
         text:
           "Each visit brings a new set of flavours shaped by the season and harvest.",
       },
-
-      {
-        type: "image-row",
-        layout: "double",
-        images: [
-          { key: "sapporo5", alt: "Traditional Sapporo miso ramen bowl with toppings, TGTF 2026" },
-          { key: "sapporo6", alt: "Sustainable urban planning in Sapporo with green spaces, TGTF 2026" }
-        ]
-      },
-
       {
         type: "heading",
         text: "Sustainability with Substance"
