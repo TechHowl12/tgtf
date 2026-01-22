@@ -60,7 +60,7 @@ function RenderContent({ post }) {
                     return (
                         <ul key={index} className="list-disc pl-6 space-y-1 text-zinc-800">
                             {block.items.map((item, i) => (
-                                <li key={i}>{item}</li>
+                                <li key={i} dangerouslySetInnerHTML={{ __html: item }}/>
                             ))}
                         </ul>
                     );
@@ -88,6 +88,38 @@ function RenderContent({ post }) {
                                 </figcaption>
                             )}
                         </figure>
+                    );
+                }
+
+                if (block.type === "image-row") {
+                    const isDouble = block.layout === "double";
+                    
+                    return (
+                        <div key={index} className={`w-full grid gap-4 ${isDouble ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+                            {block.images.map((img, i) => {
+                                const src = post.images?.[img.key];
+                                if (!src) return null;
+
+                                return (
+                                    <figure key={i} className="w-full">
+                                        <div className="relative w-full aspect-video">
+                                            <Image
+                                                src={src}
+                                                alt={img.alt || img.key}
+                                                fill
+                                                className="object-contain"
+                                                sizes={isDouble ? "(max-width: 768px) 100vw, 450px" : "(max-width: 768px) 100vw, 900px"}
+                                            />
+                                        </div>
+                                        {img.caption && (
+                                            <figcaption className="mt-2 text-center text-sm text-zinc-600">
+                                                {img.caption}
+                                            </figcaption>
+                                        )}
+                                    </figure>
+                                );
+                            })}
+                        </div>
                     );
                 }
 
