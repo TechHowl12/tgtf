@@ -1,6 +1,7 @@
 import programmeImg from '../images/programme.webp';
 import travelWithKidsImg from '../images/Travel-with-kids.png';
 import thailandauthorityoftourismImg from '../images/Thailand-Authority-of-Tourism.png';
+import thailandauthority from '../images/Thailand-Authority-of-Tourism_1.webp';
 import immersiveTrailsImg from '../images/Immersive-Trails.png';
 import ahutisejpalImg from '../images/Ahuti-Sejpal.webp';
 import rockysinghImg from '../images/Rocky-Singh.png';
@@ -44,7 +45,7 @@ const PROGRAMMES = {
             time: '03:30pm - 04:15pm',
             priceType: 'free',
             venue: 'Discovery Box',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Echoes of the Ancients: Tibetan Mask Painting',
             by: 'Immersive Trails',
             image: immersiveTrailsImg,
@@ -55,10 +56,10 @@ const PROGRAMMES = {
             time: '04:00pm - 04:15pm',
             priceType: 'free',
             venue: 'The Horizon',
-            format: 'Masterclass',
+            format: 'Entertainment',
             title: 'Rhythms of Thailand',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthorityoftourismImg,
+            image: thailandauthority,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
         {
@@ -69,20 +70,20 @@ const PROGRAMMES = {
             format: 'Masterclass',
             title: 'Travel with a cause',
             by: 'Volunteer Yatra',
-            image: programmeImg,
-            moreInfo: "A journey rooted in purpose and impact, this session explores how Volunteer Yatra was born—transforming travel into a force for good by connecting travellers with communities through meaningful, service-led experiences."
+            image: volunteerYatraImg,
+            moreInfo: "A journey rooted in purpose and impact, this session explores how Volunteer Yatra was born- transforming travel into a force for good by connecting travellers with communities through meaningful, service-led experiences."
         },
-        {
-            id: 'd1-6',
-            time: '04:45pm - 05:30pm',
-            priceType: 'free',
-            venue: 'The Horizon',
-            format: 'Masterclass',
-            title: 'Dive beneath the surface—literally and figuratively',
-            by: 'Surface Interval',
-            image: surfaceItervalImg,
-            moreInfo:"Dive into the world of deep-sea adventures with Surface Interval. This engaging panel covers diving basics to advanced experiences, sharing expert safety tips, planning insights, and inspiration for unforgettable ocean-led journeys."
-        },
+        // {
+        //     id: 'd1-6',
+        //     time: '04:45pm - 05:30pm',
+        //     priceType: 'free',
+        //     venue: 'The Horizon',
+        //     format: 'Masterclass',
+        //     title: 'Dive beneath the surface—literally and figuratively',
+        //     by: 'Surface Interval',
+        //     image: surfaceItervalImg,
+        //     moreInfo:"Dive into the world of deep-sea adventures with Surface Interval. This engaging panel covers diving basics to advanced experiences, sharing expert safety tips, planning insights, and inspiration for unforgettable ocean-led journeys."
+        // },
         // {
         //     id: 'd1-7',
         //     time: '04:45pm - 05:30pm',
@@ -99,21 +100,21 @@ const PROGRAMMES = {
             time: '05:00pm - 05:45pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
-            format: 'Masterclass',
+            format: 'Workshop',
             title: 'Coffees from around the world',
             by: 'Blue Tokai',
             image: bluetokaiImg,
-            moreInfo: "Step into a global coffee journey. Brew, taste, and explore beans from around the world while learning simple brewing basics, flavour profiles, and aromas—perfect for beginners and passionate coffee lovers alike."
+            moreInfo: "Step into a global coffee journey. Brew, taste, and explore beans from around the world while learning simple brewing basics, flavour profiles, and aromas- perfect for beginners and passionate coffee lovers alike."
         },
         {
             id: 'd1-9',
             time: '05:45pm - 06:30pm',
             priceType: 'free',
             venue: 'Discovery Box',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Sacred Strokes: Tibetan Calligraphy',
-            by: '',
-            image: programmeImg,
+            by: 'Immeqrsive Trails',
+            image: immersiveTrailsImg,
             moreInfo: "Experience the meditative beauty of Tibetan calligraphy as Gyurmay Tsundu Bhutia demonstrates graceful scripts, ancient techniques, and the deeper meaning behind this sacred written art form."
         },
         {
@@ -121,11 +122,11 @@ const PROGRAMMES = {
             time: '06:00 - 06:45pm',
             priceType: 'free',
             venue: 'The Horizon',
-            format: 'Wisdom Vault',
+            format: 'Engagement',
             title: 'Food as the Gateway to Travel: Why Every Journey Begins on the Plate',
             by: 'Rocky Singh',
             image: rockysinghImg,
-            moreInfo:"Every great journey starts with a bite. From street snacks to signature dishes, food tells the story of a place—its people, culture, and traditions. This panel explores Food as the Gateway to Travel, and why every journey truly begins on the plate."
+            moreInfo:"Every great journey starts with a bite. From street snacks to signature dishes, food tells the story of a place- its people, culture, and traditions. This panel explores Food as the Gateway to Travel, and why every journey truly begins on the plate."
         },
         {
             id: 'd1-11',
@@ -136,25 +137,25 @@ const PROGRAMMES = {
             title: 'Where the veggie?',
             by: 'Aahuti Sejpal',
             image: ahutisejpalImg,
-            moreInfo: "Discover how vegetarian travel breaks stereotypes—real stories, smart tools, and insider tips to eat boldly, connect with local cultures, and travel confidently as a vegetarian anywhere in the world."
+            moreInfo: "Discover how vegetarian travel breaks stereotypes- real stories, smart tools, and insider tips to eat boldly, connect with local cultures, and travel confidently as a vegetarian anywhere in the world."
         },
         {
             id: 'd1-12',
             time: '07:00pm - 08:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Thailand Cooking Workshop',
-            by: '',
-            image: programmeImg,
-            moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy—guided by authentic recipes and cultural insights."
+            by: 'Tourism Authority of Thailand',
+            image: thailandauthority,
+            moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
         },
         {
             id: 'd1-13',
             time: '08:00pm - 08:30pm',
             priceType: 'free',
             venue: 'F&B Lounge',
-            format: 'Entertainment',
+            format: 'Workshop',
             title: 'Sip the seychelles: The Takamaka Trail',
             by: '',
             image: programmeImg,
@@ -168,7 +169,7 @@ const PROGRAMMES = {
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthorityoftourismImg,
+            image: thailandauthority,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
     ],
@@ -178,23 +179,23 @@ const PROGRAMMES = {
             time: '03:15pm - 04:00pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Coffees from around the world',
             by: 'Blue Tokai',
             image: bluetokaiImg,
             moreInfo: "Step into a global coffee journey. Brew, taste, and explore beans from around the world while learning simple brewing basics, flavour profiles, and aromas—perfect for beginners and passionate coffee lovers alike."
         },
-        {
-            id: 'd2-2',
-            time: '03:45pm',
-            priceType: 'free',
-            venue: 'The Horizon',
-            format: 'Entertainment',
-            title: 'Rhythms of Thailand',
-            by: 'Tourism Authority of Thailand',
-            image: thailandauthorityoftourismImg,
-            moreInfo: "Thailand’s official tourism platform sparks travel dreams with destination highlights, culture, festivals, experiences, and handy planning tips to explore the Land of Smiles with ease."
-        },
+        // {
+        //     id: 'd2-2',
+        //     time: '03:45pm - ',
+        //     priceType: 'free',
+        //     venue: 'The Horizon',
+        //     format: 'Entertainment',
+        //     title: 'Rhythms of Thailand',
+        //     by: 'Tourism Authority of Thailand',
+        //     image: thailandauthorityoftourismImg,
+        //     moreInfo: "Thailand’s official tourism platform sparks travel dreams with destination highlights, culture, festivals, experiences, and handy planning tips to explore the Land of Smiles with ease."
+        // },
         {
             id: 'd2-3',
             time: '04:00pm - 04:45pm',
@@ -204,41 +205,41 @@ const PROGRAMMES = {
             title: 'Way of the Sword',
             by: 'Sapporo',
             image: sapporoImg,
-            moreInfo: "Witness the power and precision of Kendo, Japan’s traditional martial art of swordsmanship. This dynamic performance reveals discipline, focus, and centuries-old warrior philosophy—where spirit, skill, and respect meet in graceful combat."
+            moreInfo: "Witness the power and precision of Kendo, Japan’s traditional martial art of swordsmanship. This dynamic performance reveals discipline, focus, and centuries-old warrior philosophy- where spirit, skill, and respect meet in graceful combat."
         },
         {
             id: 'd2-4',
             time: '04:15pm - 04:45pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
-            format: 'Masterclass',
+            format: 'Engagement',
             title: 'Little Passports',
             by: 'Kohventure',
             image: koheventureImg,
-            moreInfo: "Curious about children travelling solo? Join this lively Q&A with the inspiring father–son founders as they share stories, insights, and honest advice—answering all your questions on solo kids trips, safety, confidence, and how young explorers learn to travel the world on their own."
+            moreInfo: "Curious about children travelling solo? Join this lively Q&A with the inspiring father-son founders as they share stories, insights, and honest advice- answering all your questions on solo kids trips, safety, confidence, and how young explorers learn to travel the world on their own."
         },
         {
             id: 'd2-5',
             time: '04:30pm - 5:00pm',
             priceType: 'free',
             venue: 'Discovery Box',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Echoes of the Ancients: Tibetan Mask Painting',
             by: 'Immersive Trails ',
             image: immersiveTrailsImg,
             moreInfo: "Explore the spiritual art of Tibetan mask painting with Gyurmay Tsundu Bhutia, uncovering symbolism, colors, and stories behind sacred masks used in rituals and cultural performances."
         },
-        {
-            id: 'd2-6',
-            time: '05:00pm - 05:30pm',
-            priceType: 'free',
-            venue: 'The Horizon',
-            format: 'Engagement',
-            title: 'Kenya Performance',
-            by: '',
-            image: programmeImg,
-            moreInfo: ""
-        },
+        // {
+        //     id: 'd2-6',
+        //     time: '05:00pm - 05:30pm',
+        //     priceType: 'free',
+        //     venue: 'The Horizon',
+        //     format: 'Engagement',
+        //     title: 'Kenya Performance',
+        //     by: '',
+        //     image: programmeImg,
+        //     moreInfo: ""
+        // },
         // {
         //     id: 'd2-7',
         //     time: '05:00pm - 05:30pm',
@@ -256,7 +257,7 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Masterclass',
-            title: 'Bucket List on Budget',
+            title: 'Bucket List on a Budget',
             by: 'Archana Singh',
             image: archanasinghImg,
             moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
@@ -269,7 +270,7 @@ const PROGRAMMES = {
             format: 'Masterclass',
             title: 'Rhythms of Thailand',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthorityoftourismImg,
+            image: thailandauthority,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
         {
@@ -277,10 +278,10 @@ const PROGRAMMES = {
             time: '06:00pm - 07:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Thailand Cooking Workshop',
-            by: '',
-            image: programmeImg,
+            by: 'Tourism Authority of Thailand',
+            image: thailandauthority,
             moreInfo: "Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy—guided by authentic recipes and cultural insights."
         },
         {
@@ -288,22 +289,22 @@ const PROGRAMMES = {
             time: '06:30pm - 07:00pm',
             priceType: 'paid',
             venue: 'Discovery Box',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Chopsticks Ninja',
             by: 'Kikkoman',
             image: kikomanImg,
-            moreInfo: "Turn chopstick skills into an art. This hands-on dining experience teaches chopstick techniques through a three-course meal, blending cultural history, etiquette, and playful practice—ending with rice-level ninja mastery."
+            moreInfo: "Turn chopstick skills into an art. This hands-on dining experience teaches chopstick techniques through a three-course meal, blending cultural history, etiquette, and playful practice-ending with rice-level ninja mastery."
         },
         {
             id: 'd2-12',
             time: '06:30pm - 08:30pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Veggie Voyage',
             by: 'Aahuti Sejpal and Aparna Bhatt',
             image: ahutisejpalandchepaparnaImg,
-            moreInfo: "An intimate, food-led cultural immersion through Spain and the Silk Roads, blending regional vegetarian tastings, language learning, history, and guided conversation—inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
+            moreInfo: "An intimate, food-led cultural immersion through Spain and the Silk Roads, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
         },
         {
             id: 'd2-13',
@@ -314,17 +315,17 @@ const PROGRAMMES = {
             title: 'Backyard Tourism',
             by: '',
             image: programmeImg,
-            moreInfo: "Rediscover the magic of your own city in this engaging panel by Backyard Tourism, exploring hidden stories, local experiences, and mindful ways to travel closer to home—proving meaningful journeys don’t always require going far."
+            moreInfo: "Rediscover the magic of your own city in this engaging panel by Backyard Tourism, exploring hidden stories, local experiences, and mindful ways to travel closer to home- proving meaningful journeys don’t always require going far."
         },
         {
             id: 'd2-14',
             time: '07:30pm - 08:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
-            format: 'Engagement',
+            format: 'Workshop',
             title: 'Sip the seychelles: The Takamaka Trail',
             by: '',
-            image: programmeImg,
+            image: ashtadKollahImg,
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         },
         {
@@ -332,22 +333,22 @@ const PROGRAMMES = {
             time: '08:00pm - 08:30pm',
             priceType: 'free',
             venue: 'The Horizon',
-            format: 'Engagement',
+            format: 'Entertainment',
             title: 'Rhythms of Thailand',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthorityoftourismImg,
+            image: thailandauthority,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
         {
             id: 'd2-16',
             time: '08:00pm - 08:30pm',
             priceType: 'paid',
-            venue: 'Discovery Box',
-            format: 'Engagement',
+            venue: 'F&B Lounge',
+            format: 'Workshop',
             title: 'Wine 101',
             by: 'Gargi Kothari',
             image: gargikothariImg,
-            moreInfo: "A beginner-friendly, fun introduction to the world of wine. Learn how to read wine labels, understand different styles, and choose the right wine based on your taste preferences, the food you’re eating, and even the weather—so every sip feels just right."
+            moreInfo: "A beginner-friendly, fun introduction to the world of wine. Learn how to read wine labels, understand different styles, and choose the right wine based on your taste preferences, the food you’re eating, and even the weather- so every sip feels just right."
         },
     ],
 };
