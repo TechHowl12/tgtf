@@ -75,7 +75,8 @@ function ProgrammeCard({ item }) {
       'Engagement': 'bg-red',
       'Entertainment': 'bg-orange',
       'Masterclass': 'bg-purple',
-      'Wisdom Vault': 'bg-green'
+      'Wisdom Vault': 'bg-green',
+      'Workshop': 'bg-yellow',
     };
     return formatColors[format] || 'bg-gray-500';
   };
