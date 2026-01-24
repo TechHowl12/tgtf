@@ -289,17 +289,28 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-11',
+            time: '06:15pm - 06:45pm',
+            priceType: 'free',
+            venue: 'The Horizon',
+            format: 'Engagement',
+            title: 'Food Fireside Fables',
+            by: 'Rocky Singh & Chef Vicky Ratnani',
+            image: thailandcookingImg,
+            moreInfo: "Join us for a free-flowing, fun conversation between two men whose lives revolve around food—stories, memories, madness, and meals—served with humour, honesty, and an unapologetic love for eating."
+        },
+        {
+            id: 'd2-12',
             time: '06:30pm - 07:00pm',
             priceType: 'paid',
             venue: 'Discovery Box',
             format: 'Workshop',
             title: 'Chopsticks Ninja',
-            by: 'Kikkoman',
+            by: 'Abokado',
             image: kikomanImg,
             moreInfo: "Turn chopstick skills into an art. This hands-on dining experience teaches chopstick techniques through a three-course meal, blending cultural history, etiquette, and playful practice-ending with rice-level ninja mastery."
         },
         {
-            id: 'd2-12',
+            id: 'd2-13',
             time: '06:30pm - 08:30pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
@@ -310,7 +321,7 @@ const PROGRAMMES = {
             moreInfo: "An intimate, food-led cultural immersion through Spain and the Silk Roads, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
         },
         {
-            id: 'd2-13',
+            id: 'd2-14',
             time: '07:00pm - 07:45pm',
             priceType: 'free',
             venue: 'The Horizon',
@@ -321,7 +332,7 @@ const PROGRAMMES = {
             moreInfo: "Rediscover the magic of your own city in this engaging panel by Backyard Tourism, exploring hidden stories, local experiences, and mindful ways to travel closer to home- proving meaningful journeys don’t always require going far."
         },
         {
-            id: 'd2-14',
+            id: 'd2-15',
             time: '07:30pm - 08:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
@@ -332,7 +343,7 @@ const PROGRAMMES = {
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         },
         {
-            id: 'd2-15',
+            id: 'd2-16',
             time: '08:00pm - 08:30pm',
             priceType: 'free',
             venue: 'The Horizon',
@@ -343,7 +354,7 @@ const PROGRAMMES = {
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
         {
-            id: 'd2-16',
+            id: 'd2-17',
             time: '08:00pm - 08:30pm',
             priceType: 'paid',
             venue: 'F&B Lounge',
