@@ -15,6 +15,9 @@ import ahutisejpalandchepaparnaImg from '../images/Ahuti-Sejpal-and-Chep-Aparna.
 import archanasinghImg from '../images/Archana-Singh.png';
 import gargikothariImg from '../images/Gargi-Kothari.png';
 import kikomanImg from '../images/Kikoman.png';
+import calligraphyImg from '../images/tibetian-calligraphy.webp'
+import thailandcookingImg from '../images/thailand-cooking.webp'
+import backyardImg from '../images/backyard.webp'
 
 const PROGRAMMES = {
     day1: [
@@ -114,7 +117,7 @@ const PROGRAMMES = {
             format: 'Workshop',
             title: 'Sacred Strokes: Tibetan Calligraphy',
             by: 'Immeqrsive Trails',
-            image: immersiveTrailsImg,
+            image: calligraphyImg,
             moreInfo: "Experience the meditative beauty of Tibetan calligraphy as Gyurmay Tsundu Bhutia demonstrates graceful scripts, ancient techniques, and the deeper meaning behind this sacred written art form."
         },
         {
@@ -147,7 +150,7 @@ const PROGRAMMES = {
             format: 'Workshop',
             title: 'Thailand Cooking Workshop',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthority,
+            image: thailandcookingImg,
             moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
         },
         {
@@ -158,7 +161,7 @@ const PROGRAMMES = {
             format: 'Workshop',
             title: 'Sip the seychelles: The Takamaka Trail',
             by: '',
-            image: programmeImg,
+            image: ashtadKollahImg,
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         },
         {
@@ -281,7 +284,7 @@ const PROGRAMMES = {
             format: 'Workshop',
             title: 'Thailand Cooking Workshop',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthority,
+            image: thailandcookingImg,
             moreInfo: "Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy—guided by authentic recipes and cultural insights."
         },
         {
@@ -314,7 +317,7 @@ const PROGRAMMES = {
             format: 'Engagement',
             title: 'Backyard Tourism',
             by: '',
-            image: programmeImg,
+            image: backyardImg,
             moreInfo: "Rediscover the magic of your own city in this engaging panel by Backyard Tourism, exploring hidden stories, local experiences, and mindful ways to travel closer to home- proving meaningful journeys don’t always require going far."
         },
         {
