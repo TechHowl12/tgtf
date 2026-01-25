@@ -83,10 +83,10 @@ function ProgrammeCard({ item }) {
 
   // Pill styling - updated colors
   const pillClass = isPaid
-    ? 'relative top-2 z-10 text-xs! md:text-xs! bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold'
-    : 'relative top-2 z-10 text-xs! md:text-xs! bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
+    ? 'relative top-2 z-10 !text-xs md:!text-xs bg-pink text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold'
+    : 'relative top-2 z-10 !text-xs md:!text-xs bg-blue text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold';
 
-  const formatPillClass = `relative top-2 z-10 text-xs! md:text-sm! ${getFormatColor(item.format)} text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold`;
+  const formatPillClass = `relative top-2 z-10 !text-xs md:!text-xs ${getFormatColor(item.format)} text-white px-2 pt-2 pb-3 rounded-t-xl font-semibold`;
 
   // Card styling
   const headingClass = isPaid
