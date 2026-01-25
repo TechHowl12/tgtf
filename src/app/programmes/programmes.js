@@ -23,7 +23,7 @@ const PROGRAMMES = {
     day1: [
         {
             id: 'd1-1',
-            time: '03:00pm - 03:45pm',
+            time: '3:00pm - 3:45pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
             format: 'Engagement',
@@ -45,7 +45,7 @@ const PROGRAMMES = {
         // },
         {
             id: 'd1-3',
-            time: '03:30pm - 04:15pm',
+            time: '3:30pm - 4:15pm',
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Workshop',
@@ -56,7 +56,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-4',
-            time: '04:00pm - 04:15pm',
+            time: '4:00pm - 4:15pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
@@ -67,7 +67,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-5',
-            time: '04:00pm - 04:45pm',
+            time: '4:00pm - 4:45pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
             format: 'Masterclass',
@@ -100,7 +100,7 @@ const PROGRAMMES = {
         // },
         {
             id: 'd1-8',
-            time: '05:00pm - 05:45pm',
+            time: '5:00pm - 5:45pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
             format: 'Workshop',
@@ -111,7 +111,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-9',
-            time: '05:45pm - 06:30pm',
+            time: '5:45pm - 6:30pm',
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Workshop',
@@ -122,7 +122,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-10',
-            time: '06:00 - 06:45pm',
+            time: '6:00pm - 6:45pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Engagement',
@@ -133,7 +133,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-11',
-            time: '06:45pm - 07:30pm',
+            time: '6:45pm - 7:30pm',
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Masterclass',
@@ -144,7 +144,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-12',
-            time: '07:00pm - 08:00pm',
+            time: '7:00pm - 8:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
@@ -155,7 +155,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-13',
-            time: '08:00pm - 08:30pm',
+            time: '8:00pm - 8:30pm',
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
@@ -166,7 +166,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-14',
-            time: '08:30pm - 08:45pm',
+            time: '8:30pm - 8:45pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
@@ -179,7 +179,7 @@ const PROGRAMMES = {
     day2: [
         {
             id: 'd2-1',
-            time: '03:15pm - 04:00pm',
+            time: '3:15pm - 4:00pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
             format: 'Workshop',
@@ -201,7 +201,7 @@ const PROGRAMMES = {
         // },
         {
             id: 'd2-3',
-            time: '04:00pm - 04:45pm',
+            time: '4:00pm - 4:45pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
@@ -212,7 +212,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-4',
-            time: '04:15pm - 04:45pm',
+            time: '4:15pm - 4:45pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
             format: 'Engagement',
@@ -223,7 +223,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-5',
-            time: '04:30pm - 5:00pm',
+            time: '4:30pm - 5:00pm',
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Workshop',
@@ -256,7 +256,7 @@ const PROGRAMMES = {
         // },
         {
             id: 'd2-8',
-            time: '05:30pm - 6:00pm',
+            time: '5:30pm - 6:00pm',
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Masterclass',
@@ -267,7 +267,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-9',
-            time: '05:45pm - 06:00pm',
+            time: '5:45pm - 6:00pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Masterclass',
@@ -278,7 +278,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-10',
-            time: '06:00pm - 07:00pm',
+            time: '6:00pm - 7:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
@@ -289,7 +289,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-11',
-            time: '06:15pm - 06:45pm',
+            time: '6:15pm - 6:45pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Engagement',
@@ -300,7 +300,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-12',
-            time: '06:30pm - 07:00pm',
+            time: '6:30pm - 7:00pm',
             priceType: 'paid',
             venue: 'Discovery Box',
             format: 'Workshop',
@@ -311,7 +311,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-13',
-            time: '06:30pm - 08:30pm',
+            time: '6:30pm - 8:30pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
             format: 'Workshop',
@@ -322,7 +322,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-14',
-            time: '07:00pm - 07:45pm',
+            time: '7:00pm - 7:45pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Engagement',
@@ -333,7 +333,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-15',
-            time: '07:30pm - 08:00pm',
+            time: '7:30pm - 8:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
@@ -344,7 +344,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-16',
-            time: '08:00pm - 08:30pm',
+            time: '8:00pm - 8:30pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
@@ -355,7 +355,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-17',
-            time: '08:00pm - 08:30pm',
+            time: '8:00pm - 8:30pm',
             priceType: 'paid',
             venue: 'F&B Lounge',
             format: 'Workshop',
