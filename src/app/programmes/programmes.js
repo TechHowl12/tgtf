@@ -318,7 +318,7 @@ const PROGRAMMES = {
             title: 'Veggie Voyage',
             by: 'Aahuti Sejpal and Aparna Bhatt',
             image: ahutisejpalandchepaparnaImg,
-            moreInfo: "An intimate, food-led cultural immersion through Spain , blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
+            moreInfo: "An intimate, food-led cultural immersion through Spain, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
         },
         {
             id: 'd2-14',
