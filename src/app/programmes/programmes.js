@@ -276,17 +276,17 @@ const PROGRAMMES = {
             image: thailandauthority,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
-        {
-            id: 'd2-10',
-            time: '6:00pm',
-            priceType: 'free',
-            venue: 'F&B Lounge',
-            format: 'Workshop',
-            title: 'Thailand Cooking Workshop',
-            by: 'Tourism Authority of Thailand',
-            image: thailandcookingImg,
-            moreInfo: "Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy—guided by authentic recipes and cultural insights."
-        },
+        // {
+        //     id: 'd2-10',
+        //     time: '6:00pm',
+        //     priceType: 'free',
+        //     venue: 'F&B Lounge',
+        //     format: 'Workshop',
+        //     title: 'Thailand Cooking Workshop',
+        //     by: 'Tourism Authority of Thailand',
+        //     image: thailandcookingImg,
+        //     moreInfo: "Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy—guided by authentic recipes and cultural insights."
+        // },
         {
             id: 'd2-11',
             time: '6:15pm',
