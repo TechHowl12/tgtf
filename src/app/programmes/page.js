@@ -90,8 +90,8 @@ function ProgrammeCard({ item }) {
 
   // Card styling
   const headingClass = isPaid
-    ? 'text-base! text-pink font-bold Capitalize'
-    : 'text-base! text-blue font-bold Capitalize';
+    ? 'text-sm! text-pink font-bold Capitalize'
+    : 'text-sm! text-blue font-bold Capitalize';
 
   const cardClass = isPaid
     ? 'border-2 border-pink mt-2 curve px-4 py-3 bg-white'
@@ -117,7 +117,7 @@ function ProgrammeCard({ item }) {
     ? 'button border-2 border-pink bg-white text-sm! text-pink curve px-4 py-2 font-bold'
     : 'button border-2 border-blue bg-white text-sm! text-blue curve px-4 py-2 font-bold';
 
-  const textClass = 'mt-2 mb-3 text-black text-sm';
+  const textClass = 'mt-2 mb-3 text-black text-xs!';
 
   const backRegisterBtnClass = isPaid
     ? 'button bg-pink text-xl! text-white curve font-semibold w-full py-3'
