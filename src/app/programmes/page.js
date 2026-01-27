@@ -56,7 +56,7 @@ export default function Page() {
         <Image src={Circles} alt='icon' className='absolute w-14 top-[40%] right-[50%] hidden md:block' />
         <Image src={Shine} alt='icon' className='absolute top-10 -right-15 w-50 hidden md:block' />
       </div>
-      <div className="programmes px-2 grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2">
+      <div className="programmes px-2 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-2">
         {programmes.map((item) => (
           <ProgrammeCard key={item.id} item={item} />
         ))}
