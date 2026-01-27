@@ -126,7 +126,7 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Engagement',
-            title: 'Food as the Gateway to Travel: Why Every Journey Begins on the Plate',
+            title: 'How Food Is The Gateway To Every Journey',
             by: 'Rocky Singh',
             image: rockysinghImg,
             moreInfo:"Every great journey starts with a bite. From street snacks to signature dishes, food tells the story of a place- its people, culture, and traditions. This panel explores Food as the Gateway to Travel, and why every journey truly begins on the plate."
