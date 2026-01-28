@@ -149,7 +149,7 @@ const Page = () => {
         { src: ibis, alt: 'ibis', className: 'w-30 mt-4' },
         { src: shwaas, alt: 'shwaas', className: 'w-40 mt-4', url:"https://shwaas.co/"},
         { src: evokeex, alt: 'evoke', className: 'w-40 mt-4', url:"http://evokeexperiences.in/"} ,
-        { src: sharepal, alt: 'sharepal', className: 'w-48 mt-4', url:"https://sharepal.in/"},
+        { src: sharepal, alt: 'sharepal', className: 'w-48   mt-4', url:"https://sharepal.in/"},
     ];
 
     const exhibitorPartners = [
