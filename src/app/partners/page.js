@@ -35,6 +35,7 @@ import shwaas from "../images/shwaas.webp";
 import tripfactory from "../images/Tripfactory.png";
 import evokeex from "../images/evokeex.png";
 import sharepal from "../images/sharepal.png";
+import dcp from "../images/dcp.png";
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
@@ -150,6 +151,7 @@ const Page = () => {
         { src: shwaas, alt: 'shwaas', className: 'w-40 mt-4', url:"https://shwaas.co/"},
         { src: evokeex, alt: 'evoke', className: 'w-40 mt-4', url:"http://evokeexperiences.in/"} ,
         { src: sharepal, alt: 'sharepal', className: 'w-48   mt-4', url:"https://sharepal.in/"},
+        { src: dcp , alt: 'dcp', className: 'w-40', url:"https://dcpexpeditions.com/"},
     ];
 
     const exhibitorPartners = [
