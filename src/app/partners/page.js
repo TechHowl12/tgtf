@@ -32,6 +32,9 @@ import homeex from "../images/homeex.webp";
 import topo from "../images/topo.webp";
 import wholetruth from "../images/wholetruth.png";
 import shwaas from "../images/shwaas.webp";
+import tripfactory from "../images/Tripfactory.png";
+import evokeex from "../images/evokeex.png";
+import sharepal from "../images/sharepal.png";
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
@@ -145,7 +148,13 @@ const Page = () => {
         { src: H, alt: 'H', className: 'w-100 mt-8', url:"https://www.hostelbird.com/" },
         { src: ibis, alt: 'ibis', className: 'w-30 mt-4' },
         { src: shwaas, alt: 'shwaas', className: 'w-40 mt-4', url:"https://shwaas.co/"},
+        { src: evokeex, alt: 'evoke', className: 'w-40 mt-4', url:"http://evokeexperiences.in/"} ,
+        { src: sharepal, alt: 'sharepal', className: 'w-48 mt-4', url:"https://sharepal.in/"},
     ];
+
+    const exhibitorPartners = [
+        { src: tripfactory, alt: 'tripfactory', className: 'w-40', url:"https://www.tripfactory.com/" },
+    ]
 
     return (
         <main className="mt-32 mb-10 md:mt-40 md:mb-24 px-0 md:px-14">
@@ -176,6 +185,7 @@ const Page = () => {
                 <PartnersSection title={<><span className="font-bold">Partners</span></>} items={partners} />
                 <PartnersSection title={<><span className="font-bold">Community</span> partners</>} items={communityPartners} />
                 <PartnersSection title={<><span className="font-bold">Gifting</span> partners</>} items={giftingPartners} />
+                <PartnersSection title={<><span className="font-bold">Exhibitor</span> partners</>} items={exhibitorPartners} />
             </div>
         </main>
     );
