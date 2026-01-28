@@ -116,7 +116,7 @@ const PROGRAMMES = {
             venue: 'Discovery Box',
             format: 'Workshop',
             title: 'Sacred Strokes: Tibetan Calligraphy',
-            by: 'Immeqrsive Trails',
+            by: 'Immersive Trails',
             image: calligraphyImg,
             moreInfo: "Experience the meditative beauty of Tibetan calligraphy as Gyurmay Tsundu Bhutia demonstrates graceful scripts, ancient techniques, and the deeper meaning behind this sacred written art form."
         },
@@ -137,7 +137,7 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Masterclass',
-            title: 'Where the veggie?',
+            title: 'Where\'s the veggie?',
             by: 'Aahuti Sejpal',
             image: ahutisejpalImg,
             moreInfo: "Discover how vegetarian travel breaks stereotypes- real stories, smart tools, and insider tips to eat boldly, connect with local cultures, and travel confidently as a vegetarian anywhere in the world."
