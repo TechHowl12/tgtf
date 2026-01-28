@@ -217,7 +217,7 @@ const PROGRAMMES = {
             venue: 'Explorer\'s Lab',
             format: 'Engagement',
             title: 'Little Passports',
-            by: 'Kohventure',
+            by: 'KohVenture',
             image: koheventureImg,
             moreInfo: "Curious about children travelling solo? Join this lively Q&A with the inspiring father-son founders as they share stories, insights, and honest advice- answering all your questions on solo kids trips, safety, confidence, and how young explorers learn to travel the world on their own."
         },
