@@ -13,7 +13,7 @@ import CGH from "../images/CGH.png";
 import kohventure from "../images/kohventure.png";
 import ana from "../images/ana.png";
 import latitude from "../images/latitude.png";
-import H from "../images/H.png";
+import H1 from "../images/H1.webp";
 import temple from "../images/temple.png";
 import rajasthan from "../images/rajasthan.png";
 import surface from "../images/surface.png";
@@ -146,10 +146,10 @@ const Page = () => {
 
     const giftingPartners = [
         { src: indulge, alt: 'indulge', className: 'w-34 object-contain', url:"https://www.indulge.house/"},
-        { src: H, alt: 'H', className: 'w-100 mt-8', url:"https://www.hostelbird.com/" },
+        { src: H1, alt: 'H1', className: 'w-30', url:"https://www.hostelbird.com/" },
         { src: ibis, alt: 'ibis', className: 'w-30 mt-4' },
-        { src: shwaas, alt: 'shwaas', className: 'w-40 mt-4', url:"https://shwaas.co/"},
-        { src: evokeex, alt: 'evoke', className: 'w-40 mt-4', url:"http://evokeexperiences.in/"} ,
+        { src: shwaas, alt: 'shwaas', className: 'w-40 mt-4', url:"https://www.shwaas.in/"},
+        { src: evokeex, alt: 'evoke', className: 'w-40 ', url:"http://evokeexperiences.in/"} ,
         { src: sharepal, alt: 'sharepal', className: 'w-48   mt-4', url:"https://sharepal.in/"},
         { src: dcp , alt: 'dcp', className: 'w-40', url:"https://dcpexpeditions.com/"},
     ];
