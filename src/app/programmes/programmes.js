@@ -159,7 +159,7 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
-            title: 'Sip the seychelles: The Takamaka Trail',
+            title: 'Sip seychelles: The Takamaka Trail',
             by: 'Takamaka',
             image: ashtadKollahImg,
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
@@ -260,7 +260,7 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Masterclass',
-            title: 'Bucket List on a Budget',
+            title: 'Bucket List on Budget',
             by: 'Archana Singh',
             image: archanasinghImg,
             moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
@@ -315,7 +315,7 @@ const PROGRAMMES = {
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
             format: 'Workshop',
-            title: 'Veggie Voyage',
+            title: 'Veggie Voyages',
             by: 'Aahuti Sejpal and Aparna Bhatt',
             image: ahutisejpalandchepaparnaImg,
             moreInfo: "An intimate, food-led cultural immersion through Spain, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
@@ -337,7 +337,7 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
-            title: 'Sip the seychelles: The Takamaka Trail',
+            title: 'Sip seychelles: The Takamaka Trail',
             by: 'Takamaka',
             image: ashtadKollahImg,
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
