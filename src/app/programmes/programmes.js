@@ -71,10 +71,10 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'Explorer\'s Lab',
             format: 'Masterclass',
-            title: 'Travel with a cause',
-            by: 'Volunteer Yatra',
-            image: volunteerYatraImg,
-            moreInfo: "A journey rooted in purpose and impact, this session explores how Volunteer Yatra was born- transforming travel into a force for good by connecting travellers with communities through meaningful, service-led experiences."
+            title: 'Little passports',
+            by: 'KohVenture',
+            image: koheventureImg,
+            moreInfo: "Curious about children travelling solo? Join this lively Q&A with the inspiring father–son founders as they share stories, insights, and honest advice—answering all your questions on solo kids trips, safety, confidence, and how young explorers learn to travel the world on their own."
         },
         // {
         //     id: 'd1-6',
@@ -104,7 +104,7 @@ const PROGRAMMES = {
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
             format: 'Workshop',
-            title: 'Coffees from around the world',
+            title: 'Brewed around the world',
             by: 'Blue Tokai',
             image: bluetokaiImg,
             moreInfo: "Step into a global coffee journey. Brew, taste, and explore beans from around the world while learning simple brewing basics, flavour profiles, and aromas- perfect for beginners and passionate coffee lovers alike."
@@ -160,7 +160,7 @@ const PROGRAMMES = {
             venue: 'F&B Lounge',
             format: 'Workshop',
             title: 'Sip the seychelles: The Takamaka Trail',
-            by: '',
+            by: 'Takamaka',
             image: ashtadKollahImg,
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         },
@@ -183,14 +183,14 @@ const PROGRAMMES = {
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
             format: 'Workshop',
-            title: 'Coffees from around the world',
+            title: 'Brewed around the world',
             by: 'Blue Tokai',
             image: bluetokaiImg,
             moreInfo: "Step into a global coffee journey. Brew, taste, and explore beans from around the world while learning simple brewing basics, flavour profiles, and aromas—perfect for beginners and passionate coffee lovers alike."
         },
         // {
         //     id: 'd2-2',
-        //     time: '03:45pm - ',
+        //     time: '03:45pm ',
         //     priceType: 'free',
         //     venue: 'The Horizon',
         //     format: 'Entertainment',
@@ -215,11 +215,11 @@ const PROGRAMMES = {
             time: '4:15pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
-            format: 'Engagement',
-            title: 'Little Passports',
-            by: 'KohVenture',
-            image: koheventureImg,
-            moreInfo: "Curious about children travelling solo? Join this lively Q&A with the inspiring father-son founders as they share stories, insights, and honest advice- answering all your questions on solo kids trips, safety, confidence, and how young explorers learn to travel the world on their own."
+            format: 'Masterclass',
+            title: 'Travel with a cause',
+            by: 'Volunteer Yatra',
+            image: volunteerYatraImg,
+            moreInfo: "A journey rooted in purpose and impact, this session explores how Volunteer Yatra was born—transforming travel into a force for good by connecting travellers with communities through meaningful, service-led experiences."
         },
         {
             id: 'd2-5',
@@ -338,7 +338,7 @@ const PROGRAMMES = {
             venue: 'F&B Lounge',
             format: 'Workshop',
             title: 'Sip the seychelles: The Takamaka Trail',
-            by: '',
+            by: 'Takamaka',
             image: ashtadKollahImg,
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         },
