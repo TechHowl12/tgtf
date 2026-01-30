@@ -206,7 +206,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Way of the Sword',
-            by: 'Sapporo',
+            by: '',
             image: sapporoImg,
             moreInfo: "Witness the power and precision of Kendo, Japan’s traditional martial art of swordsmanship. This dynamic performance reveals discipline, focus, and centuries-old warrior philosophy- where spirit, skill, and respect meet in graceful combat."
         },
