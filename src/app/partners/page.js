@@ -38,7 +38,7 @@ import sharepal from "../images/sharepal.png";
 import dcp from "../images/dcp.png";
 import haldiram from "../images/hr-logo.webp";
 import fujifilm from "../images/fujifil-logo.webp";
-import sotc from "../images/SOTC-logo.webp";
+import sotc from "../images/SOTC-logo (2).png";
 import toehold from "../images/toehold-logo.webp";
 import kuda from "../images/kv-logo.webp";
 import beyondX from "../images/BX-logo.webp";
