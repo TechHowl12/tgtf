@@ -46,8 +46,8 @@ import holidaysbox from "../images/hb-logo.webp";
 import gotrippy from "../images/gotrippy-logo.webp";
 import trippo from "../images/tripo-logo.webp";
 import brownli from "../images/brown-living-logo.webp";
-import scentedjourney from "../images/scentedj-logo.webp";
-import tripxoxo from "../images/tripxoxo-logo.webp";
+import scentedjourney from "../images/scentedjourneys-logo.webp";
+import tripxoxo from "../images/tripxoxo.webp";
 import aspirit from "../images/aspirit-logo.webp";
 import create from "../images/create-logo.webp";
 import scarters from "../images/scarters-logo.webp";
@@ -181,7 +181,7 @@ const Page = () => {
         { src: gotrippy, alt: 'gotrippy', className: 'w-50', url:"https://www.gotrippy.ai/"},
         { src: trippo, alt: 'trippo', className: 'w-40', url:"https://www.tripo.co/"},
         { src: brownli, alt: 'brownliving', className: 'w-60', url:"https://brownliving.in/"},
-        { src: tripxoxo, alt: 'tripxoxo', className: 'w-40', url:"https://tripxoxo.com/"},
+        { src: tripxoxo, alt: 'tripxoxo', className: 'w-50', url:"https://tripxoxo.com/"},
     ];
 
     const siphPartners = [
