@@ -99,7 +99,7 @@ const PROGRAMMES = {
             moreInfo:"Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
         // {
-        //     id: 'd1-7',
+        //     id: 'd1-8',
         //     time: '04:45pm - 05:30pm',
         //     priceType: 'free',
         //     venue: 'Discovery Box',
@@ -153,30 +153,30 @@ const PROGRAMMES = {
             image: thailandcookingImg,
             moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
         },
+        // {
+        //     id: 'd1-13',
+        //     time: '7:30pm',
+        //     priceType: 'free',
+        //     venue: 'The Horizon',
+        //     format: 'entertainment',
+        //     title: 'Maasai Jump Dance - Adumu Ascent',
+        //     by: 'Magical Kenya',
+        //     image: programmeImg,
+        //     moreInfo:"The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
+        // },
+        // {
+        //     id: 'd1-14',
+        //     time: '7:45pm',
+        //     priceType: 'free',
+        //     venue: 'Discovery Box',
+        //     format: 'Workshop',
+        //     title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
+        //     by: 'Magical Kenya',
+        //     image: programmeImg,
+        //     moreInfo:"Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
+        // },
         {
-            id: 'd1-12',
-            time: '7:30pm',
-            priceType: 'free',
-            venue: 'The Horizon',
-            format: 'entertainment',
-            title: 'Maasai Jump Dance - Adumu Ascent',
-            by: 'Magical Kenya',
-            image: programmeImg,
-            moreInfo:"The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
-        },
-        {
-            id: 'd1-13',
-            time: '7:45pm',
-            priceType: 'free',
-            venue: 'Discovery Box',
-            format: 'Workshop',
-            title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
-            by: 'Magical Kenya',
-            image: programmeImg,
-            moreInfo:"Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
-        },
-        {
-            id: 'd1-14',
+            id: 'd1-15',
             time: '8:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
@@ -187,7 +187,7 @@ const PROGRAMMES = {
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         },
         {
-            id: 'd1-15',
+            id: 'd1-16',
             time: '8:30pm',
             priceType: 'free',
             venue: 'The Horizon',
@@ -276,28 +276,28 @@ const PROGRAMMES = {
             image: immersiveTrailsImg,
             moreInfo: "Explore the spiritual art of Tibetan mask painting with Gyurmay Tsundu Bhutia, uncovering symbolism, colors, and stories behind sacred masks used in rituals and cultural performances."
         },
-        {
-            id: 'd2-8',
-            time: '05:30pm',
-            priceType: 'free',
-            venue: 'The Horizon',
-            format: 'Entertainment',
-            title: 'Maasai Jump Dance - Adumu Ascent',
-            by: 'Magical Kenya',
-            image: programmeImg,
-            moreInfo: "The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
-        },
-        {
-            id: 'd2-9',
-            time: '05:45pm',
-            priceType: 'free',
-            venue: 'Discovery Box',
-            format: 'Entertainment',
-            title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
-            by: 'Magical Kenya',
-            image: programmeImg,
-            moreInfo: "Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
-        },
+        // {
+        //     id: 'd2-8',
+        //     time: '05:30pm',
+        //     priceType: 'free',
+        //     venue: 'The Horizon',
+        //     format: 'Entertainment',
+        //     title: 'Maasai Jump Dance - Adumu Ascent',
+        //     by: 'Magical Kenya',
+        //     image: programmeImg,
+        //     moreInfo: "The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
+        // },
+        // {
+        //     id: 'd2-9',
+        //     time: '05:45pm',
+        //     priceType: 'free',
+        //     venue: 'Discovery Box',
+        //     format: 'Entertainment',
+        //     title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
+        //     by: 'Magical Kenya',
+        //     image: programmeImg,
+        //     moreInfo: "Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
+        // },
         // {
         //     id: 'd2-10',
         //     time: '5:30pm',
@@ -331,17 +331,17 @@ const PROGRAMMES = {
             image: thailandcookingImg,
             moreInfo: "Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy—guided by authentic recipes and cultural insights."
         },
-        {
-            id: 'd2-13',
-            time: '6:30pm',
-            priceType: 'free',
-            venue: 'The Horizon',
-            format: 'Engagement',
-            title: 'Food Fireside Fables',
-            by: 'Rocky Singh & Chef Vicky Ratnani',
-            image: programmeImg,
-            moreInfo: "Join us for a free-flowing, fun conversation between two men whose lives revolve around food—stories, memories, madness, and meals—served with humour, honesty, and an unapologetic love for eating."
-        },
+        // {
+        //     id: 'd2-13',
+        //     time: '6:30pm',
+        //     priceType: 'free',
+        //     venue: 'The Horizon',
+        //     format: 'Engagement',
+        //     title: 'Food Fireside Fables',
+        //     by: 'Rocky Singh & Chef Vicky Ratnani',
+        //     image: programmeImg,
+        //     moreInfo: "Join us for a free-flowing, fun conversation between two men whose lives revolve around food—stories, memories, madness, and meals—served with humour, honesty, and an unapologetic love for eating."
+        // },
         // {
         //     id: 'd2-14',
         //     time: '6:30pm',

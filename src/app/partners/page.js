@@ -47,6 +47,10 @@ import gotrippy from "../images/gotrippy-logo.webp";
 import trippo from "../images/tripo-logo.webp";
 import brownli from "../images/brown-living-logo.webp";
 import scentedjourney from "../images/scentedj-logo.webp";
+import tripxoxo from "../images/tripxoxo-logo.webp";
+import aspirit from "../images/aspirit-logo.webp";
+import create from "../images/create-logo.webp";
+import scarters from "../images/scarters-logo.webp";
 
 
 const swiperCommonProps = {
@@ -157,6 +161,7 @@ const Page = () => {
         { src: beyondX, alt: 'beyondX', className: 'w-48', url:"https://beyondxpeditions.com/"},
         { src: holidaysbox, alt: 'holidaysbox', className: 'w-40', url:"https://www.holidaysbox.com/"},
         { src: scentedjourney, alt: 'scentedjourney', className: 'w-40', url:"https://thescentedjourneys.com/"},
+        { src: scarters, alt: 'scarters', className: 'w-50', url:"https://scarters.com/"},
     ];
 
     const communityPartners = [
@@ -176,6 +181,15 @@ const Page = () => {
         { src: gotrippy, alt: 'gotrippy', className: 'w-50', url:"https://www.gotrippy.ai/"},
         { src: trippo, alt: 'trippo', className: 'w-40', url:"https://www.tripo.co/"},
         { src: brownli, alt: 'brownliving', className: 'w-60', url:"https://brownliving.in/"},
+        { src: tripxoxo, alt: 'tripxoxo', className: 'w-40', url:"https://tripxoxo.com/"},
+    ];
+
+    const siphPartners = [
+        { src: aspirit, alt: 'aspirit', className: 'w-40', url:"https://www.instagram.com/batchesblends/?hl=en" },
+    ];
+
+    const creatorNetworkPartners = [
+        { src: create, alt: 'create', className: 'w-50', url:"https://create.wtf/" },
     ];
 
     return (
@@ -207,6 +221,8 @@ const Page = () => {
                 <PartnersSection title={<><span className="font-bold">Partners</span></>} items={partners} />
                 <PartnersSection title={<><span className="font-bold">Community</span> partners</>} items={communityPartners} />
                 <PartnersSection title={<><span className="font-bold">Gifting</span> partners</>} items={giftingPartners} />
+                <PartnersSection title={<><span className="font-bold">Sips</span> partner</>} items={siphPartners} />
+                <PartnersSection title={<><span className="font-bold">Creator Network</span> partner</>} items={creatorNetworkPartners} />
             </div>
         </main>
     );
