@@ -954,6 +954,105 @@ export const posts = [
           "From powder snow and ramen alleys to blossom-lined parks and mountain onsen, Sapporo reveals a different rhythm of Japan — refined, spacious, and deeply seasonal.<br><br><span class='text-pink font-semibold'>Explore Sapporo and Hokkaido at The Gypsy Travel Festival 2026, happening on 7th & 8th Feb 2026 at Jio World Drive Mumbai.</span>",
       },
     ],
+  },
+  {
+    slug: "magical-kenya-beyond-the-wild",
+  title: "Magical Kenya: Beyond the Wild",
+  date: "2026-02-03",
+  excerpt:
+    "Kenya has long held a place in the world’s imagination as the beating heart of Africa’s wilderness. Explore the wild beauty, culture, and adventure of Kenya at The Gypsy Travel Festival 2026.",
+
+  images: {
+    kenya1: "/images/kenya-1.webp",
+  },
+
+  content: [
+    {
+      type: "text",
+      text:
+        "Kenya has long held a place in the world’s imagination as the beating heart of Africa’s wilderness. It is a land where the horizon stretches endlessly, where golden savannahs ripple under vast skies, and where wildlife roams free in scenes that feel almost cinematic. From the Great Migration in the Maasai Mara, one of nature’s most spectacular phenomena to intimate sightings of lions, elephants, giraffes, and rhinos, Kenya offers a raw, untamed connection to the natural world that few destinations can rival.",
+    },
+    { type: "image", key: "kenya1", alt: "Kenya wildlife" },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "Why Kenya is the Ultimate Wildlife Destination",
+    },
+
+    {
+      type: "text",
+      text:
+        "For many travellers, wildlife is the first love affair with Kenya and for good reason. Early morning game drives, the echo of birdsong at dawn, and the thrill of spotting animals in their natural habitat create memories that linger long after the journey ends. Kenya doesn’t just let you observe nature; it immerses you in it.",
+    },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "Kenya’s Rich Coastal Charm",
+    },
+
+    {
+      type: "text",
+      text:
+        "Beyond the iconic game reserves lies a country rich in diversity, culture, and contrast. Head east and the landscape transforms dramatically as Kenya opens up to a stunning coastline along the Indian Ocean. Palm-lined beaches, powdery white sands, and turquoise waters define destinations like Diani, Watamu, and Lamu. Here, days unfold at an unhurried pace—snorkelling over coral reefs, sailing on traditional dhows, or simply soaking in the coastal calm.",
+    },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "Kenya’s Cultural Tapestry",
+    },
+
+    {
+      type: "text",
+      text:
+        "Kenya’s cultural tapestry is just as compelling. Home to over 40 ethnic communities, the country is a mosaic of languages, customs, music, and rituals. From the vibrant beadwork and dances of the Maasai to the coastal Swahili influences shaped by centuries of trade, culture here is not curated for display—it is lived, celebrated, and deeply rooted in everyday life.",
+    },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "Kenyan Cuisine: A Journey in Every Bite",
+    },
+
+    {
+      type: "text",
+      text:
+        "Food, too, tells a powerful story of Kenya’s diversity. Kenyan cuisine is hearty, flavourful, and influenced by indigenous traditions as well as Indian, Arab, and coastal Swahili flavours. From nyama choma (grilled meat enjoyed socially) and ugali (a staple maize dish) to coconut-based curries and freshly caught seafood along the coast, every meal reflects a sense of place.",
+    },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "Kenya’s Adventure Beyond the Safari",
+    },
+
+    {
+      type: "text",
+      text:
+        "For those seeking adventure beyond safaris, Kenya delivers in abundance. Trek the slopes of Mount Kenya, Africa’s second-highest peak. Explore the dramatic landscapes of the Great Rift Valley. Discover lakes dotted with flamingos, highland forests alive with birdlife, and remote regions that feel worlds away from the ordinary.",
+    },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "Experience Kenya at The Gypsy Travel Festival 2026",
+    },
+
+    {
+      type: "text",
+      text:
+        "Bringing this spirit to life, Magical Kenya will showcase its rich culture at The Gypsy Travel Festival, offering visitors a chance to experience the country beyond the lens of travel. From hands-on bead-making workshops inspired by traditional craftsmanship to the energetic Maasai jumping challenge and many more immersive experiences, this cultural showcase invites you to engage, participate, and connect with Kenya in a truly meaningful way.",
+    },
+
+    {
+      type: "link",
+      href: "https://www.skillboxes.com/events/the-gypsy-travel-festival",
+      text: "Register for TGTF 2026 here",
+    },
+
+  ],
   }
 ];
 

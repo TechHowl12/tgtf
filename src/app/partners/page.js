@@ -36,6 +36,18 @@ import tripfactory from "../images/Tripfactory.png";
 import evokeex from "../images/evokeex.png";
 import sharepal from "../images/sharepal.png";
 import dcp from "../images/dcp.png";
+import haldiram from "../images/hr-logo.webp";
+import fujifilm from "../images/fujifil-logo.webp";
+import sotc from "../images/SOTC-logo.webp";
+import toehold from "../images/toehold-logo.webp";
+import kuda from "../images/kv-logo.webp";
+import beyondX from "../images/BX-logo.webp";
+import holidaysbox from "../images/hb-logo.webp";
+import gotrippy from "../images/gotrippy-logo.webp";
+import trippo from "../images/tripo-logo.webp";
+import brownli from "../images/brown-living-logo.webp";
+import scentedjourney from "../images/scentedj-logo.webp";
+
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
@@ -125,6 +137,9 @@ const Page = () => {
         { src: clubmed, alt: 'club-med', className: 'w-72 aspect-square', url:"https://www.clubmed.asia/" },
         { src: CGH, alt: 'CGH', className: 'w-56 aspect-square', url:"https://www.cghearth.com/" },
         { src: homeex, alt: 'homeex', className: 'w-52', url:"https://www.homeexchange.com/" },
+        { src: haldiram, alt: 'haldiram', className: 'w-40', url:"https://www.haldirams.com/" },
+        { src: fujifilm, alt: 'fujifilm', className: 'w-40', url:"https://www.fujifilm.com/in/en" },
+        { src: sotc, alt: 'sotc', className: 'w-40', url:"https://www.sotc.in/" },
     ];
 
     const partners = [
@@ -136,6 +151,12 @@ const Page = () => {
         { src: rare, alt: 'rare', className: 'w-36' , url:"https://www.rareindia.com/"},
         { src: topo, alt: 'topo', className: 'w-46', url:"https://www.toponomad.co/"},
         { src: wholetruth, alt: 'wholetruth', className: 'w-56', url:"https://thewholetruthfoods.com/"},
+        { src: tripfactory, alt: 'tripfactory', className: 'w-40', url:"https://www.tripfactory.com/" },
+        { src: toehold, alt: 'toehold', className: 'w-40', url:"https://www.toehold.in/"},
+        { src: kuda, alt: 'kuda', className: 'w-55', url:"https://www.kudavillingili.com/"},
+        { src: beyondX, alt: 'beyondX', className: 'w-48', url:"https://beyondxpeditions.com/"},
+        { src: holidaysbox, alt: 'holidaysbox', className: 'w-40', url:"https://www.holidaysbox.com/"},
+        { src: scentedjourney, alt: 'scentedjourney', className: 'w-40', url:"https://thescentedjourneys.com/"},
     ];
 
     const communityPartners = [
@@ -152,11 +173,10 @@ const Page = () => {
         { src: evokeex, alt: 'evoke', className: 'w-40 ', url:"http://evokeexperiences.in/"} ,
         { src: sharepal, alt: 'sharepal', className: 'w-48   mt-4', url:"https://sharepal.in/"},
         { src: dcp , alt: 'dcp', className: 'w-40', url:"https://dcpexpeditions.com/"},
+        { src: gotrippy, alt: 'gotrippy', className: 'w-50', url:"https://www.gotrippy.ai/"},
+        { src: trippo, alt: 'trippo', className: 'w-40', url:"https://www.tripo.co/"},
+        { src: brownli, alt: 'brownliving', className: 'w-60', url:"https://brownliving.in/"},
     ];
-
-    const exhibitorPartners = [
-        { src: tripfactory, alt: 'tripfactory', className: 'w-40', url:"https://www.tripfactory.com/" },
-    ]
 
     return (
         <main className="mt-32 mb-10 md:mt-40 md:mb-24 px-0 md:px-14">
@@ -187,7 +207,6 @@ const Page = () => {
                 <PartnersSection title={<><span className="font-bold">Partners</span></>} items={partners} />
                 <PartnersSection title={<><span className="font-bold">Community</span> partners</>} items={communityPartners} />
                 <PartnersSection title={<><span className="font-bold">Gifting</span> partners</>} items={giftingPartners} />
-                <PartnersSection title={<><span className="font-bold">Exhibitor</span> partners</>} items={exhibitorPartners} />
             </div>
         </main>
     );
