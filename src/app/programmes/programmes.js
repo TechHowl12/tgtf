@@ -1,21 +1,21 @@
 import programmeImg from '../images/programme.webp';
-import travelWithKidsImg from '../images/Travel-with-kids.png';
-import thailandauthorityoftourismImg from '../images/Thailand-Authority-of-Tourism.png';
+import travelwithkidsImg from '../images/Travel_with_Kids.webp';
+import thailandauthorityoftourismImg from '../images/Thailand_Authority_of_Tourism.webp';
 import thailandauthority from '../images/Thailand-Authority-of-Tourism_1.webp';
-import immersiveTrailsImg from '../images/Immersive-Trails.png';
+import immersiveTrailsImg from '../images/mask_painting.webp';
 import ahutisejpalImg from '../images/Ahuti-Sejpal.webp';
-import rockysinghImg from '../images/Rocky-Singh.png';
-import bluetokaiImg from '../images/Blue-Tokai.png';
+import rockysinghImg from '../images/rocky_kunal.webp';
+import bluetokaiImg from '../images/Blue_Tokai.webp';
 import surfaceItervalImg from '../images/Surface-Interval.png';
 import volunteerYatraImg from '../images/Volunteer-Yatra.png';
 import ashtadKollahImg from '../images/Ashtad-Kollah.png';
 import sapporoImg from '../images/Sapporo.png';
-import koheventureImg from '../images/Kohventure-programmes.png';
+import koheventureImg from '../images/Kohventure.webp';
 import ahutisejpalandchepaparnaImg from '../images/Ahuti-Sejpal-and-Chep-Aparna.webp';
 import archanasinghImg from '../images/Archana-Singh.png';
 import gargikothariImg from '../images/Gargi-Kothari.png';
 import kikomanImg from '../images/Kikoman.png';
-import calligraphyImg from '../images/tibetian-calligraphy.webp'
+import calligraphyImg from '../images/calligraphy_writing.webp'
 import thailandcookingImg from '../images/thailand-cooking.webp'
 import backyardImg from '../images/backyard.webp'
 
@@ -29,7 +29,7 @@ const PROGRAMMES = {
             format: 'Engagement',
             title: 'Strollers to Suitcases: mini explorer\'s meetup',
             by: 'Travel with Kids',
-            image: travelWithKidsImg,
+            image: travelwithkidsImg,
             moreInfo:"Travel with kids without the stress. Join this relaxed meet-and-greet to ask questions, share stories, and discover practical tips for joyful, kid-friendly family adventures."
         },
         {
