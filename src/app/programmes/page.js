@@ -90,8 +90,8 @@ function ProgrammeCard({ item }) {
 
   // Card styling
   const headingClass = isPaid
-    ? 'text-sm! text-pink font-bold Capitalize'
-    : 'text-sm! text-blue font-bold Capitalize';
+    ? 'text-sm! text-pink font-bold capitalize'
+    : 'text-sm! text-blue font-bold capitalize';
 
   const cardClass = isPaid
     ? 'border-2 border-pink mt-2 curve px-4 py-3 bg-white'
