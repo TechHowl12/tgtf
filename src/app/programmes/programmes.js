@@ -19,7 +19,7 @@ import calligraphyImg from '../images/calligraphy_writing.webp'
 import thailandcookingImg from '../images/Thailand_Cooking.webp'
 import backyardImg from '../images/Backyard_img.webp'
 import MasaiJumpImg from '../images/Masai_Jump.webp'
-import BeadworkImg from '../images/Beads_making.webp'
+import BeadworkImg from '../images/beads_making.webp'
 import firesidefablesImg from '../images/fire_fables.webp'
 import wellnessImg from '../images/wellness_masterclass.webp'
 import volunteerYatrahomeImg from '../images/Vounteer_homeexchange.webp';
@@ -29,7 +29,7 @@ import journeyImg from '../images/Journeys_to_well_being.webp';
 import createImg from '../images/CREATE_img.webp';
 import BucketListonBudgetImg from '../images/Bucket_list_on_a_budget.webp';
 import AakashmaanImg from '../images/Aakash_maan.webp';
-import kendoImg from "../images/Kendo_img.webp";
+import kendoImg from "../images/kendo_img.webp";
 
 const PROGRAMMES = {
     day1: [
