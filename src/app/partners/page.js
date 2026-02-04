@@ -51,7 +51,11 @@ import tripxoxo from "../images/tripxoxo.webp";
 import aspirit from "../images/aspirit-logo.webp";
 import create from "../images/create-logo.webp";
 import scarters from "../images/scarters-logo.webp";
-
+import zwr from "../images/ZWR_Logo.webp";
+import lacigale from "../images/La_cigale_logo.webp";
+import tdlogo from "../images/TD_logo.webp";
+import thewestin from "../images/the_westin.webp";
+import bt from "../images/bt_logo.webp";
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
@@ -182,6 +186,11 @@ const Page = () => {
         { src: trippo, alt: 'trippo', className: 'w-40', url:"https://www.tripo.co/"},
         { src: brownli, alt: 'brownliving', className: 'w-60', url:"https://brownliving.in/"},
         { src: tripxoxo, alt: 'tripxoxo', className: 'w-50', url:"https://tripxoxo.com/"},
+        { src: zwr, alt: 'zwc', className: 'w-34', url:"https://zulal.com/en/"},
+        { src: lacigale, alt: 'la-cigale', className: 'w-30', url:"https://www.lacigalehotel.com/"},
+        { src: tdlogo, alt: 'td', className: 'w-64', url:"https://www.traveldesigner.qa/"},
+        { src: thewestin, alt: 'the-westin', className: 'w-48', url:"https://www.marriott.com/en-us/hotels/dohwi-the-westin-doha-hotel-and-spa/overview/"},
+        { src: bt, alt: 'bt', className: 'w-60', url:"https://www.banyantree.com/qatar/doha/accommodation" },
     ];
 
     const siphPartners = [

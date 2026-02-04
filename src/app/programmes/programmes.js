@@ -17,12 +17,19 @@ import gargikothariImg from '../images/Gargi-Kothari.png';
 import kikomanImg from '../images/Kikoman.png';
 import calligraphyImg from '../images/calligraphy_writing.webp'
 import thailandcookingImg from '../images/Thailand_Cooking.webp'
-import backyardImg from '../images/backyard.webp'
+import backyardImg from '../images/Backyard_img.webp'
 import MasaiJumpImg from '../images/Masai_Jump.webp'
 import BeadworkImg from '../images/Beads_making.webp'
 import firesidefablesImg from '../images/fire_fables.webp'
-import BucketListonBudgetImg from '../images/budget_img.webp'
 import wellnessImg from '../images/wellness_masterclass.webp'
+import volunteerYatrahomeImg from '../images/Vounteer_homeexchange.webp';
+import polarbearImg from '../images/polar_bear_img.webp';
+import throughtheildImg from '../images/Through _the_wild_lens.webp';
+import journeyImg from '../images/Journeys_to_well_being.webp';
+import createImg from '../images/CREATE_img.webp';
+import BucketListonBudgetImg from '../images/Bucket_list_on_a_budget.webp';
+import AakashmaanImg from '../images/Aakash_maan.webp';
+import kendoImg from "../images/Kendo_img.webp";
 
 const PROGRAMMES = {
     day1: [
@@ -83,6 +90,28 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-6',
+            time: '4:30pm',
+            priceType: 'free',
+            venue: 'The Horizon',
+            format: 'Engagement',
+            title: 'Smarter Travel: Alternative Ways to Explore the World',
+            by: 'Aakash Maan, Archana Singh, Anupam Hans',
+            image:AakashmaanImg,
+            moreInfo: "Discover smarter ways to travel with creators and innovators exploring volunteering, home exchanges, and alternative stays—learn how flexibility and curiosity can unlock richer journeys, longer adventures, and lower costs."
+        },
+        {
+            id: 'd1-7',
+            time: '4:45pm',
+            priceType: 'free',
+            venue: 'Discovery Box',
+            format: 'Engagement',
+            title: 'In search of Polar Bears - an Arctic wildlife exploration',
+            by: 'Jayanth Sharma',
+            image:polarbearImg,
+            moreInfo: "Join Jayanth Sharma on a journey into the Arctic wild, exploring polar bear habitats, wildlife behaviour, extreme conditions, and the stories behind documenting life in one of the world’s most breathtaking and fragile landscapes."
+        },
+        {
+            id: 'd1-8',
             time: '5:00pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
@@ -92,19 +121,8 @@ const PROGRAMMES = {
             image: bluetokaiImg,
             moreInfo: "Step into a global coffee journey. Brew, taste, and explore beans from around the world while learning simple brewing basics, flavour profiles, and aromas- perfect for beginners and passionate coffee lovers alike."
         },
-        {
-            id: 'd1-7',
-            time: '5:30pm',
-            priceType: 'free',
-            venue: 'The Horizon',
-            format: 'Entertainment',
-            title: 'Rhythms of Thailand',
-            by: 'Tourism Authority of Thailand',
-            image: thailandauthorityoftourismImg,
-            moreInfo:"Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
-        },
         // {
-        //     id: 'd1-8',
+        //     id: 'd1-10',
         //     time: '04:45pm - 05:30pm',
         //     priceType: 'free',
         //     venue: 'Discovery Box',
@@ -115,7 +133,7 @@ const PROGRAMMES = {
         //     moreInfo: "Explore wildlife through your lens in this masterclass by Toe Hold, where expert photographers share tips on capturing animals in their natural habitats, mastering light and movement, and telling powerful visual stories."
         // },
         {
-            id: 'd1-9',
+            id: 'd1-11',
             time: '5:30pm',
             priceType: 'free',
             venue: 'Discovery Box',
@@ -126,7 +144,18 @@ const PROGRAMMES = {
             moreInfo: "Experience the meditative beauty of Tibetan calligraphy as Gyurmay Tsundu Bhutia demonstrates graceful scripts, ancient techniques, and the deeper meaning behind this sacred written art form."
         },
         {
-            id: 'd1-10',
+            id: 'd1-9',
+            time: '5:45 pm',
+            priceType: 'free',
+            venue: 'The Horizon',
+            format: 'Entertainment',
+            title: 'Rhythms of Thailand',
+            by: 'Tourism Authority of Thailand',
+            image: thailandauthorityoftourismImg,
+            moreInfo:"Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
+        },
+        {
+            id: 'd1-12',
             time: '6:00pm',
             priceType: 'free',
             venue: 'The Horizon',
@@ -136,8 +165,19 @@ const PROGRAMMES = {
             image: rockysinghImg,
             moreInfo:"Every great journey starts with a bite. From street snacks to signature dishes, food tells the story of a place- its people, culture, and traditions. This panel explores Food as the Gateway to Travel, and why every journey truly begins on the plate."
         },
+        // {
+        //     id: 'd1-13',
+        //     time: '6:00pm',
+        //     priceType: 'free',
+        //     venue: 'Explorer\'s Lab',
+        //     format: 'Engagement  ',
+        //     title: 'Dive Beneath Surface Fireside chat',
+        //     by: 'urface Interval, Shaan & Sushant Joshi (Scubareels)',
+        //     image: programmeImg,
+        //     moreInfo:"Join Surface Interval and Sushant Joshi for a fireside chat exploring deep-sea diving, ocean adventures, marine life, conservation, and the thrill of discovering the hidden world beneath the waves."
+        // },
         {
-            id: 'd1-11',
+            id: 'd1-14',
             time: '6:45pm',
             priceType: 'free',
             venue: 'Discovery Box',
@@ -148,7 +188,7 @@ const PROGRAMMES = {
             moreInfo: "Discover how vegetarian travel breaks stereotypes- real stories, smart tools, and insider tips to eat boldly, connect with local cultures, and travel confidently as a vegetarian anywhere in the world."
         },
         {
-            id: 'd1-12',
+            id: 'd1-15',
             time: '7:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
@@ -159,18 +199,29 @@ const PROGRAMMES = {
             moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
         },
         {
-            id: 'd1-13',
+            id: 'd1-16',
             time: '7:00pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
-            format: '',
-            title: 'Wellness masterclass',
-            by: 'CGH Earth',
-            image: wellnessImg,
+            format: 'Masterclass',
+            title: 'Journey to well-being',
+            by: 'Salil Subhash Paranjape, CGH Earth Wellness',
+            image: journeyImg,
             moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
         },
         {
-            id: 'd1-14',
+            id: 'd1-17',
+            time: '7:15pm',
+            priceType: 'free',
+            venue: 'Explorer\'s Lab',
+            format: 'Masterclass',
+            title: 'Through the wild lens- Nature, Conservation and Photography',
+            by: 'David Raju, CGH Earth Experience',
+            image: throughtheildImg,
+            moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
+        },
+        {
+            id: 'd1-18',
             time: '7:30pm',
             priceType: 'free',
             venue: 'The Horizon',
@@ -181,7 +232,7 @@ const PROGRAMMES = {
             moreInfo:"The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
         },
         {
-            id: 'd1-15',
+            id: 'd1-19',
             time: '8:00pm',
             priceType: 'free',
             venue: 'Discovery Box',
@@ -192,25 +243,25 @@ const PROGRAMMES = {
             moreInfo:"Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
         },
         {
-            id: 'd1-16',
+            id: 'd1-20',
             time: '8:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
-            title: 'Takamaka Tasting Session',
+            title: 'Sip Seychelles: the Takamaka Trail',
             by: 'Takamaka',
             image: ashtadKollahImg,
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         },
         {
-            id: 'd1-17',
+            id: 'd1-21',
             time: '8:30pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthority,
+            image: thailandauthorityoftourismImg,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
     ],
@@ -232,9 +283,9 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
-            title: 'Way of the Sword',
-            by: 'Sapporo',
-            image: sapporoImg,
+            title: 'Way of the Swords- Kendo',
+            by: '',
+            image: kendoImg,
             moreInfo: "Witness the power and precision of Kendo, Japan’s traditional martial art of swordsmanship. This dynamic performance reveals discipline, focus, and centuries-old warrior philosophy—where spirit, skill, and respect meet in graceful combat."
         },
         {
@@ -277,7 +328,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Engagement',
             title: 'Backyard Tourism',
-            by: 'Kaushal Karkhanis',
+            by: 'Kaushal Karkhanis, Simin Mehta, Harshvardhan Tanvar, Alisha Sadikot',
             image: backyardImg,
             moreInfo: "Rediscover the magic of your own city in this engaging panel by Backyard Tourism, exploring hidden stories, local experiences, and mindful ways to travel closer to home—proving meaningful journeys don’t always require going far."
         },
@@ -299,21 +350,21 @@ const PROGRAMMES = {
             venue: 'Discovery Box',
             format: 'Engagement',
             title: 'Bucket List on Budget',
-            by: 'Archana Singh',
+            by: 'Archana Singh, Rohit Malve',
             image: BucketListonBudgetImg,
             moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
         },
-        // {
-        //     id: 'd2-9',
-        //     time: '05:00pm',
-        //     priceType: 'free',
-        //     venue: 'Discovery Box',
-        //     format: 'Engagement',
-        //     title: 'Echoes of the Ancients: Tibetan Mask Painting',
-        //     by: 'Immersive Trails',
-        //     image: immersiveTrailsImg,
-        //     moreInfo: "Explore the spiritual art of Tibetan mask painting with Gyurmay Tsundu Bhutia, uncovering symbolism, colors, and stories behind sacred masks used in rituals and cultural performances."
-        // },
+        {
+            id: 'd2-9',
+            time: '05:15pm',
+            priceType: 'free',
+            venue: 'Explorer\'s Lab',
+            format: 'Engagement',
+            title: 'How Content Creators Design High Value Trips',
+            by: 'CREATE',
+            image: createImg,
+            moreInfo: "Come learn how to travel smarter with leading creators who’ll share planning secrets, timing tricks, and clever splurges—so you can turn any budget into a journey packed with unforgettable moments and real value, not just pretty photos."
+        },
         // {
         //     id: 'd2-10',
         //     time: '5:15pm',
@@ -387,9 +438,20 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Engagement',
             title: 'Food Fireside Fables',
-            by: 'Rocky Singh & Chef Vicky Ratnani',
+            by: 'Rocky Singh, Chef Vicky Ratnani',
             image: firesidefablesImg,
             moreInfo: "Join us for a free-flowing, fun conversation between two men whose lives revolve around food—stories, memories, madness, and meals—served with humour, honesty, and an unapologetic love for eating."
+        },
+        {
+            id: 'd2-18',
+            time: '6:30pm',
+            priceType: 'paid',
+            venue: 'Explorer\'s Lab',
+            format: 'Workshop',
+            title: 'Veggie Voyages',
+            by: 'Aahuti Sejpal, Aparna Bhatt',
+            image: ahutisejpalandchepaparnaImg,
+            moreInfo: "An intimate, food-led cultural immersion through Spain, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
         },
         {
             id: 'd2-17',
@@ -401,17 +463,6 @@ const PROGRAMMES = {
             by: 'Abokado',
             image: kikomanImg,
             moreInfo: "Turn chopstick skills into an art. This hands-on dining experience teaches chopstick techniques through a three-course meal, blending cultural history, etiquette, and playful practice-ending with rice-level ninja mastery."
-        },
-        {
-            id: 'd2-18',
-            time: '6:30pm',
-            priceType: 'paid',
-            venue: 'Explorer\'s Lab',
-            format: 'Workshop',
-            title: 'Veggie Voyages',
-            by: 'Aahuti Sejpal and Aparna Bhatt',
-            image: ahutisejpalandchepaparnaImg,
-            moreInfo: "An intimate, food-led cultural immersion through Spain, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
         },
         // {
         //     id: 'd2-19',
@@ -459,11 +510,11 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-23',
-            time: '7:45pm',
+            time: '8:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
-            title: 'Takamaka Tasting Session',
+            title: 'Sip Seychelles: the Takamaka Trail',
             by: 'Takamaka',
             image: ashtadKollahImg,
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
