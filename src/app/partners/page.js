@@ -104,8 +104,8 @@ const PartnersSection = ({ title, items }) => {
                 </Swiper>
             </div>
 
-            {/* Tablet + Desktop: Grid cols-3 */}
-            <div className="hidden md:grid grid-cols-3 gap-y-14 gap-x-8 justify-items-center">
+            {/* Tablet + Desktop: Grid cols-3 or centered for single item */}
+            <div className={`hidden md:grid gap-y-14 gap-x-8 justify-items-center ${items.length === 1 ? 'grid-cols-1' : 'grid-cols-3'}`}>
                 {items.map((item) => (
                     <div key={item.alt} className="flex items-center justify-center h-[140px]">
                         {item.url ? (
@@ -221,8 +221,18 @@ const Page = () => {
                 <PartnersSection title={<><span className="font-bold">Partners</span></>} items={partners} />
                 <PartnersSection title={<><span className="font-bold">Community</span> partners</>} items={communityPartners} />
                 <PartnersSection title={<><span className="font-bold">Gifting</span> partners</>} items={giftingPartners} />
-                <PartnersSection title={<><span className="font-bold">Sips</span> partner</>} items={siphPartners} />
-                <PartnersSection title={<><span className="font-bold">Creator Network</span> partner</>} items={creatorNetworkPartners} />
+                
+                {/* Mobile: Stacked layout */}
+                <div className="flex flex-col gap-y-10 md:hidden">
+                    <PartnersSection title={<><span className="font-bold">Sips</span> partner</>} items={siphPartners} />
+                    <PartnersSection title={<><span className="font-bold">Creator Network</span> partner</>} items={creatorNetworkPartners} />
+                </div>
+
+                {/* Desktop: Side by side layout */}
+                <div className="hidden md:grid md:grid-cols-2 md:gap-x-10">
+                    <PartnersSection title={<><span className="font-bold">Sips</span> partner</>} items={siphPartners} />
+                    <PartnersSection title={<><span className="font-bold">Creator Network</span> partner</>} items={creatorNetworkPartners} />
+                </div>
             </div>
         </main>
     );

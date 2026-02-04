@@ -7,7 +7,7 @@ import ahutisejpalImg from '../images/Ahuti-Sejpal.webp';
 import rockysinghImg from '../images/rocky_kunal.webp';
 import bluetokaiImg from '../images/Blue_Tokai.webp';
 import surfaceItervalImg from '../images/Surface-Interval.png';
-import volunteerYatraImg from '../images/Volunteer-Yatra.png';
+import volunteerYatraImg from '../images/volunteer.webp';
 import ashtadKollahImg from '../images/Ashtad-Kollah.png';
 import sapporoImg from '../images/Sapporo.png';
 import koheventureImg from '../images/Kohventure.webp';
@@ -16,8 +16,13 @@ import archanasinghImg from '../images/Archana-Singh.png';
 import gargikothariImg from '../images/Gargi-Kothari.png';
 import kikomanImg from '../images/Kikoman.png';
 import calligraphyImg from '../images/calligraphy_writing.webp'
-import thailandcookingImg from '../images/thailand-cooking.webp'
+import thailandcookingImg from '../images/Thailand_Cooking.webp'
 import backyardImg from '../images/backyard.webp'
+import MasaiJumpImg from '../images/Masai_Jump.webp'
+import BeadworkImg from '../images/Beads_making.webp'
+import firesidefablesImg from '../images/fire_fables.webp'
+import BucketListonBudgetImg from '../images/budget_img.webp'
+import wellnessImg from '../images/wellness_masterclass.webp'
 
 const PROGRAMMES = {
     day1: [
@@ -111,7 +116,7 @@ const PROGRAMMES = {
         // },
         {
             id: 'd1-9',
-            time: '5:45pm',
+            time: '5:30pm',
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Workshop',
@@ -126,7 +131,7 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Engagement',
-            title: 'How Food Is The Gateway To Every Journey begins on the plate',
+            title: 'Food as the Gateway to Travel: Why Every Journey Begins on the Plate',
             by: 'Rocky Singh, Kunal Vijakar, Pawan Shahri',
             image: rockysinghImg,
             moreInfo:"Every great journey starts with a bite. From street snacks to signature dishes, food tells the story of a place- its people, culture, and traditions. This panel explores Food as the Gateway to Travel, and why every journey truly begins on the plate."
@@ -153,30 +158,41 @@ const PROGRAMMES = {
             image: thailandcookingImg,
             moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
         },
-        // {
-        //     id: 'd1-13',
-        //     time: '7:30pm',
-        //     priceType: 'free',
-        //     venue: 'The Horizon',
-        //     format: 'entertainment',
-        //     title: 'Maasai Jump Dance - Adumu Ascent',
-        //     by: 'Magical Kenya',
-        //     image: programmeImg,
-        //     moreInfo:"The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
-        // },
-        // {
-        //     id: 'd1-14',
-        //     time: '7:45pm',
-        //     priceType: 'free',
-        //     venue: 'Discovery Box',
-        //     format: 'Workshop',
-        //     title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
-        //     by: 'Magical Kenya',
-        //     image: programmeImg,
-        //     moreInfo:"Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
-        // },
+        {
+            id: 'd1-13',
+            time: '7:00pm',
+            priceType: 'free',
+            venue: 'Explorer\'s Lab',
+            format: '',
+            title: 'Wellness masterclass',
+            by: 'CGH Earth',
+            image: wellnessImg,
+            moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
+        },
+        {
+            id: 'd1-14',
+            time: '7:30pm',
+            priceType: 'free',
+            venue: 'The Horizon',
+            format: 'Entertainment',
+            title: 'Maasai Jump Dance - Adumu Ascent',
+            by: 'Magical Kenya',
+            image: MasaiJumpImg,
+            moreInfo:"The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
+        },
         {
             id: 'd1-15',
+            time: '8:00pm',
+            priceType: 'free',
+            venue: 'Discovery Box',
+            format: 'Workshop',
+            title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
+            by: 'Magical Kenya',
+            image: BeadworkImg,
+            moreInfo:"Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
+        },
+        {
+            id: 'd1-16',
             time: '8:00pm',
             priceType: 'free',
             venue: 'F&B Lounge',
@@ -187,7 +203,7 @@ const PROGRAMMES = {
             moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         },
         {
-            id: 'd1-16',
+            id: 'd1-17',
             time: '8:30pm',
             priceType: 'free',
             venue: 'The Horizon',
@@ -216,13 +232,24 @@ const PROGRAMMES = {
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
-            title: 'Kendo',
+            title: 'Way of the Sword',
             by: 'Sapporo',
             image: sapporoImg,
             moreInfo: "Witness the power and precision of Kendo, Japan’s traditional martial art of swordsmanship. This dynamic performance reveals discipline, focus, and centuries-old warrior philosophy—where spirit, skill, and respect meet in graceful combat."
         },
+        {
+            id: 'd2-3',
+            time: '03:45pm ',
+            priceType: 'free',
+            venue: 'Discovery Box',
+            format: 'Workshop',
+            title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
+            by: 'Magical Kenya',
+            image: BeadworkImg,
+            moreInfo: "Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
+        },
         // {
-        //     id: 'd2-3',
+        //     id: 'd2-4',
         //     time: '4:00pm',
         //     priceType: 'free',
         //     venue: 'The Horizon',
@@ -233,7 +260,7 @@ const PROGRAMMES = {
         //     moreInfo: "Witness the power and precision of Kendo, Japan’s traditional martial art of swordsmanship. This dynamic performance reveals discipline, focus, and centuries-old warrior philosophy- where spirit, skill, and respect meet in graceful combat."
         // },
         {
-            id: 'd2-4',
+            id: 'd2-5',
             time: '4:15pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
@@ -244,7 +271,7 @@ const PROGRAMMES = {
             moreInfo: "A journey rooted in purpose and impact, this session explores how Volunteer Yatra was born—transforming travel into a force for good by connecting travellers with communities through meaningful, service-led experiences."
         },
         {
-            id: 'd2-5',
+            id: 'd2-6',
             time: '4:30pm',
             priceType: 'free',
             venue: 'The Horizon',
@@ -255,8 +282,8 @@ const PROGRAMMES = {
             moreInfo: "Rediscover the magic of your own city in this engaging panel by Backyard Tourism, exploring hidden stories, local experiences, and mindful ways to travel closer to home—proving meaningful journeys don’t always require going far."
         },
         {
-            id: 'd2-6',
-            time: '4:45pm',
+            id: 'd2-7',
+            time: '5:00pm',
             priceType: 'paid',
             venue: 'Discovery Box',
             format: 'Engagement',
@@ -266,40 +293,62 @@ const PROGRAMMES = {
             moreInfo: "A beginner-friendly, fun introduction to the world of wine. Learn how to read wine labels, understand different styles, and choose the right wine based on your taste preferences, the food you’re eating, and even the weather—so every sip feels just right."
         },
         {
-            id: 'd2-7',
-            time: '05:00pm',
+            id: 'd2-8',
+            time: '5:15pm',
             priceType: 'free',
             venue: 'Discovery Box',
             format: 'Engagement',
-            title: 'Echoes of the Ancients: Tibetan Mask Painting',
-            by: 'Immersive Trails',
-            image: immersiveTrailsImg,
-            moreInfo: "Explore the spiritual art of Tibetan mask painting with Gyurmay Tsundu Bhutia, uncovering symbolism, colors, and stories behind sacred masks used in rituals and cultural performances."
+            title: 'Bucket List on Budget',
+            by: 'Archana Singh',
+            image: BucketListonBudgetImg,
+            moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
         },
         // {
-        //     id: 'd2-8',
-        //     time: '05:30pm',
+        //     id: 'd2-9',
+        //     time: '05:00pm',
         //     priceType: 'free',
-        //     venue: 'The Horizon',
-        //     format: 'Entertainment',
-        //     title: 'Maasai Jump Dance - Adumu Ascent',
-        //     by: 'Magical Kenya',
-        //     image: programmeImg,
-        //     moreInfo: "The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
+        //     venue: 'Discovery Box',
+        //     format: 'Engagement',
+        //     title: 'Echoes of the Ancients: Tibetan Mask Painting',
+        //     by: 'Immersive Trails',
+        //     image: immersiveTrailsImg,
+        //     moreInfo: "Explore the spiritual art of Tibetan mask painting with Gyurmay Tsundu Bhutia, uncovering symbolism, colors, and stories behind sacred masks used in rituals and cultural performances."
         // },
         // {
-        //     id: 'd2-9',
+        //     id: 'd2-10',
+        //     time: '5:15pm',
+        //     priceType: 'free',
+        //     venue: 'Discovery Box',
+        //     format: 'Engagement',
+        //     title: 'How Content Creators Design High Value Trips',
+        //     by: 'Create',
+        //     image: programmeImg,
+        //     moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
+        // },
+        {
+            id: 'd2-11',
+            time: '05:30pm',
+            priceType: 'free',
+            venue: 'The Horizon',
+            format: 'Entertainment',
+            title: 'Maasai Jump Dance - Adumu Ascent',
+            by: 'Magical Kenya',
+            image: MasaiJumpImg,
+            moreInfo: "The world-famous Maasai Jump Dance - Adumu Ascent Experience the Maasai’s traditional jumping dance. A powerful display of strength, agility, and cultural pride."
+        },
+        // {
+        //     id: 'd2-12',
         //     time: '05:45pm',
         //     priceType: 'free',
         //     venue: 'Discovery Box',
         //     format: 'Entertainment',
         //     title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
         //     by: 'Magical Kenya',
-        //     image: programmeImg,
+        //     image: BeadworkImg,
         //     moreInfo: "Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
         // },
         // {
-        //     id: 'd2-10',
+        //     id: 'd2-13',
         //     time: '5:30pm',
         //     priceType: 'free',
         //     venue: 'Discovery Box',
@@ -310,19 +359,19 @@ const PROGRAMMES = {
         //     moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
         // },
         {
-            id: 'd2-11',
+            id: 'd2-14',
             time: '6:00pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Masterclass',
             title: 'Rhythms of Thailand',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthority,
+            image: thailandauthorityoftourismImg,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
         {
-            id: 'd2-12',
-            time: '6:00pm',
+            id: 'd2-15',
+            time: '6:15pm',
             priceType: 'free',
             venue: 'F&B Lounge',
             format: 'Workshop',
@@ -331,30 +380,30 @@ const PROGRAMMES = {
             image: thailandcookingImg,
             moreInfo: "Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy—guided by authentic recipes and cultural insights."
         },
-        // {
-        //     id: 'd2-13',
-        //     time: '6:30pm',
-        //     priceType: 'free',
-        //     venue: 'The Horizon',
-        //     format: 'Engagement',
-        //     title: 'Food Fireside Fables',
-        //     by: 'Rocky Singh & Chef Vicky Ratnani',
-        //     image: programmeImg,
-        //     moreInfo: "Join us for a free-flowing, fun conversation between two men whose lives revolve around food—stories, memories, madness, and meals—served with humour, honesty, and an unapologetic love for eating."
-        // },
-        // {
-        //     id: 'd2-14',
-        //     time: '6:30pm',
-        //     priceType: 'paid',
-        //     venue: 'Discovery Box',
-        //     format: 'Workshop',
-        //     title: 'Chopsticks Ninja',
-        //     by: 'Abokado',
-        //     image: kikomanImg,
-        //     moreInfo: "Turn chopstick skills into an art. This hands-on dining experience teaches chopstick techniques through a three-course meal, blending cultural history, etiquette, and playful practice-ending with rice-level ninja mastery."
-        // },
         {
-            id: 'd2-15',
+            id: 'd2-16',
+            time: '6:30pm',
+            priceType: 'free',
+            venue: 'The Horizon',
+            format: 'Engagement',
+            title: 'Food Fireside Fables',
+            by: 'Rocky Singh & Chef Vicky Ratnani',
+            image: firesidefablesImg,
+            moreInfo: "Join us for a free-flowing, fun conversation between two men whose lives revolve around food—stories, memories, madness, and meals—served with humour, honesty, and an unapologetic love for eating."
+        },
+        {
+            id: 'd2-17',
+            time: '7:30pm',
+            priceType: 'paid',
+            venue: 'Discovery Box',
+            format: 'Workshop',
+            title: 'Chopsticks Ninja',
+            by: 'Abokado',
+            image: kikomanImg,
+            moreInfo: "Turn chopstick skills into an art. This hands-on dining experience teaches chopstick techniques through a three-course meal, blending cultural history, etiquette, and playful practice-ending with rice-level ninja mastery."
+        },
+        {
+            id: 'd2-18',
             time: '6:30pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
@@ -364,30 +413,30 @@ const PROGRAMMES = {
             image: ahutisejpalandchepaparnaImg,
             moreInfo: "An intimate, food-led cultural immersion through Spain, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
         },
-        {
-            id: 'd2-16',
-            time: '6:45pm',
-            priceType: 'free',
-            venue: 'Discovery Box',
-            format: 'Engagement',
-            title: 'Bucket List on Budget',
-            by: 'Archana Singh',
-            image: archanasinghImg,
-            moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
-        },
-        {
-            id: 'd2-17',
-            time: '7:30pm',
-            priceType: 'paid',
-            venue: 'The Horizon',
-            format: 'Engagement',
-            title: 'Chopsticks Ninja',
-            by: 'abokado',
-            image: kikomanImg,
-            moreInfo: "Turn chopstick skills into an art. This hands-on dining experience teaches chopstick techniques through a three-course meal, blending cultural history, etiquette, and playful practice—ending with rice-level ninja mastery."
-        },
         // {
-        //     id: 'd2-18',
+        //     id: 'd2-19',
+        //     time: '6:45pm',
+        //     priceType: 'free',
+        //     venue: 'Discovery Box',
+        //     format: 'Engagement',
+        //     title: 'Bucket List on Budget',
+        //     by: 'Archana Singh',
+        //     image: archanasinghImg,
+        //     moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
+        // },
+        // {
+        //     id: 'd2-20',
+        //     time: '7:30pm',
+        //     priceType: 'paid',
+        //     venue: 'The Horizon',
+        //     format: 'Engagement',
+        //     title: 'Chopsticks Ninja',
+        //     by: 'abokado',
+        //     image: kikomanImg,
+        //     moreInfo: "Turn chopstick skills into an art. This hands-on dining experience teaches chopstick techniques through a three-course meal, blending cultural history, etiquette, and playful practice—ending with rice-level ninja mastery."
+        // },
+        // {
+        //     id: 'd2-21',
         //     time: '7:30pm',
         //     priceType: 'free',
         //     venue: 'F&B Lounge',
@@ -398,18 +447,18 @@ const PROGRAMMES = {
         //     moreInfo: "Discover the spirit of the Seychelles in this immersive Takamaka Rum masterclass, exploring its rich heritage, tropical flavours, and craftsmanship through a guided sensory journey of taste, aroma, and storytelling."
         // },
         {
-            id: 'd2-19',
+            id: 'd2-22',
             time: '7:45pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
             by: 'Tourism Authority of Thailand',
-            image: thailandauthority,
+            image: thailandauthorityoftourismImg,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
         {
-            id: 'd2-20',
+            id: 'd2-23',
             time: '7:45pm',
             priceType: 'free',
             venue: 'F&B Lounge',
