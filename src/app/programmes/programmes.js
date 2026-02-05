@@ -1,5 +1,5 @@
 import programmeImg from '../images/programme.webp';
-import travelwithkidsImg from '../images/Travel_with_Kids.webp';
+import travelwithkidsImg from '../images/strollers_to_suitcase_img.webp';
 import thailandauthorityoftourismImg from '../images/Thailand_Authority_of_Tourism.webp';
 import thailandauthority from '../images/Thailand-Authority-of-Tourism_1.webp';
 import immersiveTrailsImg from '../images/mask_painting.webp';
@@ -7,10 +7,10 @@ import ahutisejpalImg from '../images/Ahuti-Sejpal.webp';
 import rockysinghImg from '../images/rocky_kunal.webp';
 import bluetokaiImg from '../images/Blue_Tokai.webp';
 import surfaceItervalImg from '../images/Surface-Interval.png';
-import volunteerYatraImg from '../images/volunteer.webp';
+import volunteerYatraImg from '../images/volunteer_yatra_img.webp';
 import ashtadKollahImg from '../images/Ashtad-Kollah.png';
 import sapporoImg from '../images/Sapporo.png';
-import koheventureImg from '../images/Kohventure.webp';
+import koheventureImg from '../images/little_passports_img.webp';
 import ahutisejpalandchepaparnaImg from '../images/Ahuti-Sejpal-and-Chep-Aparna.webp';
 import archanasinghImg from '../images/Archana-Singh.png';
 import gargikothariImg from '../images/Gargi-Kothari.png';
@@ -62,7 +62,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Tourism Authority of Thailand',
+            by: 'Amazing Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Thailand’s official tourism platform sparks travel dreams with destination highlights, culture, festivals, experiences, and handy planning tips to explore the Land of Smiles with ease."
         },
@@ -150,7 +150,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Tourism Authority of Thailand',
+            by: 'Amazing Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo:"Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
@@ -194,7 +194,7 @@ const PROGRAMMES = {
             venue: 'F&B Lounge',
             format: 'Workshop',
             title: 'Flavours of Thailand: From Street to Stove',
-            by: 'Tourism Authority of Thailand',
+            by: 'Amazing Thailand',
             image: thailandcookingImg,
             moreInfo:"Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy- guided by authentic recipes and cultural insights."
         },
@@ -211,7 +211,7 @@ const PROGRAMMES = {
         },
         {
             id: 'd1-17',
-            time: '7:15pm',
+            time: '7:30pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
             format: 'Masterclass',
@@ -260,7 +260,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Tourism Authority of Thailand',
+            by: 'Amazing Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
@@ -279,6 +279,17 @@ const PROGRAMMES = {
         },
         {
             id: 'd2-2',
+            time: '03:30pm ',
+            priceType: 'free',
+            venue: 'Discovery Box',
+            format: 'Workshop',
+            title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
+            by: 'Magical Kenya',
+            image: BeadworkImg,
+            moreInfo: "Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
+        },
+        {
+            id: 'd2-3',
             time: '03:45pm ',
             priceType: 'free',
             venue: 'The Horizon',
@@ -288,17 +299,7 @@ const PROGRAMMES = {
             image: kendoImg,
             moreInfo: "Witness the power and precision of Kendo, Japan’s traditional martial art of swordsmanship. This dynamic performance reveals discipline, focus, and centuries-old warrior philosophy—where spirit, skill, and respect meet in graceful combat."
         },
-        {
-            id: 'd2-3',
-            time: '03:45pm ',
-            priceType: 'free',
-            venue: 'Discovery Box',
-            format: 'Workshop',
-            title: 'Ushanga Making - Traditional Maasai Beadwork Practice',
-            by: 'Magical Kenya',
-            image: BeadworkImg,
-            moreInfo: "Create traditional Maasai jewellery using Ushanga techniques and understand the cultural symbolism behind the craft."
-        },
+        
         // {
         //     id: 'd2-4',
         //     time: '4:00pm',
@@ -312,6 +313,17 @@ const PROGRAMMES = {
         // },
         {
             id: 'd2-5',
+            time: '4:00pm',
+            priceType: 'free',
+            venue: 'Discovery Box',
+            format: 'Engagement',
+            title: 'Bucket List on Budget',
+            by: 'Archana Singh & Rohit Malve',
+            image: BucketListonBudgetImg,
+            moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
+        },
+        {
+            id: 'd2-6',
             time: '4:15pm',
             priceType: 'free',
             venue: 'Explorer\'s Lab',
@@ -322,7 +334,7 @@ const PROGRAMMES = {
             moreInfo: "A journey rooted in purpose and impact, this session explores how Volunteer Yatra was born—transforming travel into a force for good by connecting travellers with communities through meaningful, service-led experiences."
         },
         {
-            id: 'd2-6',
+            id: 'd2-7',
             time: '4:30pm',
             priceType: 'free',
             venue: 'The Horizon',
@@ -333,7 +345,7 @@ const PROGRAMMES = {
             moreInfo: "Rediscover the magic of your own city in this engaging panel by Backyard Tourism, exploring hidden stories, local experiences, and mindful ways to travel closer to home—proving meaningful journeys don’t always require going far."
         },
         {
-            id: 'd2-7',
+            id: 'd2-8',
             time: '5:00pm',
             priceType: 'paid',
             venue: 'Discovery Box',
@@ -342,17 +354,6 @@ const PROGRAMMES = {
             by: 'By Gargi Kothari',
             image: gargikothariImg,
             moreInfo: "A beginner-friendly, fun introduction to the world of wine. Learn how to read wine labels, understand different styles, and choose the right wine based on your taste preferences, the food you’re eating, and even the weather—so every sip feels just right."
-        },
-        {
-            id: 'd2-8',
-            time: '5:15pm',
-            priceType: 'free',
-            venue: 'Discovery Box',
-            format: 'Engagement',
-            title: 'Bucket List on Budget',
-            by: 'Archana Singh, Rohit Malve',
-            image: BucketListonBudgetImg,
-            moreInfo: "Travel more, spend smarter. Join Archana Singh for a power-packed masterclass packed with budget hacks, smart planning tips, and practical strategies to turn your travel bucket list into affordable, achievable adventures."
         },
         {
             id: 'd2-9',
@@ -416,7 +417,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Masterclass',
             title: 'Rhythms of Thailand',
-            by: 'Tourism Authority of Thailand',
+            by: 'Amazing Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
@@ -427,7 +428,7 @@ const PROGRAMMES = {
             venue: 'F&B Lounge',
             format: 'Workshop',
             title: 'Flavours of Thailand: From Street to Stove',
-            by: 'Tourism Authority of Thailand',
+            by: 'Amazing Thailand',
             image: thailandcookingImg,
             moreInfo: "Dive into Thai flavours in this hands-on cooking workshop, learning traditional techniques, iconic dishes, and bold balance of sweet, sour, salty, and spicy—guided by authentic recipes and cultural insights."
         },
@@ -438,7 +439,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Engagement',
             title: 'Food Fireside Fables',
-            by: 'Rocky Singh, Chef Vicky Ratnani',
+            by: 'Rocky Singh & Chef Vicky Ratnani',
             image: firesidefablesImg,
             moreInfo: "Join us for a free-flowing, fun conversation between two men whose lives revolve around food—stories, memories, madness, and meals—served with humour, honesty, and an unapologetic love for eating."
         },
@@ -504,7 +505,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Entertainment',
             title: 'Rhythms of Thailand',
-            by: 'Tourism Authority of Thailand',
+            by: 'Amazing Thailand',
             image: thailandauthorityoftourismImg,
             moreInfo: "Experience Thailand’s cultural elegance through traditional Thai dance, the iconic Khon performance Hanuman Captures Suphanna Matcha, the energetic Long Drum Dance (Ram Klong Yao), and the joyful Songkran dance celebrating Thailand’s traditional New Year."
         },
