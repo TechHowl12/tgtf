@@ -56,8 +56,8 @@ import lacigale from "../images/La_cigale_Logo.webp";
 import tdlogo from "../images/TD_logo.webp";
 import thewestin from "../images/the_westin.webp";
 import bt from "../images/bt_logo.webp";
-import inha from "../images/Inha_wellness_logo.webp";
-import travelseewrite from "../images/travel_see_write_logo.webp";
+import inha from "../images/Inha.webp";
+import travelseewrite from "../images/travel_see.webp";
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
