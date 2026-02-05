@@ -17,7 +17,7 @@ import gargikothariImg from '../images/Gargi-Kothari.png';
 import kikomanImg from '../images/Kikoman.png';
 import calligraphyImg from '../images/calligraphy_writing.webp'
 import thailandcookingImg from '../images/Thailand_Cooking.webp'
-import backyardImg from '../images/Backyard_img.webp'
+import backyardImg from '../images/backyard_tourism.webp'
 import MasaiJumpImg from '../images/Masai_Jump.webp'
 import BeadworkImg from '../images/beads_making.webp'
 import firesidefablesImg from '../images/fire_fables.webp'
@@ -26,10 +26,11 @@ import volunteerYatrahomeImg from '../images/Vounteer_homeexchange.webp';
 import polarbearImg from '../images/polar_bear_img.webp';
 import throughtheildImg from '../images/Through _the_wild_lens.webp';
 import journeyImg from '../images/Journeys_to_well_being.webp';
-import createImg from '../images/CREATE_img.webp';
+import createImg from '../images/content_creators.webp';
 import BucketListonBudgetImg from '../images/Bucket_list_on_a_budget.webp';
 import AakashmaanImg from '../images/Aakash_maan.webp';
 import kendoImg from "../images/kendo_img.webp";
+import diveImg from "../images/Beneath_the_surface.webp";
 
 const PROGRAMMES = {
     day1: [
@@ -122,7 +123,7 @@ const PROGRAMMES = {
             moreInfo: "Step into a global coffee journey. Brew, taste, and explore beans from around the world while learning simple brewing basics, flavour profiles, and aromas- perfect for beginners and passionate coffee lovers alike."
         },
         // {
-        //     id: 'd1-10',
+        //     id: 'd1-9',
         //     time: '04:45pm - 05:30pm',
         //     priceType: 'free',
         //     venue: 'Discovery Box',
@@ -133,7 +134,7 @@ const PROGRAMMES = {
         //     moreInfo: "Explore wildlife through your lens in this masterclass by Toe Hold, where expert photographers share tips on capturing animals in their natural habitats, mastering light and movement, and telling powerful visual stories."
         // },
         {
-            id: 'd1-11',
+            id: 'd1-10',
             time: '5:30pm',
             priceType: 'free',
             venue: 'Discovery Box',
@@ -144,8 +145,8 @@ const PROGRAMMES = {
             moreInfo: "Experience the meditative beauty of Tibetan calligraphy as Gyurmay Tsundu Bhutia demonstrates graceful scripts, ancient techniques, and the deeper meaning behind this sacred written art form."
         },
         {
-            id: 'd1-9',
-            time: '5:45 pm',
+            id: 'd1-11',
+            time: '5:30pm',
             priceType: 'free',
             venue: 'The Horizon',
             format: 'Entertainment',
@@ -165,17 +166,17 @@ const PROGRAMMES = {
             image: rockysinghImg,
             moreInfo:"Every great journey starts with a bite. From street snacks to signature dishes, food tells the story of a place- its people, culture, and traditions. This panel explores Food as the Gateway to Travel, and why every journey truly begins on the plate."
         },
-        // {
-        //     id: 'd1-13',
-        //     time: '6:00pm',
-        //     priceType: 'free',
-        //     venue: 'Explorer\'s Lab',
-        //     format: 'Engagement  ',
-        //     title: 'Dive Beneath Surface Fireside chat',
-        //     by: 'urface Interval, Shaan & Sushant Joshi (Scubareels)',
-        //     image: programmeImg,
-        //     moreInfo:"Join Surface Interval and Sushant Joshi for a fireside chat exploring deep-sea diving, ocean adventures, marine life, conservation, and the thrill of discovering the hidden world beneath the waves."
-        // },
+        {
+            id: 'd1-13',
+            time: '6:00pm',
+            priceType: 'free',
+            venue: 'Explorer\'s Lab',
+            format: 'Engagement  ',
+            title: 'Dive Beneath Surface Fireside chat',
+            by: 'urface Interval, Shaan & Sushant Joshi (Scubareels)',
+            image: diveImg,
+            moreInfo:"Join Surface Interval and Sushant Joshi for a fireside chat exploring deep-sea diving, ocean adventures, marine life, conservation, and the thrill of discovering the hidden world beneath the waves."
+        },
         {
             id: 'd1-14',
             time: '6:45pm',
@@ -444,7 +445,7 @@ const PROGRAMMES = {
             moreInfo: "Join us for a free-flowing, fun conversation between two men whose lives revolve around food—stories, memories, madness, and meals—served with humour, honesty, and an unapologetic love for eating."
         },
         {
-            id: 'd2-18',
+            id: 'd2-17',
             time: '6:30pm',
             priceType: 'paid',
             venue: 'Explorer\'s Lab',
@@ -455,7 +456,7 @@ const PROGRAMMES = {
             moreInfo: "An intimate, food-led cultural immersion through Spain, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
         },
         {
-            id: 'd2-17',
+            id: 'd2-18',
             time: '7:30pm',
             priceType: 'paid',
             venue: 'Discovery Box',
