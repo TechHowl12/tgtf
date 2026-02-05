@@ -56,6 +56,8 @@ import lacigale from "../images/La_cigale_Logo.webp";
 import tdlogo from "../images/TD_logo.webp";
 import thewestin from "../images/the_westin.webp";
 import bt from "../images/bt_logo.webp";
+import inha from "../images/inha_wellness_logo.webp";
+import travelseewrite from "../images/travel_see_write_logo.webp";
 
 const swiperCommonProps = {
     modules: [Autoplay, Pagination],
@@ -172,6 +174,7 @@ const Page = () => {
         { src: volunteer, alt: 'volunteer', className: 'w-40', url:"https://volunteeryatra.com/" },
         { src: twk, alt: 'twk', className: 'w-32', url:"https://travelwithkids.co.in/" },
         { src: surface, alt: 'surface', className: 'w-44', url:"https://surface-interval.com/?srsltid=AfmBOor3FdtvrzdPmPoag0nDrxFfbNnx0iG84XwIppRCde_rm6BgDnf6" },
+        { src: travelseewrite, alt: 'travelseewrite', className: 'w-50', url:"https://travelseewrite.com/"},
     ];
 
     const giftingPartners = [
@@ -191,6 +194,8 @@ const Page = () => {
         { src: tdlogo, alt: 'td', className: 'w-64', url:"https://www.traveldesigner.qa/"},
         { src: thewestin, alt: 'the-westin', className: 'w-48', url:"https://www.marriott.com/en-us/hotels/dohwi-the-westin-doha-hotel-and-spa/overview/"},
         { src: bt, alt: 'bt', className: 'w-60', url:"https://www.banyantree.com/qatar/doha/accommodation" },
+        { src: inha, alt: 'inha', className: 'w-40', url:"https://inhawellness.com/"},
+        
     ];
 
     const siphPartners = [
