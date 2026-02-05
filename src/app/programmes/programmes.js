@@ -173,7 +173,7 @@ const PROGRAMMES = {
             venue: 'Explorer\'s Lab',
             format: 'Engagement  ',
             title: 'Dive Beneath Surface Fireside chat',
-            by: 'urface Interval, Shaan & Sushant Joshi (Scubareels)',
+            by: 'Surface Interval, Shaan & Sushant Joshi (Scubareels)',
             image: diveImg,
             moreInfo:"Join Surface Interval and Sushant Joshi for a fireside chat exploring deep-sea diving, ocean adventures, marine life, conservation, and the thrill of discovering the hidden world beneath the waves."
         },
@@ -341,7 +341,7 @@ const PROGRAMMES = {
             venue: 'The Horizon',
             format: 'Engagement',
             title: 'Backyard Tourism',
-            by: 'Kaushal Karkhanis, Simin Mehta, Harshvardhan Tanvar, Alisha Sadikot',
+            by: 'Harshvardhan Tanvar, Alisha Sadikot, Simin Mehta, Kaushal Karkhanis',
             image: backyardImg,
             moreInfo: "Rediscover the magic of your own city in this engaging panel by Backyard Tourism, exploring hidden stories, local experiences, and mindful ways to travel closer to home—proving meaningful journeys don’t always require going far."
         },
