@@ -1,18 +1,13 @@
-import programmeImg from '../images/programme.webp';
 import travelwithkidsImg from '../images/strollers_to_suitcase_img.webp';
 import thailandauthorityoftourismImg from '../images/Thailand_Authority_of_Tourism.webp';
-import thailandauthority from '../images/Thailand-Authority-of-Tourism_1.webp';
 import immersiveTrailsImg from '../images/mask_painting.webp';
 import ahutisejpalImg from '../images/Ahuti-Sejpal.webp';
 import rockysinghImg from '../images/rocky_kunal.webp';
 import bluetokaiImg from '../images/Blue_Tokai.webp';
-import surfaceItervalImg from '../images/Surface-Interval.png';
 import volunteerYatraImg from '../images/volunteer_yatra_img.webp';
 import ashtadKollahImg from '../images/Ashtad-Kollah.png';
-import sapporoImg from '../images/Sapporo.png';
 import koheventureImg from '../images/little_passports_img.webp';
 import ahutisejpalandchepaparnaImg from '../images/Ahuti-Sejpal-and-Chep-Aparna.webp';
-import archanasinghImg from '../images/Archana-Singh.png';
 import gargikothariImg from '../images/Gargi-Kothari.png';
 import kikomanImg from '../images/Kikoman.png';
 import calligraphyImg from '../images/calligraphy_writing.webp'
@@ -21,8 +16,6 @@ import backyardImg from '../images/backyard_tourism.webp'
 import MasaiJumpImg from '../images/Masai_Jump.webp'
 import BeadworkImg from '../images/beads_making.webp'
 import firesidefablesImg from '../images/fire_fables.webp'
-import wellnessImg from '../images/wellness_masterclass.webp'
-import volunteerYatrahomeImg from '../images/Vounteer_homeexchange.webp';
 import polarbearImg from '../images/polar_bear_img.webp';
 import throughtheildImg from '../images/Through _the_wild_lens.webp';
 import journeyImg from '../images/Journeys_to_well_being.webp';
@@ -173,7 +166,7 @@ const PROGRAMMES = {
             venue: 'Explorer\'s Lab',
             format: 'Engagement  ',
             title: 'Dive Beneath Surface Fireside chat',
-            by: 'Surface Interval, Shaan & Sushant Joshi (Scubareels)',
+            by: 'Shaan Singh, Sushant Joshi, Rhea Malhotra',
             image: diveImg,
             moreInfo:"Join Surface Interval and Sushant Joshi for a fireside chat exploring deep-sea diving, ocean adventures, marine life, conservation, and the thrill of discovering the hidden world beneath the waves."
         },
@@ -451,7 +444,7 @@ const PROGRAMMES = {
             venue: 'Explorer\'s Lab',
             format: 'Workshop',
             title: 'Veggie Voyages',
-            by: 'Aahuti Sejpal, Aparna Bhatt',
+            by: 'Aahuti Sejpal & Aparna Bhatt',
             image: ahutisejpalandchepaparnaImg,
             moreInfo: "An intimate, food-led cultural immersion through Spain, blending regional vegetarian tastings, language learning, history, and guided conversation- inviting participants to explore destinations slowly, sensorially, and meaningfully through shared meals and stories."
         },
