@@ -208,7 +208,7 @@ const Banner = () => {
             setTimeout(() => setShowButton(false), 500);
           }}
         >
-          <source src="/banner.mp4" type="video/mp4" />
+          <source src="/banner_new.mp4" type="video/mp4" />
         </video>
 
         {/* Play/Pause Overlay */}
