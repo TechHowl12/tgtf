@@ -4,43 +4,28 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import fallback from "../../images/fallback.webp";
-import Logo from "../../images/logo.svg";
-import star from "../../images/star.webp";
-
 gsap.registerPlugin(ScrollTrigger);
-
 const Banner = () => {
   const mobileVideoRef = useRef(null);
   const desktopVideoRef = useRef(null);
-
-  const logoRef = useRef(null);
-  const registerRef = useRef(null);
-  const starRef = useRef(null);
-
   const [isPaused, setIsPaused] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-
   // global "video ready" state (mobile or desktop)
   const [isVideoReady, setIsVideoReady] = useState(false);
-
   const getActiveVideo = useCallback(() => {
     if (typeof window === "undefined") return null;
     const isDesktop = window.innerWidth >= 768;
     return isDesktop ? desktopVideoRef.current : mobileVideoRef.current;
   }, []);
-
   // autoplay on mount
   useEffect(() => {
     const video = getActiveVideo();
     if (!video) return;
-
     video.muted = true; // ensure muted before autoplay attempt
     const p = video.play();
-
     // ✅ ensure we show the video as soon as we attempt to play
     setIsVideoReady(true);
-
     if (p && typeof p.catch === "function") {
       p.catch(() => {
         setIsPaused(true);
@@ -48,47 +33,9 @@ const Banner = () => {
       });
     }
   }, [getActiveVideo]);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mediaQuery.matches) return;
-    if (window.innerWidth >= 767) return;
-
-    const ctx = gsap.context(() => {
-      const logo = logoRef.current;
-      const trigger = registerRef.current;
-      if (!logo || !trigger) return;
-
-      gsap.to(logo, {
-        y: 250,
-        ease: "none",
-        scrollTrigger: {
-          trigger,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-
-      gsap.to(starRef.current, {
-        rotate: 360,
-        ease: "none",
-        scrollTrigger: {
-          trigger,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
-
   const togglePlay = () => {
     const video = getActiveVideo();
     if (!video) return;
-
     if (video.paused) {
       video.play();
       setIsPaused(false);
@@ -99,26 +46,22 @@ const Banner = () => {
       setShowButton(true);
     }
   };
-
   const toggleMute = (e) => {
     e.stopPropagation(); // don't trigger play/pause on container click
     const video = getActiveVideo();
     if (!video) return;
-
     const nextMuted = !isMuted;
     video.muted = nextMuted;
     setIsMuted(nextMuted);
   };
-
   // handler when video has loaded enough to play
   const handleVideoLoaded = () => {
     if (!isVideoReady) {
       setIsVideoReady(true);
     }
   };
-
   return (
-    <div id="first-section" className="relative w-full h-[698px]">
+    <div id="first-section" className="relative w-full h-full">
       {/* FALLBACK IMAGE (shown until video is ready) */}
       <div className="absolute inset-0 pointer-events-none">
         <Image
@@ -130,7 +73,6 @@ const Banner = () => {
           }`}
         />
       </div>
-
       {/* MOBILE */}
       <div className="md:hidden w-full h-full relative" onClick={togglePlay}>
         <video
@@ -156,7 +98,6 @@ const Banner = () => {
         >
           <source src="/mobile-banner.mp4" type="video/mp4" />
         </video>
-
         {/* Play/Pause Overlay */}
         <button
           aria-label={isPaused ? "Play video" : "Pause video"}
@@ -176,7 +117,6 @@ const Banner = () => {
           </div>
         </button>
       </div>
-
       {/* DESKTOP */}
       <div
         className="hidden md:block relative w-full h-full"
@@ -210,7 +150,6 @@ const Banner = () => {
         >
           <source src="/banner_new.mp4" type="video/mp4" />
         </video>
-
         {/* Play/Pause Overlay */}
         <button
           aria-label={isPaused ? "Play video" : "Pause video"}
@@ -231,7 +170,6 @@ const Banner = () => {
           </div>
         </button>
       </div>
-
       {/* MUTE / UNMUTE BUTTON */}
       <button
         onClick={toggleMute}
@@ -253,36 +191,7 @@ const Banner = () => {
           </svg>
         )}
       </button>
-
-      {/* bottom text + logo */}
-      <div className="flex w-full gap-x-3 md:gap-x-6 xl:gap-x-10 justify-between md:justify-start px-4 md:px-24 xl:px-40 absolute bottom-0">
-        <div ref={logoRef} className="will-change-transform z-20">
-          <Image
-            width={123}
-            height={204}
-            src={Logo}
-            alt="TGTF Logo"
-            className="relative top-12 md:w-32 md:top-[30px] lg:top-24 xl:top-[180px] xl:w-44 xl:h-[291px]"
-          />
-        </div>
-
-        <div className="w-52 md:w-[700px] relative" ref={registerRef}>
-          <h1 className="text-bright relative top-[100px] md:top-[30px] lg:top-24 xl:top-[180px] z-20">
-            A Destination that’ll{" "}
-            <span className="font-bold">start your next journey.</span>
-          </h1>
-          <Image
-            ref={starRef}
-            width={31}
-            height={31}
-            src={star}
-            alt="Star Icon"
-            className="absolute right-8 xl:right-32 xl:bottom-4 xl:w-12 xl:h-12 bottom-6 z-0"
-          />
-        </div>
-      </div>
     </div>
   );
 };
-
 export default Banner;
