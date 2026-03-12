@@ -30,16 +30,19 @@ export default function Home() {
       const logo = logoRef.current;
       const trigger = registerRef.current;
       if (!logo || !trigger) return;
-      gsap.to(logo, {
-        y: 250,
-        ease: "none",
-        scrollTrigger: {
-          trigger,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
+      gsap.fromTo(logo,
+        { y: 0 },
+        {
+          y: 200,
+          ease: "none",
+          scrollTrigger: {
+            trigger,
+            start: "top 90%",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
       gsap.to(starRef.current, {
         rotate: 360,
         ease: "none",
@@ -60,7 +63,7 @@ export default function Home() {
       {/* Register Section */}
       <section ref={registerRef} className="bg-blue relative w-full pb-3 xl:pb-6 z-10">
         <div className="w-full mx-auto pr-4 md:pr-0 py-7">
-          <div className="flex items-center gap-x-3 md:gap-x-6 xl:gap-x-10 px-4 md:px-24 xl:px-40">
+          <div className="flex items-start gap-x-3 md:gap-x-6 xl:gap-x-10 px-4 md:px-24 xl:px-40">
             {/* TGTF Logo — left aligned with paragraph text */}
             <div ref={logoRef} className="will-change-transform z-20 flex-shrink-0">
               <Image
