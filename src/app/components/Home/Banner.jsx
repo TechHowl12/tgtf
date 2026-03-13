@@ -61,7 +61,7 @@ const Banner = () => {
     }
   };
   return (
-    <div id="first-section" className="relative w-full h-screen">
+    <div id="first-section" className="relative w-full mt-12 md:h-auto h-screen">
       {/* FALLBACK IMAGE (shown until video is ready) */}
       <div className="absolute inset-0 pointer-events-none">
         <Image
@@ -119,7 +119,7 @@ const Banner = () => {
       </div>
       {/* DESKTOP */}
       <div
-        className="hidden md:block relative w-full h-screen"
+        className="hidden md:block relative w-full"
         onMouseEnter={() => {
           if (!isPaused) setShowButton(true);
         }}
@@ -129,7 +129,7 @@ const Banner = () => {
       >
         <video
           ref={desktopVideoRef}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+          className={`w-full h-auto block transition-opacity duration-500 ${
             isVideoReady ? "opacity-100" : "opacity-0"
           }`}
           playsInline

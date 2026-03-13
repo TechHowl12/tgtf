@@ -21,6 +21,7 @@ export default function Home() {
   const registerRef = useRef(null);
   const logoRef = useRef(null);
   const starRef = useRef(null);
+  const buttonRef = useRef(null); // ref on mobile Register Now button — used as animation end point
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -29,7 +30,8 @@ export default function Home() {
     const ctx = gsap.context(() => {
       const logo = logoRef.current;
       const trigger = registerRef.current;
-      if (!logo || !trigger) return;
+      const endEl = buttonRef.current;
+      if (!logo || !trigger || !endEl) return;
       gsap.fromTo(logo,
         { y: 0 },
         {
@@ -37,8 +39,9 @@ export default function Home() {
           ease: "none",
           scrollTrigger: {
             trigger,
-            start: "top 90%",
-            end: "bottom top",
+            start: "top top",       // starts when top of blue section hits top of viewport
+            endTrigger: endEl,
+            end: "top bottom",      // ends just before the mobile Register Now button
             scrub: true,
           },
         }
@@ -102,6 +105,7 @@ export default function Home() {
         </div>
         {/* Button: mobile only (full width, below everything) */}
         <button
+          ref={buttonRef}
           id="register-now"
           type="button"
           onClick={() =>
