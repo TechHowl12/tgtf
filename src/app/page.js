@@ -21,7 +21,6 @@ export default function Home() {
   const registerRef = useRef(null);
   const logoRef = useRef(null);
   const starRef = useRef(null);
-  const buttonRef = useRef(null); // ref on mobile Register Now button — used as animation end point
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -30,19 +29,17 @@ export default function Home() {
     const ctx = gsap.context(() => {
       const logo = logoRef.current;
       const trigger = registerRef.current;
-      const endEl = buttonRef.current;
-      if (!logo || !trigger || !endEl) return;
+      if (!logo || !trigger) return;
       gsap.to(logo, {
-          y: 80,
-          ease: "none",
-          scrollTrigger: {
-            trigger,
-            start: "top top",
-            endTrigger: endEl,
-            end: "top bottom",
-            scrub: 0.5,
-          },
-        });
+        y: 250,
+        ease: "none",
+        scrollTrigger: {
+          trigger,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
       gsap.to(starRef.current, {
         rotate: 360,
         ease: "none",
@@ -61,17 +58,17 @@ export default function Home() {
     <main>
       <Banner />
       {/* Register Section */}
-      <section ref={registerRef} className="bg-blue relative w-full pb-3 xl:pb-6 z-10 overflow-hidden">
+      <section ref={registerRef} className="bg-blue relative w-full pb-3 xl:pb-6 z-10">
         <div className="w-full mx-auto pr-4 md:pr-0 py-7">
           <div className="flex items-center gap-x-3 md:gap-x-6 xl:gap-x-10 px-4 md:px-24 xl:px-40">
             {/* TGTF Logo — left aligned with paragraph text */}
-            <div ref={logoRef} className="z-20 flex-shrink-0">
+            <div ref={logoRef} className="will-change-transform z-20 flex-shrink-0">
               <Image
                 width={123}
                 height={204}
                 src={Logo}
                 alt="TGTF Logo"
-                className="w-20 md:w-32 xl:w-44 xl:h-[291px] will-change-transform"
+                className="w-20 md:w-32 xl:w-44 xl:h-[291px]"
               />
             </div>
             {/* Paragraph text + button (button inline on desktop) */}
@@ -102,7 +99,6 @@ export default function Home() {
         </div>
         {/* Button: mobile only (full width, below everything) */}
         <button
-          ref={buttonRef}
           id="register-now"
           type="button"
           onClick={() =>
