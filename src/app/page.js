@@ -32,20 +32,17 @@ export default function Home() {
       const trigger = registerRef.current;
       const endEl = buttonRef.current;
       if (!logo || !trigger || !endEl) return;
-      gsap.fromTo(logo,
-        { y: 0 },
-        {
+      gsap.to(logo, {
           y: 80,
           ease: "none",
           scrollTrigger: {
             trigger,
-            start: "top top",       // starts when top of blue section hits top of viewport
+            start: "top top",
             endTrigger: endEl,
-            end: "top bottom",      // ends just before the mobile Register Now button
-            scrub: true,
+            end: "top bottom",
+            scrub: 0.5,
           },
-        }
-      );
+        });
       gsap.to(starRef.current, {
         rotate: 360,
         ease: "none",
