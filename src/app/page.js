@@ -35,7 +35,7 @@ export default function Home() {
       gsap.fromTo(logo,
         { y: 0 },
         {
-          y: 200,
+          y: 80,
           ease: "none",
           scrollTrigger: {
             trigger,
@@ -64,17 +64,17 @@ export default function Home() {
     <main>
       <Banner />
       {/* Register Section */}
-      <section ref={registerRef} className="bg-blue relative w-full pb-3 xl:pb-6 z-10">
+      <section ref={registerRef} className="bg-blue relative w-full pb-3 xl:pb-6 z-10 overflow-hidden">
         <div className="w-full mx-auto pr-4 md:pr-0 py-7">
           <div className="flex items-center gap-x-3 md:gap-x-6 xl:gap-x-10 px-4 md:px-24 xl:px-40">
             {/* TGTF Logo — left aligned with paragraph text */}
-            <div ref={logoRef} className="will-change-transform z-20 flex-shrink-0">
+            <div ref={logoRef} className="z-20 flex-shrink-0">
               <Image
                 width={123}
                 height={204}
                 src={Logo}
                 alt="TGTF Logo"
-                className="w-20 md:w-32 xl:w-44 xl:h-[291px]"
+                className="w-20 md:w-32 xl:w-44 xl:h-[291px] will-change-transform"
               />
             </div>
             {/* Paragraph text + button (button inline on desktop) */}
