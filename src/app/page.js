@@ -31,7 +31,7 @@ export default function Home() {
       const trigger = registerRef.current;
       if (!logo || !trigger) return;
       gsap.to(logo, {
-        y: 250,
+        y: 60,
         ease: "none",
         scrollTrigger: {
           trigger,

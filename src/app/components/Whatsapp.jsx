@@ -60,7 +60,7 @@ export default function WhatsAppFloat() {
         href="https://www.skillboxes.com/events/the-gypsy-travel-festival?utm_source=website&utm_medium=registernow_floater"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40"
+        className="fixed bottom-6 right-6 z-40 invisible"
         id="register-now"
       >
         <Image src={register} alt="Register Now" width={120} height={50} />
